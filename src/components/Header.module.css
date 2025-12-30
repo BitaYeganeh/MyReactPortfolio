@@ -57,14 +57,18 @@
     background-color: #6596ec;
     display: none;
     padding: 10px 0;
+    align-items: flex-start; /* Align links to the left */
+    padding-left: 20px;
   }
   .nav.active {
     display: flex;
   }
   .menuToggle {
     display: block;
+    color: white; /* hamburger turns red */
   }
 }
+
 /* Dark Mode */
 body.dark-mode .header {
   background-color: #333;
