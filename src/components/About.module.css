@@ -1,0 +1,189 @@
+/* =========================
+   About Section - Light Mode
+========================= */
+.about {
+  padding: 4rem 2rem;
+  text-align: left;
+  background-color: #ffffff; /* light background */
+  color: rgb(3, 3, 4); /* light text */
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: rgb(67, 65, 165);
+}
+
+/* Flex container for profile and text */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.profileWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Profile image styling */
+.profileImage {
+  width: 240px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8%;
+  transition: transform 0.3s;
+}
+
+.profileImage:hover {
+  transform: scale(1.05);
+}
+
+/* Typewriter text */
+.typewriter {
+  margin-top: 2rem;
+  color: rgb(67, 65, 165);
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #6596ec;
+  width: 0;
+  font-size: 20px;
+  animation: typing 4s steps(40) infinite, blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  40% {
+    width: 100%;
+  }
+  60% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Text section */
+.text {
+  flex: 1;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.text p {
+  margin-bottom: 1.5rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* Optional: spacing for last paragraph */
+.text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Languages / Skills block */
+.languages {
+  max-width: 800px;
+  margin: 3rem auto 0 auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, #184356, #0f172a);
+  border-radius: 12px;
+  text-align: left;
+  color: #eee;
+}
+
+.languages h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: rgb(148, 147, 222);
+}
+
+.languages ul {
+  list-style: none;
+  padding-left: 0;
+  line-height: 1.6;
+}
+
+.languages li {
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+/* =========================
+   Dark Mode - match Education
+========================= */
+:global(body.dark-mode) .about {
+  background-color: #1f260d; /* same as Education dark section */
+  color: #eee;
+}
+
+:global(body.dark-mode) .about h2 {
+  color: #e0e0e0; /* heading */
+}
+
+:global(body.dark-mode) .text {
+  color: #e0e0e0;
+}
+
+:global(body.dark-mode) .bold {
+  color: #facc15; /* highlight same as Education focus */
+}
+
+:global(body.dark-mode) .typewriter {
+  color: #e0e0e0;
+  border-right: 2px solid #facc15;
+}
+
+:global(body.dark-mode) .languages {
+  background-color: #4f0202; /* match Education card background */
+  color: #e0e0e0;
+}
+
+:global(body.dark-mode) .languages h3 {
+  color: #e0e0e0;
+}
+
+:global(body.dark-mode) .languages ul {
+  color: #e0e0e0;
+}
+
+:global(body.dark-mode) .languages li span {
+  color: #facc15; /* highlight important info */
+}
+
+/* =========================
+   Mobile Responsiveness
+========================= */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text {
+    width: 100%;
+  }
+
+  .typewriter {
+    font-size: 18px;
+  }
+
+  .profileImage {
+    height: 300px;
+  }
+}

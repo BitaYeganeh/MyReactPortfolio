@@ -1,0 +1,102 @@
+.contactSection {
+  padding: 4rem 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contactSection h2 {
+  font-size: 2.5rem;
+  color: rgb(67, 65, 165);
+  margin-bottom: 2rem;
+}
+
+/* ===== FORM ===== */
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  background-color: rgb(243, 226, 226);
+  padding: 2rem;
+  border-radius: 10px;
+  border: 2px solid #6596ec;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.contactForm label {
+  font-weight: bold;
+  color: #6596ec;
+}
+
+.contactForm input,
+.contactForm textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  outline: none;
+  border-color: #c20808;
+  background-color: #fff8f8;
+}
+
+/* ===== BUTTON ===== */
+.contactForm button {
+  background-color: #6596ec;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contactForm button:hover {
+  background-color: #c20808;
+  transform: scale(1.05);
+}
+
+/* ===== DARK MODE ===== */
+body.dark-mode .contactForm {
+  background-color: #222;
+  border: 2px solid white;
+  color: #eee;
+}
+
+body.dark-mode .contactForm label {
+  color: #e0e0e0;
+}
+
+body.dark-mode .contactForm input,
+body.dark-mode .contactForm textarea {
+  background-color: #333;
+  border-color: #555;
+  color: #eee;
+}
+
+body.dark-mode .contactForm input:focus,
+body.dark-mode .contactForm textarea:focus {
+  border-color: #c20808;
+  background-color: #444;
+  color: #fff;
+}
+
+body.dark-mode .contactForm button {
+  background-color: #4f0202;
+  color: #fff;
+}
+
+body.dark-mode .contactForm button:hover {
+  background-color: #c20808;
+  transform: scale(1.05);
+}

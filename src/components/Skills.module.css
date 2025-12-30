@@ -1,0 +1,57 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 1rem;
+}
+
+.modalContent {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 450px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.closeBtn:hover {
+  transform: scale(1.2);
+}
+
+.skillsList {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.skillsList li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+  font-weight: 600;
+}
+
+/* Dark mode */
+:global(body.dark-mode) .modalContent {
+  background-color: #1f260d;
+  color: #eee;
+}
+
+:global(body.dark-mode) .skillsList li {
+  border-bottom: 1px solid #333;
+}

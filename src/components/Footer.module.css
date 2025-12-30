@@ -1,0 +1,46 @@
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #6596ec;
+  color: white;
+  position: relative;
+}
+
+.footerLink {
+  color: white;
+  text-decoration: underline;
+}
+
+.footerLink:hover {
+  color: #c20808;
+}
+
+.backToTop {
+  margin-top: 0.5rem;
+  background-color: #1d0cd0;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.backToTop:hover {
+  background-color: #c20808;
+}
+
+/* Dark mode */
+body.dark-mode .footer {
+  background-color: #4f0202;
+  color: #f0f0f0;
+}
+
+body.dark-mode .footerLink {
+  color: #f0f0f0;
+}
+
+body.dark-mode .backToTop {
+  background-color: #6596ec;
+  color: #fff;
+}

@@ -1,0 +1,74 @@
+.education {
+  padding: 4rem 2rem;
+}
+
+.education h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem; /* slightly more spacing */
+  color: rgb(67, 65, 165);
+  text-align: center;
+  font-weight: 700; /* more emphasis on heading */
+  display: inline-block;
+  font-weight: 600;
+  background: linear-gradient(
+    90deg,
+    #38bdf8,
+    /* blue */ #818cf8,
+    /* indigo */ #c084fc /* violet */
+  );
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 8s ease infinite;
+}
+
+/* Card */
+.card {
+  max-width: 800px;
+  color: #eee;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #184356, #0f172a);
+  padding: 2.5rem; /* slightly more padding */
+  border-radius: 12px; /* smoother corners */
+  border: 2px solid #6596ec;
+  font-size: 1.15rem; /* slightly bigger for readability */
+  line-height: 2; /* better spacing between lines */
+}
+
+/* Main education lines */
+.card p:not(.focus) {
+  font-weight: 600; /* bold main education titles */
+  margin-bottom: 1rem; /* spacing between items */
+}
+
+/* Focus line */
+.focus {
+  font-style: italic;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  color: #aabedb; /* subtle contrast in light mode */
+}
+
+/* Dark mode */
+:global(body.dark-mode) .education {
+  background-color: #1f260d;
+  color: #eee;
+}
+
+:global(body.dark-mode) .education h2 {
+  color: #e0e0e0;
+}
+
+:global(body.dark-mode) .card {
+  background-color: #4f0202;
+  color: #e0e0e0;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+:global(body.dark-mode) .card p:not(.focus) {
+  font-weight: 600; /* bold main lines in dark mode */
+}
+
+:global(body.dark-mode) .focus {
+  color: #facc15; /* match About section highlight */
+}

@@ -1,0 +1,106 @@
+.hero {
+  position: relative; /* IMPORTANT */
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #184356, #0f172a);
+  color: white;
+  text-align: center;
+}
+.content,
+.spinWrapper {
+  position: relative;
+  z-index: 10;
+  color: white;
+  line-height: 2.9;
+}
+.title {
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.gradientText {
+  background: linear-gradient(90deg, #ff6ec4, #7873f5, #4ade80, #facc15);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 6s ease infinite;
+}
+/* Gradient text for subtitle first line */
+.gradientSubtitle {
+  display: inline-block;
+  font-weight: 600;
+  background: linear-gradient(
+    90deg,
+    #38bdf8,
+    /* blue */ #818cf8,
+    /* indigo */ #c084fc /* violet */
+  );
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 8s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.content h1 {
+  font-size: 4rem;
+}
+.content > :last-child {
+  margin-top: 1.5rem;
+}
+
+.spinWrapper {
+  position: absolute;
+  top: 6rem;
+  left: 3rem;
+  width: 200px;
+  height: 200px;
+  pointer-events: none; /* optional: avoids blocking clicks */
+}
+
+.spinText {
+  font-size: 1.2rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  opacity: 10;
+  animation: spin 20s linear infinite;
+}
+.subtitle {
+  margin-top: 20rem;
+  font-size: 1rem;
+  color: #b5c8e4;
+  line-height: 2rem;
+}
+@media (max-width: 600px) {
+  .hero {
+    padding: 2rem;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .spinWrapper {
+    position: absolute;
+    top: 6rem;
+    left: 3rem;
+    width: 200px;
+    height: 200px;
+    pointer-events: none; /* optional: avoids blocking clicks */
+  }
+}

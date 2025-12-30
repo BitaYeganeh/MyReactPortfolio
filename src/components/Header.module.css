@@ -1,0 +1,109 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6596ec;
+  color: white;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.menuToggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.modeToggle {
+  margin-right: 10px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: #6596ec;
+    display: none;
+    padding: 10px 0;
+  }
+  .nav.active {
+    display: flex;
+  }
+  .menuToggle {
+    display: block;
+  }
+}
+/* Dark Mode */
+body.dark-mode .header {
+  background-color: #333;
+  color: #f0f0f0;
+}
+body.dark-mode .nav {
+  background-color: #333;
+}
+body.dark-mode .nav a {
+  color: #f0f0f0;
+}
+body.dark-mode .menuToggle,
+body.dark-mode .modeToggle {
+  color: #f0f0f0;
+}
+/* Light Mode */
+body.light-mode .header {
+  background-color: #6596ec;
+  color: white;
+}
+body.light-mode .nav {
+  background-color: #6596ec;
+}
+body.light-mode .nav a {
+  color: white;
+}
+body.light-mode .menuToggle,
+body.light-mode .modeToggle {
+  color: white;
+}
+.navButton {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+.navButton:hover {
+  text-decoration: underline;
+}
