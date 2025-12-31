@@ -13,9 +13,7 @@ const About = () => {
             alt="Bita Yeganeh Profile"
             className={styles.profileImage}
           />
-          <p className={styles.typewriter}>
-            Software Development Student & UI/UX Enthusiast
-          </p>
+          <p className={styles.typewriter}>Software Development Student</p>
         </div>
 
         <div className={styles.text}>
@@ -62,8 +60,12 @@ const About = () => {
       <section id="languages" className={styles.languages}>
         <h3>Languages & Availability</h3>
         <ul>
-          <li>Finnish: B1–B2, actively studying and improving</li>
-          <li>English: Fluent</li>
+          <li>
+            <strong>Finnish:</strong> B1–B2, actively studying and improving
+          </li>
+          <li>
+            <strong>English: </strong>Fluent
+          </li>
           <li>Available for full-time trainee position starting March 2026</li>
         </ul>
       </section>{" "}
