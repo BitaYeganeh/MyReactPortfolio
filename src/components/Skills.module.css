@@ -10,15 +10,22 @@
 }
 
 .modalContent {
-  background: white;
+  /* Gradient background */
+  background: linear-gradient(135deg, #6596ec 0%, #97b7ed 50%, #c5e0f4 100%);
   padding: 2rem;
-  border-radius: 12px;
+  border-radius: 16px;
   max-width: 450px;
   width: 90%;
   text-align: center;
-  position: relative;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+
+  /* Glassy/soft look */
+  backdrop-filter: blur(8px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+
+  /* Smooth animation */
   transition: all 0.3s ease;
+  position: relative;
 }
 
 .closeBtn {
@@ -28,6 +35,7 @@
   font-size: 28px;
   cursor: pointer;
   transition: transform 0.2s;
+  color: white;
 }
 
 .closeBtn:hover {
@@ -42,16 +50,21 @@
 
 .skillsList li {
   padding: 0.5rem 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   font-weight: 600;
+  color: #fff;
 }
 
 /* Dark mode */
 :global(body.dark-mode) .modalContent {
-  background-color: #1f260d;
+  background: linear-gradient(135deg, #1f260d 0%, #333c12 50%, #556032 100%);
   color: #eee;
+  border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 :global(body.dark-mode) .skillsList li {
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.group:hover {
+  box-shadow: 0 0 30px rgba(101, 150, 236, 0.5);
 }

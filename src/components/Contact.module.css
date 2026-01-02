@@ -6,7 +6,7 @@
 }
 
 .contactSection h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: rgb(67, 65, 165);
   margin-bottom: 2rem;
 }
@@ -19,7 +19,7 @@
   background-color: rgb(243, 226, 226);
   padding: 2rem;
   border-radius: 10px;
-  border: 2px solid #6596ec;
+  border: 8px solid #184356;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease, color 0.3s ease,
     border-color 0.3s ease;

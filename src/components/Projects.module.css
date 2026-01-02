@@ -3,7 +3,6 @@
 .projectsSection {
   padding: 4rem 2rem;
   text-align: center;
-  background-color: #f8f9fa;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -14,7 +13,7 @@
 }
 
 .projectsSection h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 2rem;
   color: rgb(67, 65, 165);
 }

@@ -13,62 +13,64 @@ const About = () => {
             alt="Bita Yeganeh Profile"
             className={styles.profileImage}
           />
-          <p className={styles.typewriter}>Software Development Student</p>
+          <p className={styles.typewriter}>Aspiring Fullstack Developer</p>
         </div>
 
         <div className={styles.text}>
           <p>
-            I am a software development student at{" "}
-            <span className={styles.bold}>Business College Helsinki</span>,
-            focused on building modern, responsive web applications.
-          </p>
-
-          <p>
-            As part of my studies, I am required to complete{" "}
-            <strong>full-time on-the-job training starting March 2026</strong>,
-            and I am actively seeking a trainee position where I can grow
-            professionally and contribute to real projects.
-          </p>
-
-          <p>
-            My technical skills include{" "}
+            I am a{" "}
             <strong>
-              HTML, CSS, JavaScript, React, WordPress, UI/UX design, and testing
-            </strong>
-            . I enjoy creating clean interfaces and writing maintainable code.
-          </p>
-
-          <p>
-            I work well in collaborative environments and value feedback,
-            continuous learning, and improving development workflows.
-          </p>
-
-          <p>
-            Currently, I am focusing on{" "}
-            <strong>
-              React, Git, accessibility, and modern best practices
+              Software Development student at Business College Helsinki
             </strong>{" "}
-            to build meaningful and user-friendly products.
+            with a unique technical background in{" "}
+            <strong>Electronic Engineering and Renewable Energy</strong>. My
+            studies have strengthened my analytical thinking and problem-solving
+            skills, which I now apply to building modern, responsive web
+            applications.
           </p>
+
           <p>
-            I am comfortable working in English and currently improving my
-            professional Finnish skills. I am highly motivated to grow in a
-            bilingual work environment.
+            I have hands-on experience with{" "}
+            <strong>
+              React, JavaScript, HTML, CSS, WordPress,SQL, PHP, UI/UX design,
+              and testing
+            </strong>
+            . I enjoy turning design ideas into functional, user-friendly
+            applications and improving workflows with clean, maintainable code.
+            For example, I have built small projects that focus on responsive
+            design and accessibility, experimenting with modern web development
+            best practices.
+          </p>
+
+          <p>
+            I thrive in team environments and bring strong soft skills,
+            including{" "}
+            <strong>adaptability, collaboration, and a growth mindset</strong>.
+            I am eager to contribute from day one, learn quickly, and tackle
+            challenges creatively. My diverse technical background allows me to
+            approach problems with a broad perspective and innovative thinking.
+          </p>
+
+          <p>
+            I am highly motivated to start a full-time trainee position in March
+            2026, contribute to real-world projects, and grow as a professional
+            developer in a bilingual, forward-thinking team.
           </p>
         </div>
       </div>
+
       <section id="languages" className={styles.languages}>
         <h3>Languages & Availability</h3>
         <ul>
           <li>
-            <strong>Finnish:</strong> B1–B2, actively studying and improving
+            <strong>Finnish:</strong> B1–B2, actively learning
           </li>
           <li>
-            <strong>English: </strong>Fluent
+            <strong>English:</strong> Fluent
           </li>
           <li>Available for full-time trainee position starting March 2026</li>
         </ul>
-      </section>{" "}
+      </section>
     </section>
   );
 };

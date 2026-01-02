@@ -1,29 +1,46 @@
 .footer {
   text-align: center;
-  padding: 1rem;
+  padding: 1rem 1rem;
   background-color: #6596ec;
   color: white;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.footer .links {
+  display: flex;
+  gap: 1.5rem; /* space between GitHub and LinkedIn */
+  margin-bottom: 0.5rem;
 }
 
 .footerLink {
-  color: white;
-  text-decoration: underline;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* space between icon and text */
+  color: #184356;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
 }
 
 .footerLink:hover {
   color: #c20808;
+  box-shadow: 0 0 20px rgba(101, 150, 236, 0.6);
 }
 
 .backToTop {
   margin-top: 0.5rem;
-  background-color: #1d0cd0;
+  background-color: #184356;
   color: white;
   border: none;
   padding: 5px 10px;
   cursor: pointer;
   border-radius: 4px;
   font-size: 14px;
+  transition: background-color 0.3s;
 }
 
 .backToTop:hover {

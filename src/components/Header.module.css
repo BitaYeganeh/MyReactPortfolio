@@ -3,14 +3,14 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 15px 40px;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #6596ec;
   color: white;
   z-index: 999;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -26,8 +26,27 @@
 .nav a {
   color: white;
   text-decoration: none;
+  margin-left: 1.5rem;
   font-weight: 500;
   font-size: 16px;
+}
+
+.nav a:hover {
+  color: #c20808;
+}
+.navButton {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.3s ease; /* smooth hover */
+}
+
+.navButton:hover {
+  color: #c20808; /* same accent color as links */
+  text-decoration: underline;
 }
 
 .menuToggle {
