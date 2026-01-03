@@ -50,35 +50,43 @@
   margin-top: 2rem;
   color: rgb(67, 65, 165);
   font-weight: bold;
+  font-size: 20px;
+
   overflow: hidden;
   white-space: nowrap;
   border-right: 2px solid #6596ec;
-  width: 0;
-  font-size: 20px;
-  animation: typing 4s steps(40) infinite, blink 0.7s step-end infinite;
+
+  /* Reserve space so layout doesn't shift */
+  max-width: 26ch;
+
+  animation: typing 3s steps(26, end) 1 forwards, blink 1.2s step-end infinite;
 }
 
 @keyframes typing {
-  0% {
-    width: 0;
+  from {
+    max-width: 0;
   }
-  40% {
-    width: 100%;
-  }
-  60% {
-    width: 100%;
-  }
-  100% {
-    width: 0;
+  to {
+    max-width: 26ch;
   }
 }
 
 @keyframes blink {
-  50% {
+  0%,
+  50%,
+  100% {
     border-color: transparent;
   }
+  25%,
+  75% {
+    border-color: #6596ec;
+  }
 }
-
+@media (max-width: 768px) {
+  .typewriter {
+    display: none;
+  }
+}
 /* Text section */
 .text {
   flex: 1;

@@ -3,7 +3,7 @@
 const projects = [
   {
     id: 1,
-    title: "HR Management System",
+    title: "React Project - HR Management System",
     image: "/images/hrapp-screenshot.png", // replace with actual screenshot
     alt: "HR Management System",
     github: "https://github.com/BitaYeganeh/hrApp",
@@ -11,42 +11,65 @@ const projects = [
   },
   {
     id: 2,
-    title: "Café Website UI – Figma Prototype",
+    title: "Figma Project - Café Website UI ",
     image: "/images/figma-cafe.png",
     alt: "Café website UI design in Figma",
     live: "https://www.figma.com/proto/LOFz2qhMrQFBrMrCsotQfl/prototype-for-a-caf%C3%A9-website?node-id=1-2&starting-point-node-id=1%3A2&t=taVksUnCMCTiGYTj-1",
   },
   {
     id: 3,
-    title: "Personal Mood Board",
+    title: "Figma - Personal Mood Board",
     image: "/images/moodboard.png",
     alt: "Mood Board UI design in Figma",
     live: "https://www.figma.com/design/T0DHRgheR5owxqJPjMSCew/Mood-Borad?t=0w1cZSds6tZsp8H0-1",
   },
   {
     id: 4,
-    title: "Eläintarha JS Project",
+    title: "WordPrees/PHP Project - Tech News",
+    image: "/images/technews.png",
+    alt: "WordPrees/PHP Project - Tech News",
+    live: "",
+  },
+  {
+    id: 4,
+    title: "Wordpress Project - Business College Helsinki",
+    image: "/images/bcd.png",
+    alt: "Wordpress Project - Business College Helsinki Networking Page",
+    github:
+      "https://github.com/BitaYeganeh/wordpress_Ohjelmistokehitysprojekti-1/tree/main",
+  },
+  {
+    id: 5,
+    title: "Wordpress Project - ABC OF MEDIA Website",
+    image: "/images/abc.png",
+    alt: "Wordpress Project - ABC OF MEDIA",
+    github: "https://github.com/BitaYeganeh/WordPress-Project---ABC-OF-MEDIA",
+  },
+
+  {
+    id: 6,
+    title: "JavaScript Project - Eläintarha",
     image: "/images/project1.png",
     alt: "Eläintarha JavaScript Project",
     github:
       "https://github.com/BitaYeganeh/HTML_School/tree/main/JS/07-viikko/Eläintarha",
   },
   {
-    id: 5,
-    title: "Pancake Order Project",
+    id: 7,
+    title: "JavaScript Project - Pancake Ordering Site",
     image: "/images/project2.png",
     alt: "Pancake Order Project",
     github: "https://github.com/BitaYeganeh/Summer-tasks/tree/main/Pannukakku",
   },
   {
-    id: 6,
-    title: "Pancake Project 2",
+    id: 8,
+    title: "JavaScript Project - Pancake kitchen view",
     image: "/images/project3.png",
     alt: "Pancake Project 2",
     github: "https://github.com/BitaYeganeh/Summer-tasks/tree/main/Pannukakku",
   },
   {
-    id: 7,
+    id: 9,
     title: "Flexbox Layout Project",
     image: "/images/project4.png",
     alt: "Flexbox Layout Project",
@@ -54,30 +77,30 @@ const projects = [
       "https://github.com/BitaYeganeh/HTML_School/tree/main/HTML-KURSSI/06-viikko/01_flex-projekti",
   },
   {
-    id: 8,
-    title: "Flexbox Project 2",
+    id: 10,
+    title: "Flexbox Project",
     image: "/images/project5.png",
     alt: "Flexbox Project 2",
     github:
       "https://github.com/BitaYeganeh/HTML_School/tree/main/HTML-KURSSI/06-viikko/01_flex-projekti",
   },
   {
-    id: 9,
-    title: "Flexbox Project 3",
+    id: 11,
+    title: "Flexbox Project",
     image: "/images/project6.png",
     alt: "Flexbox Project 3",
     github:
       "https://github.com/BitaYeganeh/HTML_School/tree/main/HTML-KURSSI/06-viikko/01_flex-projekti",
   },
   {
-    id: 10,
+    id: 12,
     title: "Project 7 Placeholder",
     image: "/images/project7.png",
     alt: "Project 7 placeholder",
     github: "#",
   },
   {
-    id: 11,
+    id: 13,
     title: "Base Apparel Coming Soon",
     image: "/images/project8.png",
     alt: "Base Apparel Coming Soon Project",
@@ -85,7 +108,7 @@ const projects = [
       "https://github.com/BitaYeganeh/Summer-tasks/tree/main/FrontendMentor/base-apparel-coming-soon-master",
   },
   {
-    id: 12,
+    id: 14,
     title: "Project 9 Placeholder",
     image: "/images/project9.png",
     alt: "Project 9 placeholder",

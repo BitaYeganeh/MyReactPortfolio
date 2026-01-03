@@ -23,29 +23,24 @@
   gap: 20px;
 }
 
-.nav a {
+.nav a,
+.navButton {
   color: white;
   text-decoration: none;
-  margin-left: 1.5rem;
   font-weight: 500;
   font-size: 16px;
-}
 
-.nav a:hover {
-  color: #c20808;
-}
-.navButton {
+  display: block; /* important */
+  padding: 10px 0; /* match spacing */
+  text-align: left; /* mobile alignment */
+
   background: none;
   border: none;
-  color: inherit;
-  font: inherit;
   cursor: pointer;
-  padding: 0;
-  transition: color 0.3s ease; /* smooth hover */
 }
-
+.nav a:hover,
 .navButton:hover {
-  color: #c20808; /* same accent color as links */
+  color: #c20808;
   text-decoration: underline;
 }
 
