@@ -11,7 +11,7 @@ body,
   height: 100%;
   max-width: 100%;
   overflow-x: hidden;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* smooth scroll for window */
 }
 
 body {
@@ -29,6 +29,10 @@ body {
 main {
   flex: 1; /* take remaining space */
   padding-top: 80px; /* header height */
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  /* Removed overflow-y and height to allow window scrolling */
 }
 
 /* ===== LIGHT / DARK MODE ===== */
@@ -73,13 +77,6 @@ a:hover {
   opacity: 0.8;
 }
 
-/* ===== MAIN LAYOUT ===== */
-main {
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-}
-
 /* ===== BUTTONS ===== */
 button {
   cursor: pointer;
@@ -92,6 +89,8 @@ button {
     padding: 90px 15px 20px 15px;
   }
 }
+
+/* ===== GLOW EFFECT ===== */
 @keyframes glow {
   0% {
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
