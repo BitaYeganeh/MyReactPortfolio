@@ -32,8 +32,8 @@ const About = () => {
           <p>
             I have hands-on experience with{" "}
             <strong>
-              React, JavaScript, HTML, CSS, WordPress, SQL, PHP, UI/UX design,
-              and testing
+              React, JavaScript, HTML, CSS, WordPress,Python SQL, PHP, UI/UX
+              design, and testing
             </strong>
             . I enjoy turning design ideas into functional, user-friendly
             applications and improving workflows with clean, maintainable code.

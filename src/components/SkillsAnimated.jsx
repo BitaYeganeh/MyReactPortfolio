@@ -11,6 +11,7 @@ import {
   FaReact,
   FaDatabase,
   FaPhp,
+  FaPython,
 } from "react-icons/fa";
 import { AnimatedList } from "./ui/AnimatedList";
 
@@ -32,10 +33,16 @@ const skills = [
     color: "from-cyan-400 via-blue-500 to-indigo-500",
   },
   {
+    name: "Python",
+    icon: FaPython,
+    color: "from-blue-400 via-yellow-400 to-green-500",
+  },
+  {
     name: "WordPress",
     icon: FaWordpress,
     color: "from-indigo-400 via-violet-500 to-purple-600",
   },
+
   {
     name: "PHP",
     icon: FaPhp,
