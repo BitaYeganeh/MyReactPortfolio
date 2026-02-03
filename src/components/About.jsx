@@ -32,7 +32,7 @@ const About = () => {
           <p>
             I have hands-on experience with{" "}
             <strong>
-              React, JavaScript, HTML, CSS, WordPress,Python SQL, PHP, UI/UX
+              React, JavaScript, HTML, CSS, WordPress, Python, SQL, PHP, UI/UX
               design, and testing
             </strong>
             . I enjoy turning design ideas into functional, user-friendly
