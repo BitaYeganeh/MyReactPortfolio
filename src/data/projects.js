@@ -94,10 +94,11 @@ const projects = [
   },
   {
     id: 12,
-    title: "Project 7 Placeholder",
+    title: "Social-links-profile-card",
     image: "/images/project7.png",
-    alt: "Project 7 placeholder",
-    github: "#",
+    alt: "Social-links-profile-card Project",
+    github:
+      "https://github.com/BitaYeganeh/Summer-tasks/tree/main/FrontendMentor/Social-links-profile",
   },
   {
     id: 13,
@@ -109,10 +110,11 @@ const projects = [
   },
   {
     id: 14,
-    title: "Project 9 Placeholder",
+    title: "SignUp Form",
     image: "/images/project9.png",
-    alt: "Project 9 placeholder",
-    github: "#",
+    alt: "SignUp Form Project",
+    github:
+      "https://github.com/BitaYeganeh/Summer-tasks/tree/main/FrontendMentor/sign-up-form",
   },
 ];
 
