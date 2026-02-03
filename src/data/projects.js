@@ -114,7 +114,7 @@ const projects = [
     image: "/images/project9.png",
     alt: "SignUp Form Project",
     github:
-      "https://github.com/BitaYeganeh/Summer-tasks/tree/main/FrontendMentor/sign-up-form",
+      "https://github.com/BitaYeganeh/HTML_School/tree/main/HTML-KURSSI/04_viikko/tilauslomake",
   },
 ];
 
