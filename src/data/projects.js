@@ -25,9 +25,9 @@ const projects = [
   },
   {
     id: 4,
-    title: "WordPrees/PHP Project - Tech News",
+    title: "WordPress/PHP Project - Tech News",
     image: "/images/technews.png",
-    alt: "WordPrees/PHP Project - Tech News",
+    alt: "WordPress/PHP Project - Tech News",
     github: "https://github.com/BitaYeganeh/WordPress-PHP-Project---Tech-News",
   },
   {
