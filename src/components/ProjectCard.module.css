@@ -8,47 +8,58 @@
   flex-direction: column;
 }
 
+/* ---------- IMAGE ---------- */
+
 .imageWrapper {
-  flex: 1; /* take available vertical space */
+  flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center; /* centers the image */
+  align-items: center;
   overflow: hidden;
 }
 
 .card img {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain; /* keeps image proportions */
+  object-fit: contain;
+  z-index: 1;
   transition:
     transform 0.35s ease,
-    box-shadow 0.35s ease;
-  z-index: 1;
+    box-shadow 0.35s ease,
+    opacity 0.2s ease;
 }
 
-.card:hover img {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 60vw;
-  height: 60vh;
-  transform: translate(-50%, -50%) scale(1);
-  z-index: 9999;
-  background: #000;
-  padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+/* ---------- DESKTOP ONLY: HOVER PREVIEW ---------- */
+@media (hover: hover) and (pointer: fine) {
+  .card:hover img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 60vw;
+    height: 60vh;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background: #000;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+  }
+
+  .card:hover::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 9998;
+  }
+
+  .card:hover .overlay {
+    opacity: 0;
+  }
 }
-.card:hover .overlay {
-  opacity: 0;
-}
-.card:hover::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 9998;
-}
+
+/* ---------- OVERLAY ---------- */
 
 .overlay {
   position: absolute;
@@ -63,8 +74,10 @@
   transition: opacity 0.3s ease;
 }
 
-.card:hover .overlay {
-  opacity: 1;
+@media (hover: hover) and (pointer: fine) {
+  .card:hover .overlay {
+    opacity: 1;
+  }
 }
 
 .overlay h3 {
@@ -72,6 +85,8 @@
   font-size: 1.2rem;
   text-align: center;
 }
+
+/* ---------- LINKS ---------- */
 
 .links {
   display: flex;
@@ -90,4 +105,27 @@
 
 .links a:hover {
   background-color: #c20808;
+}
+
+/* ---------- MOBILE / TOUCH DEVICES ---------- */
+@media (hover: none), (max-width: 768px) {
+  /* Disable popup behavior completely */
+  .card img {
+    position: static;
+    transform: none;
+    box-shadow: none;
+  }
+
+  .card::after {
+    display: none;
+  }
+
+  /* Make overlay always visible & non-blocking */
+  .overlay {
+    position: static;
+    opacity: 1;
+    background: transparent;
+    color: inherit;
+    padding: 1rem 0;
+  }
 }
