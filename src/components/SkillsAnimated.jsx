@@ -33,10 +33,11 @@ const skills = [
     color: "from-cyan-400 via-blue-500 to-indigo-500",
   },
   {
-    name: "Python",
+    name: "Python & Django",
     icon: FaPython,
     color: "from-blue-400 via-yellow-400 to-green-500",
   },
+  
   {
     name: "WordPress",
     icon: FaWordpress,
@@ -114,7 +115,7 @@ const SkillItem = ({ name, icon: Icon, color }) => {
 // Animated list container
 const SkillsAnimated = () => {
   return (
-    <div className="relative h-[380px] overflow-hidden">
+<div className="relative max-h-[60vh] overflow-y-auto">
       <AnimatedList>
         {skills.map((skill, i) => (
           <SkillItem key={i} {...skill} />

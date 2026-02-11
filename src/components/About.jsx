@@ -68,7 +68,7 @@ const About = () => {
           <li>
             <strong>English:</strong> Fluent
           </li>
-          <li>Available for full-time trainee position starting March 2026</li>
+          <li>Available for full-time trainee position starting April 2026</li>
         </ul>
       </section>
     </section>
