@@ -32,7 +32,7 @@ const Hero = () => {
         <br />
         <span>
           Koodaajakoulutus WP25K – WordPress & React <br />
-          Pakollinen työssäoppiminen alkaa maaliskuussa 2026
+          Pakollinen työssäoppiminen alkaa huhtikuussa 2026
         </span>
       </p>
     </section>
