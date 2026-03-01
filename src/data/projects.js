@@ -16,37 +16,37 @@ const projects = [
     alt: "WordPress/PHP Project - Tech News",
     github: "https://github.com/BitaYeganeh/WordPress-PHP-Project---Tech-News",
   },
-  
-  {
+    {
     id: 3,
-    title: "JavaScript Project - Pancake Ordering Site",
-    image: "/images/project2.png",
-    alt: "Pancake Order Project",
-    github: "https://github.com/BitaYeganeh/Summer-tasks/tree/main/Pannukakku",
-  },
-  {
-    id: 4,
     title: "Figma Project - Café Website UI ",
     image: "/images/figma-cafe.png",
     alt: "Café website UI design in Figma",
     live: "https://www.figma.com/proto/LOFz2qhMrQFBrMrCsotQfl/prototype-for-a-caf%C3%A9-website?node-id=1-2&starting-point-node-id=1%3A2&t=taVksUnCMCTiGYTj-1",
   },
+
   {
+    id: 4,
+    title: "JavaScript Project - Pancake Ordering Site",
+    image: "/images/project2.png",
+    alt: "Pancake Order Project",
+    github: "https://github.com/BitaYeganeh/Summer-tasks/tree/main/Pannukakku",
+  },
+    {
     id: 5,
+    title: "JavaScript Project - Pancake kitchen view",
+    image: "/images/project3.png",
+    alt: "Pancake Project 2",
+    github: "https://github.com/BitaYeganeh/Summer-tasks/tree/main/Pannukakku",
+  },
+
+  {
+    id: 6,
     title: "Wordpress Project - Business College Helsinki",
     image: "/images/bcd.png",
     alt: "Wordpress Project - Business College Helsinki Networking Page",
     github:
       "https://github.com/BitaYeganeh/wordpress_Ohjelmistokehitysprojekti-1/tree/main",
   },
-  {
-    id: 6,
-    title: "Wordpress Project - ABC OF MEDIA Website",
-    image: "/images/abc.png",
-    alt: "Wordpress Project - ABC OF MEDIA",
-    github: "https://github.com/BitaYeganeh/WordPress-Project---ABC-OF-MEDIA",
-  },
-
   {
     id: 7,
     title: "JavaScript Project - Eläintarha",
@@ -57,18 +57,18 @@ const projects = [
   },
   {
     id: 8,
+    title: "Wordpress Project - ABC OF MEDIA Website",
+    image: "/images/abc.png",
+    alt: "Wordpress Project - ABC OF MEDIA",
+    github: "https://github.com/BitaYeganeh/WordPress-Project---ABC-OF-MEDIA",
+  },
+  {
+    id: 9,
     title: "Figma - Personal Mood Board",
     image: "/images/moodboard.png",
     alt: "Mood Board UI design in Figma",
     live: "https://www.figma.com/design/T0DHRgheR5owxqJPjMSCew/Mood-Borad?t=0w1cZSds6tZsp8H0-1",
 
-  },
-  {
-    id: 9,
-    title: "JavaScript Project - Pancake kitchen view",
-    image: "/images/project3.png",
-    alt: "Pancake Project 2",
-    github: "https://github.com/BitaYeganeh/Summer-tasks/tree/main/Pannukakku",
   },
   {
     id: 10,
