@@ -52,7 +52,7 @@ const projects = [
     image: "/images/project1.png",
     alt: "Eläintarha JavaScript Project",
     github:
-      "https://github.com/BitaYeganeh/HTML_School/tree/main/JS/07-viikko/Eläintarha",
+      "https://github.com/BitaYeganeh/HTML-CSS-JS-projektit/tree/main/JS/Projects/Eläintarha",
   },
   {
     id: 8,
