@@ -41,11 +41,10 @@ const projects = [
 
   {
     id: 6,
-    title: "Wordpress Project - Business College Helsinki",
-    image: "/images/bcd.png",
-    alt: "Wordpress Project - Business College Helsinki Networking Page",
-    github:
-      "https://github.com/BitaYeganeh/wordpress_Ohjelmistokehitysprojekti-1/tree/main",
+    title: "Wordpress Project - ABC OF MEDIA Website",
+    image: "/images/abc.png",
+    alt: "Wordpress Project - ABC OF MEDIA",
+    github: "https://github.com/BitaYeganeh/WordPress-Project---ABC-OF-MEDIA",
   },
   {
     id: 7,
@@ -57,10 +56,12 @@ const projects = [
   },
   {
     id: 8,
-    title: "Wordpress Project - ABC OF MEDIA Website",
-    image: "/images/abc.png",
-    alt: "Wordpress Project - ABC OF MEDIA",
-    github: "https://github.com/BitaYeganeh/WordPress-Project---ABC-OF-MEDIA",
+    title: "Wordpress Project - Business College Helsinki",
+    image: "/images/bcd.png",
+    alt: "Wordpress Project - Business College Helsinki Networking Page",
+    github:
+      "https://github.com/BitaYeganeh/wordpress_Ohjelmistokehitysprojekti-1/tree/main",
+
   },
   {
     id: 9,
