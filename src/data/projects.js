@@ -3,7 +3,7 @@
 const projects = [
   {
     id: 1,
-    title: "React Project - HR Management System",
+    title: "React - HR Management System",
     image: "/images/hrapp-screenshot.png", // replace with actual screenshot
     alt: "HR Management System",
     github: "https://github.com/BitaYeganeh/hrApp",
@@ -11,14 +11,14 @@ const projects = [
   },
   {
     id: 2,
-    title: "WordPress/PHP Project - Tech News",
+    title: "WordPress/PHP - Tech News",
     image: "/images/technews.png",
     alt: "WordPress/PHP Project - Tech News",
     github: "https://github.com/BitaYeganeh/WordPress-PHP-Project---Tech-News",
   },
     {
     id: 3,
-    title: "Figma Project - Café Website UI ",
+    title: "Figma - Cafe Website UI Design",
     image: "/images/figma-cafe.png",
     alt: "Café website UI design in Figma",
     live: "https://www.figma.com/proto/LOFz2qhMrQFBrMrCsotQfl/prototype-for-a-caf%C3%A9-website?node-id=1-2&starting-point-node-id=1%3A2&t=taVksUnCMCTiGYTj-1",
@@ -26,14 +26,14 @@ const projects = [
 
   {
     id: 4,
-    title: "JavaScript Project - Pancake Ordering Site",
+    title: "JavaScript - Pancake Order System",
     image: "/images/project2.png",
     alt: "Pancake Order Project",
     github: "https://github.com/BitaYeganeh/Summer-tasks/tree/main/Pannukakku",
   },
     {
     id: 5,
-    title: "JavaScript Project - Pancake kitchen view",
+    title: "JavaScript - Pancake kitchen view",
     image: "/images/project3.png",
     alt: "Pancake Project 2",
     github: "https://github.com/BitaYeganeh/Summer-tasks/tree/main/Pannukakku",
@@ -41,14 +41,14 @@ const projects = [
 
   {
     id: 6,
-    title: "Wordpress Project - ABC OF MEDIA Website",
+    title: "WordPress/PHP - ABC OF MEDIA Website",
     image: "/images/abc.png",
-    alt: "Wordpress Project - ABC OF MEDIA",
+    alt: "WordPress/PHP Project - ABC OF MEDIA Website",
     github: "https://github.com/BitaYeganeh/WordPress-Project---ABC-OF-MEDIA",
   },
   {
     id: 7,
-    title: "JavaScript Project - Eläintarha",
+    title: "JavaScript - Eläintarha",
     image: "/images/project1.png",
     alt: "Eläintarha JavaScript Project",
     github:
@@ -56,9 +56,9 @@ const projects = [
   },
   {
     id: 8,
-    title: "Wordpress Project - Business College Helsinki",
+    title: "WordPress - Business College Helsinki",
     image: "/images/bcd.png",
-    alt: "Wordpress Project - Business College Helsinki Networking Page",
+    alt: "WordPress Project - Business College Helsinki Networking Page",
     github:
       "https://github.com/BitaYeganeh/wordpress_Ohjelmistokehitysprojekti-1/tree/main",
 
@@ -80,7 +80,7 @@ const projects = [
       "https://github.com/BitaYeganeh/HTML-CSS-JS-projektit/tree/main/HTML-KURSSI/Projects/FlexProjekt",
   },
   {
-      id: 11,
+    id: 11,
     title: "Social-links-profile-card",
     image: "/images/project7.png",
     alt: "Social-links-profile-card Project",
