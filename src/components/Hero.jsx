@@ -27,12 +27,11 @@ const Hero = () => {
       </div>
       <p className={styles.subtitle}>
         <span className={styles.gradientSubtitle}>
-          Software Development Student at Business College Helsinki{" "}
+          Software Developer at Business College Helsinki{" "}
         </span>
         <br />
         <span>
           Koodaajakoulutus WP25K – WordPress & React <br />
-          Pakollinen työssäoppiminen alkaa huhtikuussa 2026
         </span>
       </p>
     </section>
