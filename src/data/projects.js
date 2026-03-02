@@ -77,26 +77,10 @@ const projects = [
     image: "/images/project4.png",
     alt: "Flexbox Layout Project",
     github:
-      "https://github.com/BitaYeganeh/HTML_School/tree/main/HTML-KURSSI/06-viikko/01_flex-projekti",
+      "https://github.com/BitaYeganeh/HTML-CSS-JS-projektit/tree/main/HTML-KURSSI/Projects/FlexProjekt",
   },
   {
-    id: 11,
-    title: "Flexbox Project",
-    image: "/images/project5.png",
-    alt: "Flexbox Project 2",
-    github:
-      "https://github.com/BitaYeganeh/HTML_School/tree/main/HTML-KURSSI/06-viikko/01_flex-projekti",
-  },
-  {
-    id: 12,
-    title: "Flexbox Project",
-    image: "/images/project6.png",
-    alt: "Flexbox Project 3",
-    github:
-      "https://github.com/BitaYeganeh/HTML_School/tree/main/HTML-KURSSI/06-viikko/01_flex-projekti",
-  },
-  {
-    id: 13,
+      id: 11,
     title: "Social-links-profile-card",
     image: "/images/project7.png",
     alt: "Social-links-profile-card Project",
@@ -104,7 +88,7 @@ const projects = [
       "https://github.com/BitaYeganeh/Summer-tasks/tree/main/FrontendMentor/Social-links-profile",
   },
   {
-    id: 14,
+    id: 12,
     title: "Base Apparel Coming Soon",
     image: "/images/project8.png",
     alt: "Base Apparel Coming Soon Project",
@@ -112,7 +96,7 @@ const projects = [
       "https://github.com/BitaYeganeh/Summer-tasks/tree/main/FrontendMentor/base-apparel-coming-soon-master",
   },
   {
-    id: 15,
+    id: 13,
     title: "SignUp Form",
     image: "/images/project9.png",
     alt: "SignUp Form Project",
