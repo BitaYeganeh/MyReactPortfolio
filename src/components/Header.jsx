@@ -47,17 +47,8 @@ const Header = ({ onOpenSkills }) => {
           About
         </a>
 
-        <a href="#experience" onClick={closeMenu}>
-          Experience
-        </a>
 
-        <a href="#certificates" onClick={closeMenu}>
-          Certificates
-        </a>
 
-        <a href="#projects" onClick={closeMenu}>
-          Projects
-        </a>
 
         <button
           className={styles.navButton}
@@ -72,6 +63,17 @@ const Header = ({ onOpenSkills }) => {
         <a href="#education" onClick={closeMenu}>
           Education
         </a>
+                <a href="#projects" onClick={closeMenu}>
+          Projects
+        </a>
+                <a href="#experience" onClick={closeMenu}>
+          Experience
+        </a>
+
+        <a href="#certificates" onClick={closeMenu}>
+          Certificates
+        </a>
+
 
         <a href="#contact" onClick={closeMenu}>
           Contact Me
