@@ -112,9 +112,9 @@
   max-width: 800px;
   margin: 3rem auto 0 auto;
   padding: 2rem;
-  background: linear-gradient(135deg, #184356, #0f172a);
+  background: linear-gradient(135deg, #949aa5, #6596ec);
   border-radius: 12px;
-  border: 2px solid #6596ec;
+  border: 10px solid #184356;
   text-align: left;
   color: #eee;
 }
@@ -122,7 +122,7 @@
 .languages h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: rgb(148, 147, 222);
+  color: rgb(67, 65, 165);
 }
 
 .languages ul {
@@ -134,6 +134,7 @@
 .languages li {
   margin-bottom: 0.75rem;
   font-weight: 500;
+  color:black;
 }
 
 /* =========================

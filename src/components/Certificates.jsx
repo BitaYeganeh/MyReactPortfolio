@@ -125,16 +125,6 @@ const Certificates = () => {
               <h3 className={styles.title}>{item.title}</h3>
               <p className={styles.issuer}>{item.issuer}</p>
               <p className={styles.date}>{item.date}</p>
-              {item.preview ? (
-                <a
-                  className={styles.link}
-                  href={item.preview}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Open certificate
-                </a>
-              ) : null}
             </div>
           </article>
         ))}

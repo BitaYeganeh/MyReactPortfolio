@@ -14,12 +14,12 @@
 /* Card */
 .card {
   max-width: 800px;
-  color: #eee;
+  color:black;
   margin: 0 auto;
-  background: linear-gradient(135deg, #184356, #0f172a);
+background: linear-gradient(135deg, #949aa5, #6596ec);
   padding: 2.5rem;
   border-radius: 12px;
-  border: 2px solid #6596ec;
+  border: 10px solid #184356;
   font-size: 1.15rem;
   line-height: 1.8;
 }
@@ -27,7 +27,7 @@
 .entry {
   padding-bottom: 1rem;
   margin-bottom: 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  border-bottom: 1px solid rgb(67, 65, 165);
 }
 
 .entry:last-child {
@@ -52,8 +52,8 @@
 }
 
 .date {
-  font-size: 0.95rem;
-  color: #aabedb;
+  font-size: 0.75rem;
+  color:rgb(67, 65, 165);
   margin-bottom: 0.5rem;
 }
 
@@ -67,7 +67,7 @@
   font-style: italic;
   font-weight: 500;
   margin-bottom: 0.75rem;
-  color: #aabedb;
+  color: rgb(67, 65, 165);
 }
 
 /* Dark mode */
