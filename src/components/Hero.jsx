@@ -26,12 +26,15 @@ const Hero = () => {
         </RainbowButton>
       </div>
       <p className={styles.subtitle}>
-        <span className={styles.gradientSubtitle}>
-          Software Developer at Business College Helsinki{" "}
+        <span className={styles.gradientSubtitle}>Software Developer</span>
+        <br />
+        <span>
+          ICT Student at Metropolia University of Applied Sciences &
+          Business College Helsinki
         </span>
         <br />
         <span>
-          Koodaajakoulutus WP25K – WordPress & React <br />
+          Building web applications with React, WordPress, PHP, JavaScript, SQL and Python
         </span>
       </p>
     </section>

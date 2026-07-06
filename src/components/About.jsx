@@ -20,7 +20,7 @@ const About = () => {
           <p>
             I am a{" "}
             <strong>
-              Software Development student at Business College Helsinki
+              Software Development student 
             </strong>{" "}
             with a unique technical background in{" "}
             <strong>Electronic Engineering and Renewable Energy</strong>. My

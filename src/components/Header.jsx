@@ -47,6 +47,14 @@ const Header = ({ onOpenSkills }) => {
           About
         </a>
 
+        <a href="#experience" onClick={closeMenu}>
+          Experience
+        </a>
+
+        <a href="#certificates" onClick={closeMenu}>
+          Certificates
+        </a>
+
         <a href="#projects" onClick={closeMenu}>
           Projects
         </a>

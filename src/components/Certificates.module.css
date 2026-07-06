@@ -1,0 +1,96 @@
+.certificates {
+  padding: 4rem 2rem;
+}
+
+.certificates h2 {
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  color: rgb(67, 65, 165);
+  text-align: center;
+  font-weight: 700;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  overflow: hidden;
+  border-radius: 14px;
+  border: 2px solid #6596ec;
+  background: linear-gradient(135deg, #184356, #0f172a);
+  color: #eee;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.previewBox {
+  aspect-ratio: 4 / 3;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.preview {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #dce8f7;
+  font-weight: 600;
+}
+
+.content {
+  padding: 1rem 1rem 1.25rem;
+}
+
+.title {
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.issuer {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.date {
+  font-size: 0.95rem;
+  color: #aabedb;
+  margin-bottom: 0.45rem;
+}
+
+.description {
+  line-height: 1.6;
+  color: #dce8f7;
+  margin-bottom: 0.7rem;
+}
+
+.link {
+  color: #facc15;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+:global(body.dark-mode) .certificates h2 {
+  color: #e0e0e0;
+}
+
+:global(body.dark-mode) .card {
+  background-color: #4f0202;
+  color: #e0e0e0;
+}

@@ -194,7 +194,11 @@
 
   .text {
     width: 100%;
-    text-align: left;
+    text-align: justify;
+  }
+
+  .text p {
+    text-align: justify;
   }
 
   .typewriter {

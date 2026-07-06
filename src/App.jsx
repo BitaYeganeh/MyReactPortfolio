@@ -2,6 +2,8 @@ import React, { useRef, useState } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Experience from "./components/Experience";
+import Certificates from "./components/Certificates";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Education from "./components/Education";
@@ -32,6 +34,12 @@ function App() {
         </section>
         <section id="about">
           <About />
+        </section>
+        <section id="experience">
+          <Experience />
+        </section>
+        <section id="certificates">
+          <Certificates />
         </section>
         <section id="projects">
           <Projects />
