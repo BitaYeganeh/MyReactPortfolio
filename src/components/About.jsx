@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./About.module.css";
 import profileImage from "../assets/CVimage.jpeg";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const About = () => {
   return (
@@ -30,6 +31,28 @@ const About = () => {
             <span>Python</span>
             <span>Astro</span>
           </div>
+          
+          <div className={styles.socials}>
+  <a
+    href="https://github.com/BitaYeganeh"
+    target="_blank"
+    rel="noopener noreferrer"
+     aria-label={styles.github}
+  >
+    <FaGithub />
+    
+  </a>
+
+  <a
+    href="https://www.linkedin.com/in/bita-yeganeh-503144237/"
+    target="_blank"
+    rel="noopener noreferrer"
+     aria-label={styles.linkedin}
+  >
+    <FaLinkedin />
+    
+  </a>
+</div>
 
           <p className={styles.status}>
             🚀 Open to Trainee Opportunities

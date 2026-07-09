@@ -90,7 +90,52 @@
   transform: translateY(-3px);
   box-shadow: 0 8px 18px rgba(101,150,236,.35);
 }
+/* ===========================
+   Social Links
+=========================== */
 
+/* ===========================
+   Social Icons
+=========================== */
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 18px;
+}
+
+.socials a {
+  color: #080808;
+  font-size: 2rem;
+  transition: all 0.25s ease;
+}
+
+.socials a:hover {
+  transform: translateY(-4px) scale(1.1);
+}
+
+.socials a:first-child:hover {
+  color: #24292f;   /* GitHub */
+}
+
+.socials a:last-child:hover {
+  color: #0A66C2;   /* LinkedIn */
+}
+
+/* Dark mode */
+
+:global(body.dark-mode) .socials a {
+  color: #e5e7eb;
+}
+
+:global(body.dark-mode) .socials a:first-child:hover {
+  color: white;
+}
+
+:global(body.dark-mode) .socials a:last-child:hover {
+  color: #4ea8ff;
+}
 /* =========================
    About Text
 ========================= */
@@ -291,5 +336,14 @@
     font-size: 13px;
     padding: 5px 12px;
   }
+  .socials {
+  flex-direction: column;
+  width: 100%;
+}
+
+.socials a {
+  justify-content: center;
+  width: 220px;
+}
 
 }
