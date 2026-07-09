@@ -1,64 +1,390 @@
+/* ===========================
+   Experience Section
+=========================== */
+
 .experience {
   padding: 4rem 2rem;
 }
 
 .experience h2 {
-  font-size: 2rem;
-  margin-bottom: 2.5rem;
-  color: rgb(67, 65, 165);
   text-align: center;
-  font-weight: 700;
+  font-size: 2rem;
+  color: rgb(67, 65, 165);
+  margin-bottom: 3rem;
 }
+
+/* ===========================
+   Timeline Layout
+=========================== */
+
+.timeline {
+  max-width: 950px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ===========================
+   Card
+=========================== */
 
 .card {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2.5rem;
-  border-radius: 12px;
-  border: 2px solid #6596ec;
-  background: linear-gradient(135deg, #184356, #0f172a);
-  color: #eee;
+  background: linear-gradient(135deg, #b5c4de, #6596ec);
+
+  border: 10px solid #184356;
+  border-radius: 10px;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,.15);
+
+  padding: 1.8rem;
+
+  transition: all .3s ease;
+
+  position: relative;
+  overflow: hidden;
 }
 
-.entry {
-  padding-bottom: 1.1rem;
-  margin-bottom: 1.1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0,0,0,.25);
 }
 
-.entry:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
+/* Left accent */
+
+.card::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 8px;
+  height: 100%;
+
+  background: #184356;
 }
 
-.role {
-  font-weight: 700;
-  margin-bottom: 0.25rem;
+/* ===========================
+   Header
+=========================== */
+
+.header {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+
+  margin-bottom: 1.4rem;
 }
 
-.company {
+.icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.header h3 {
+  margin: 0;
+  font-size: 1.35rem;
+  color: #0f172a;
+}
+
+.header h4 {
+  margin: .3rem 0 .7rem;
+  font-size: 1rem;
+  color: #184356;
   font-weight: 600;
-  margin-bottom: 0.2rem;
 }
 
-.date,
-.location {
-  font-size: 0.95rem;
-  color: #aabedb;
-  margin-bottom: 0.35rem;
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  font-size: .9rem;
+  color: #243b53;
 }
 
-.description {
+/* ===========================
+   Achievements
+=========================== */
+
+.achievements {
+  margin: 0;
+  padding-left: 1.3rem;
+
   line-height: 1.7;
-  color: #dce8f7;
 }
+
+.achievements li {
+  margin-bottom: .6rem;
+}
+
+.achievements li::marker {
+  color: #184356;
+}
+
+/* ===========================
+   Skills
+=========================== */
+
+.skills {
+  margin-top: 1.5rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: .7rem;
+}
+
+.skills span {
+  background: #184356;
+  color: white;
+
+  padding: 6px 14px;
+
+  border-radius: 999px;
+
+  font-size: .85rem;
+  font-weight: 600;
+
+  transition: .3s ease;
+}
+
+.skills span:hover {
+  background: #0f172a;
+  transform: translateY(-2px);
+}
+/* ===========================
+   Card Content
+=========================== */
+
+.content {
+
+  display: grid;
+
+  grid-template-columns: 2.2fr 1fr;
+
+  gap: 2rem;
+
+  margin-top: 1.5rem;
+
+  align-items: start;
+
+}
+
+/* Left column */
+
+.left {
+  width: 100%;
+}
+
+/* Right column */
+
+.right {
+
+  border-left: 2px solid rgba(24,67,86,.2);
+
+  padding-left: 1.5rem;
+
+}
+
+.right h5 {
+
+  margin: 0 0 1rem;
+
+  color: #184356;
+
+  font-size: .95rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+
+}
+.skills span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  background: #184356;
+  color: white;
+
+  padding: 7px 14px;
+
+  border-radius: 999px;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  transition: all .25s ease;
+}
+
+.skills span:hover {
+  transform: translateY(-2px);
+}
+
+.skillIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skillIcon svg {
+  font-size: 18px;
+}
+.skillIcon svg {
+  font-size: 18px;
+}
+
+.react {
+  color: #61DAFB;
+}
+
+.javascript {
+  color: #F7DF1E;
+}
+
+.python {
+  color: #3776AB;
+}
+
+.astro {
+  color: #FF5D01;
+}
+
+.html {
+  color: #E34F26;
+}
+
+.css {
+  color: #1572B6;
+}
+
+.php {
+  color: #777BB4;
+}
+
+.mysql {
+  color: #4479A1;
+}
+
+.wordpress {
+  color: #21759B;
+}
+
+/* ===========================
+   Dark Mode
+=========================== */
 
 :global(body.dark-mode) .experience h2 {
-  color: #e0e0e0;
+  color: white;
 }
 
 :global(body.dark-mode) .card {
-  background-color: #4f0202;
-  color: #e0e0e0;
+
+  background: #4f0202;
+
+  border-color: #6b0b0b;
+
+  color: #ececec;
+}
+
+:global(body.dark-mode) .card::before {
+  background: #facc15;
+}
+
+:global(body.dark-mode) .header h3 {
+  color: white;
+}
+
+:global(body.dark-mode) .header h4 {
+  color: #d6d6d6;
+}
+
+:global(body.dark-mode) .meta {
+  color: #bbbbbb;
+}
+
+:global(body.dark-mode) .skills span {
+  background: #facc15;
+  color: #111;
+}
+
+:global(body.dark-mode) .skills span:hover {
+  background: #fde047;
+}
+:global(body.dark-mode) .right {
+
+  border-left: 2px solid rgba(255,255,255,.15);
+
+}
+
+:global(body.dark-mode) .right h5 {
+
+  color: #facc15;
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width: 768px) {
+
+  .experience {
+    padding: 3rem 1rem;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: .7rem;
+  }
+
+  .icon {
+    font-size: 1.8rem;
+  }
+
+  .header h3 {
+    font-size: 1.2rem;
+  }
+
+  .meta {
+    flex-direction: column;
+    gap: .35rem;
+  }
+
+  .card {
+    padding: 1.4rem;
+    border-width: 6px;
+  }
+  @media (max-width:768px){
+
+.content{
+
+grid-template-columns:1fr;
+
+gap:1.5rem;
+
+}
+
+.right{
+
+border-left:none;
+
+border-top:1px solid rgba(0,0,0,.15);
+
+padding-left:0;
+
+padding-top:1rem;
+
+}
+
+:global(body.dark-mode) .right{
+
+border-top:1px solid rgba(255,255,255,.15);
+
+}
+
+}
+
 }

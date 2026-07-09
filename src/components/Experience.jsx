@@ -1,60 +1,115 @@
 import styles from "./Experience.module.css";
+import {
+  SiReact,
+  SiJavascript,
+  SiPython,
+  SiAstro,
+  SiHtml5,
+  SiCss,
+  SiPhp,
+  SiMysql,
+  SiWordpress,
+} from "react-icons/si";
+
+const techIcons = {
+  React: <SiReact className={styles.react} />,
+  JavaScript: <SiJavascript className={styles.javascript} />,
+  Python: <SiPython className={styles.python} />,
+  Astro: <SiAstro className={styles.astro} />,
+  HTML: <SiHtml5 className={styles.html} />,
+  CSS: <SiCss className={styles.css} />,
+  PHP: <SiPhp className={styles.php} />,
+  SQL: <SiMysql className={styles.mysql} />,
+  WordPress: <SiWordpress className={styles.wordpress} />,
+};
 
 const experiences = [
   {
-    role: "ICT Trainee / Cybersecurity Trainee",
+    icon: "🛡️",
+    role: "Cybersecurity Trainee",
     company: "Cyber Security Finland",
-    type: "Full-time",
     period: "Jun 2026 – Present",
-    location: "Helsinki Metropolitan Area · Hybrid",
-    description:
-      "Currently working on web redesign, security assessments, and secure frontend development using React, HTML, CSS, JavaScript, and Astro.",
+    location: "Helsinki, Finland · Hybrid",
+    achievements: [
+      "Redesigning the company website using modern frontend technologies.",
+      "Building secure and responsive user interfaces with Astro, HTML, CSS and JavaScript.",
+      "Improving accessibility, usability, and security best practices.",
+      "Collaborating with the team on real-world cybersecurity projects."
+    ],
+    skills: ["Astro", "JavaScript", "HTML", "CSS", "Security"]
   },
+
   {
-    role: "Lastenhoitaja",
+    icon: "👶",
+    role: "Childcare Provider",
     company: "Seure Henkilöstöpalvelut Oy",
-    type: "Full-time",
     period: "Oct 2023 – Jul 2026",
-    location: "Helsinki, Uusimaa, Finland · On-site",
-    description:
-      "Provided daily care and education for children in a Finnish-speaking environment while strengthening communication, patience, and crisis management skills. This role also supported my Finnish language learning and helped me build confidence in a new cultural and professional setting.",
+    location: "Helsinki, Finland",
+    achievements: [
+      "Worked in a Finnish-speaking environment.",
+      "Developed strong communication and teamwork skills.",
+      "Strengthened adaptability and problem-solving in daily situations.",
+      "Built confidence working in a new culture while improving Finnish."
+    ],
+    skills: ["Communication", "Teamwork", "Finnish", "Adaptability"]
   },
+
   {
+    icon: "📦",
     role: "Senior Quality Control Executive",
     company: "HappyFresh",
-    type: "Full-time",
     period: "Mar 2016 – Aug 2019",
-    location: "Malaysia · On-site",
-    description:
-      "Managed quality assurance processes, improved content accuracy, and supported cross-functional teams in a fast-paced e-commerce environment.",
+    location: "Malaysia",
+    achievements: [
+      "Managed quality assurance processes for e-commerce content.",
+      "Improved data accuracy and workflow efficiency.",
+      "Collaborated with cross-functional international teams.",
+      "Maintained high quality standards in a fast-paced environment."
+    ],
+    skills: ["Quality Assurance", "Data", "Teamwork", "Problem Solving"]
   },
+
   {
+    icon: "🛒",
     role: "Content Executive",
     company: "Shopee",
-    type: "Full-time",
     period: "Jun 2015 – Mar 2016",
     location: "Malaysia",
-    description:
-      "Reviewed digital content and improved platform consistency through systematic quality control and cross-team coordination.",
+    achievements: [
+      "Reviewed and validated digital content.",
+      "Maintained platform quality and consistency.",
+      "Worked closely with internal teams to improve processes."
+    ],
+    skills: ["Content", "Quality", "Communication"]
   },
+
   {
+    icon: "🔬",
     role: "Research Assistant",
     company: "National University of Malaysia (UKM)",
-    type: "Part-time",
     period: "Jun 2014 – Sep 2015",
     location: "Selangor, Malaysia",
-    description:
-      "Supported academic research on thermoelectric power generation, contributing to technical analysis, data handling, and engineering problem-solving.",
+    achievements: [
+      "Conducted research on thermoelectric power generation.",
+      "Performed technical analysis and data collection.",
+      "Supported engineering experiments and documentation."
+    ],
+    skills: ["Research", "Engineering", "Analysis"]
   },
+
   {
+    icon: "⚡",
     role: "Commercial Expert",
     company: "Iman Electronic",
-    type: "Full-time",
     period: "Apr 2009 – Aug 2013",
     location: "Iran",
-    description:
-      "Managed customer communication and commercial operations in the electronics import industry while strengthening teamwork and technical documentation skills.",
-  },
+    achievements: [
+      "Managed customer communication and supplier coordination.",
+      "Supported international electronics import operations.",
+      "Prepared technical and commercial documentation."
+    ],
+    skills: ["Electronics", "Communication", "Documentation"]
+  }
 ];
 
 const Experience = () => {
@@ -62,16 +117,55 @@ const Experience = () => {
     <section id="experience" className={styles.experience}>
       <h2>Experience</h2>
 
-      <div className={styles.card}>
-        {experiences.map((item) => (
-          <div className={styles.entry} key={item.role}>
-            <p className={styles.role}>{item.role}</p>
-            <p className={styles.company}>
-              {item.company} · {item.type}
-            </p>
-            <p className={styles.date}>{item.period}</p>
-            <p className={styles.location}>{item.location}</p>
-            <p className={styles.description}>{item.description}</p>
+      <div className={styles.timeline}>
+        {experiences.map((exp) => (
+          <div className={styles.card} key={exp.role}>
+
+            <div className={styles.header}>
+              <div className={styles.icon}>{exp.icon}</div>
+
+              <div>
+                <h3>{exp.role}</h3>
+                <h4>{exp.company}</h4>
+
+                <div className={styles.meta}>
+                  <span>📅 {exp.period}</span>
+                  <span>📍 {exp.location}</span>
+                </div>
+              </div>
+            </div>
+
+<div className={styles.content}>
+
+  <div className={styles.left}>
+
+    <ul className={styles.achievements}>
+      {exp.achievements.map((item, index) => (
+        <li key={index}>{item}</li>
+      ))}
+    </ul>
+
+  </div>
+
+  <div className={styles.right}>
+
+    <h5>Tech Stack</h5>
+
+<div className={styles.skills}>
+  {exp.skills.map((skill) => (
+    <span key={skill}>
+      {techIcons[skill] && (
+        <span className={styles.skillIcon}>
+          {techIcons[skill]}
+        </span>
+      )}
+      {skill}
+    </span>
+  ))}
+</div>
+  </div>
+
+</div>
           </div>
         ))}
       </div>
