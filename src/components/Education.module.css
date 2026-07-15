@@ -4,11 +4,11 @@
 
 .education h2 {
   font-size: 2rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   color: rgb(67, 65, 165);
   text-align: center;
+  align-items: center;
   font-weight: 700;
-  display: inline-block;
 }
 
 /* Card */

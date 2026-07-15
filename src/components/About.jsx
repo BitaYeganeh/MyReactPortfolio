@@ -100,7 +100,7 @@ const About = () => {
       </div>
 
       <section id="languages" className={styles.languages}>
-        <h3>Languages & Availability</h3>
+        <h3>Languages</h3>
 
         <ul>
           <li>
@@ -111,9 +111,7 @@ const About = () => {
             <strong>English:</strong> Fluent
           </li>
 
-          <li>
-            <strong>Availability:</strong> Full-time trainee opportunities
-          </li>
+          
         </ul>
       </section>
     </section>
