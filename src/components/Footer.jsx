@@ -1,5 +1,5 @@
 import styles from "./Footer.module.css";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaArrowUp } from "react-icons/fa";
 
 const Footer = ({ scrollToTop }) => {
   return (
@@ -26,9 +26,13 @@ const Footer = ({ scrollToTop }) => {
       <p>Created @ {new Date().getFullYear()}</p>
 
       {/* Scroll button */}
-      <button className={styles.backToTop} onClick={scrollToTop}>
-        ⬆ Back to Top
-      </button>
+  <button
+  className={styles.backToTop}
+  onClick={scrollToTop}
+  aria-label="Back to top"
+>
+  <FaArrowUp />
+</button>
     </footer>
   );
 };

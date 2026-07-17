@@ -9,104 +9,69 @@ html,
 body,
 #root {
   height: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-  scroll-behavior: smooth; /* smooth scroll for window */
+  width: 100%;
+  overflow: hidden; /* Prevent double scrollbars */
 }
 
 body {
-  font-family: Arial, sans-serif;
-  transition: background-color 0.3s, color 0.3s;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #FF6B00;
+  color: #ffffff;
 }
 
-/* ===== FLEX LAYOUT FOR FOOTER ===== */
-#root > div {
+/* ===== APP CONTAINER ===== */
+.app-container {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* ===== MAIN CONTENT ===== */
+.app-main {
+  width: 100%;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
-  min-height: 100%;
 }
 
-main {
-  flex: 1; /* take remaining space */
-  padding-top: 80px; /* header height */
+/* ===== SECTIONS WRAPPER ===== */
+.sections-wrapper {
+  background: #000000; /* Black background for sections after hero */
+}
+
+/* ===== SECTION CONTAINER (for non-hero sections) ===== */
+.section-container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 4rem 2rem;
   width: 100%;
-  /* Removed overflow-y and height to allow window scrolling */
 }
 
-/* ===== LIGHT / DARK MODE ===== */
-body.light-mode {
-  background-color: #f0f0f0;
-  color: #222;
-}
-
-body.dark-mode {
-  background-color: #1f260d;
-  color: #e0e0e0;
-}
-
-/* ===== HEADER & FOOTER ===== */
-body.light-mode header {
-  background-color: #6596ec;
-  color: white;
-}
-
-body.dark-mode header {
-  background-color: #4f0202;
-  color: #f1f1f1;
-}
-
-body.light-mode footer {
-  background-color: #6596ec;
-  color: white;
-}
-
-body.dark-mode footer {
-  background-color: #4f0202;
-  color: #f0f0f0;
-}
-
-/* ===== LINKS ===== */
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-a:hover {
-  opacity: 0.8;
-}
-
-/* ===== BUTTONS ===== */
-button {
-  cursor: pointer;
-  font-family: inherit;
-}
-
-/* ===== MOBILE ADJUSTMENTS ===== */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  main {
-    padding: 90px 15px 20px 15px;
+  .section-container {
+    padding: 2rem 1rem;
   }
 }
 
-/* ===== GLOW EFFECT ===== */
-@keyframes glow {
-  0% {
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
-  }
-  100% {
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-  }
+/* ===== SCROLLBAR STYLING ===== */
+.app-container::-webkit-scrollbar {
+  width: 10px;
 }
 
-.glow {
-  transition: box-shadow 0.3s ease-in-out;
+.app-container::-webkit-scrollbar-track {
+  background: #000000;
 }
 
-.group:hover .glow {
-  animation: glow 1s ease-in-out infinite;
+.app-container::-webkit-scrollbar-thumb {
+  background: #FF6B00;
+  border-radius: 5px;
 }
+
+.app-container::-webkit-scrollbar-thumb:hover {
+  background: #FF8C33;
+}
+
+/* ===== Keep your existing styles for other elements ===== */
+/* ... any other styles you want to keep ... */

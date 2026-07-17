@@ -16,9 +16,10 @@ const Education = () => {
 
         <div className={styles.entry}>
           <p>
-            • Software Development (March 2025 – Oct 2026) — Business College
+            • Software Development — Business College
             Helsinki
           </p>
+          <p className={styles.date}>March 2025 – Oct 2026</p>
           <p className={styles.focus}>
             (Focus: React, JavaScript, WordPress, PHP, UI/UX Design,
             SQL, and Web Development)

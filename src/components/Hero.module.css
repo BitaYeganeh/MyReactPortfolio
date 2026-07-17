@@ -1,181 +1,505 @@
 .hero {
+  min-height: calc(100vh - 150px); /* Increased from 100px to 150px */
+  width: 100%;
+  background: #FF6B00;
+  display: flex;
+  flex-direction: column;
   position: relative;
-  min-height: 100vh;
-  overflow: visible;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+/* ===== BACKGROUND PATTERN ===== */
+.bgPattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(0, 0, 0, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ===== NAVIGATION ===== */
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1.5rem 3rem;
+  background: transparent;
+}
+
+.navContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navCenter {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding: 1rem 1.25rem 1rem;
-  background: linear-gradient(135deg, #184356, #0f172a);
-  color: white;
-  text-align: center;
+  gap: 2.5rem;
+  flex: 1;
 }
 
-.content,
-.spinWrapper {
-  position: relative;
-  z-index: 8;
-  color: white;
-  line-height: 2;
-}
-
-.content {
+.logo {
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 700;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  max-width: 700px;
+  gap: 0.3rem;
+}
+
+.logoText {
+  color: #000000; /* Black text for "Bita" */
+  -webkit-text-stroke: 0; /* No border needed for black text */
+  text-stroke: 0;
+}
+
+.logoAccent {
+  color: #ffffff; /* White text for "Yeganeh" */
+}
+
+.navLink {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: 'Courier New', monospace;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.navLink:hover {
+  color: #ffffff;
+}
+
+.navLink:hover::after {
   width: 100%;
 }
 
-.title {
-  font-weight: 600;
+.contactLink {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: 'Courier New', monospace;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.contactSlash {
+  color: rgba(255, 255, 255, 0.5);
+  margin-right: 4px;
+  font-weight: 300;
+}
+
+.contactLink:hover {
+  color: #ffffff;
+}
+
+/* Underline effect */
+.contactLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.contactLink:hover::after {
+  width: 100%;
+}
+/* ===== MAIN CONTENT ===== */
+.content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 4rem 2rem 4rem;
+  position: relative;
+  z-index: 1;
+  gap: 2rem;
+}
+
+/* ===== SIDE TEXT ===== */
+.sideText {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Courier New', monospace; /* Match navbar font */
+  font-weight: 500; /* Match navbar weight */
+  font-size: 0.9rem; /* Match navbar size */
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  flex: 0 0 auto;
+  width: 420px;
+  color: rgba(255, 255, 255, 0.8); /* Match navbar text color */
+  line-height: 1.6; /* Better readability */
+  padding: 0; /* Remove default padding */
+}
+
+.leftText {
+  transform: translateX(-10px);
+  text-align: left;
+  padding-top: 80px; /* Add padding from top */
+}
+
+.rightText {
+  transform: translateX(50px);
+  text-align: right;
+  padding-bottom: 80px; /* Add padding from bottom */
+  margin-top: 300px;
+}
+
+.sideTextLine {
+  display: block;
+  font-family: 'Courier New', monospace; /* Ensure monospace font */
+  font-weight: 500; /* Match navbar */
+  font-size: 0.9rem; /* Match navbar */
+  color: rgba(255, 255, 255, 0.8); /* Match navbar */
+  letter-spacing: normal; /* Remove uppercase letter spacing */
+  text-transform: none; /* Remove uppercase transformation */
+}
+
+.sideTextLine:last-child {
+  color: rgba(255, 255, 255, 0.8); /* Match navbar color */
+}
+/* ===== CENTER CONTENT ===== */
+.centerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex: 1;
+  max-width: 500px;
+}
+
+/* ===== TITLE OVERLAY ===== */
+/* ===== TITLE OVERLAY ===== */
+.titleOverlay {
+  position: absolute;
+  top: -70px;
+  z-index: 5;
   text-align: center;
-  line-height: 1.3;
+  opacity: 0;
+  transform: translateY(-30px) translateX(-50%);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: normal;
+  word-spacing: 2rem;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
   margin: 0;
 }
 
-.gradientText {
-  background: linear-gradient(90deg, #ff6ec4, #7873f5, #4ade80, #facc15);
-  background-size: 300% 300%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradientMove 6s ease infinite;
+.title span {
+  display: block;
+  font-size: 5.5rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, monospace;
+  text-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
 }
 
-.gradientSubtitle {
-  display: inline-block;
-  font-weight: 600;
-  background: linear-gradient(90deg, #c7ab7b, #c610b1, #76df06);
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradientMove 3s ease infinite;
+.title span:last-child {
+  color: #ffffff;
+  font-size: 5.5rem;
+  word-spacing: 1rem;
+  
+  /* Black border only on DEVELOPER */
+  -webkit-text-stroke: 2px #000000;
+  text-stroke: 2px #000000;
+  
+  /* Keep text white with black outline */
+  color: #ffffff;
+}
+/* ===== PROFILE IMAGE ===== */
+.imageWrapper {
+  width: 200px;
+  height: 200px;
+  border-radius: 10%;
+  border: 6px solid white;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 2;
+  animation: float 6s ease-in-out infinite;
+  margin-top: 150px;
 }
 
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== FLOAT ANIMATION ===== */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
   }
   50% {
-    background-position: 100% 50%;
+    transform: translateY(-10px);
+  }
+}
+
+/* ===== THICK SKILLS BAR - MARQUEE STYLE ===== */
+.skillsBar {
+  width: 100%;
+  background: #FF6B00;
+  padding: 2rem 0; /* Increased padding for bigger text */
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  display: block;
+}
+
+.skillsTrack {
+  display: flex;
+  align-items: center;
+  gap: 4rem; /* Increased gap for bigger text */
+  animation: scrollSkills 60s linear infinite;
+  white-space: nowrap;
+  width: max-content;
+  padding: 0 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.skillsTrack.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes scrollSkills {
+  0% {
+    transform: translate3d(0, 0, 0);
   }
   100% {
-    background-position: 0% 50%;
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
-.content h1 {
-  font-size: clamp(2rem, 5vw, 3.1rem);
-}
-
-.content > :last-child {
-  margin-top: 1rem;
-}
-
-.spinWrapper {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  width: 180px;
-  height: 180px;
-  pointer-events: none;
-  overflow: visible;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.spinText {
-  font-size: 1rem;
-  letter-spacing: 0.25em;
+/* Apply the font styles to the actual text elements */
+.skillTag {
+  --skill-fill: #ffffff;
+  --skill-stroke: #000000;
+  color: var(--skill-fill);
+  font-family: 'Courier New', monospace;
+  font-weight: 900;
+  font-size: 4.5rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  flex-shrink: 0;
   text-transform: uppercase;
-  opacity: 0.8;
-  animation: spin 10s linear infinite;
+  letter-spacing: 0.15em;
+  -webkit-text-stroke: 2px var(--skill-stroke);
+  text-stroke: 2px var(--skill-stroke);
 }
 
-.subtitle {
-  margin-top: 0;
-  font-size: clamp(0.95rem, 2.2vw, 1.125rem);
-  color: #b5c8e4;
-  line-height: 1.8;
-  max-width: 90%;
+.skillTag:nth-child(even) {
+  --skill-fill: #000000;
+  --skill-stroke: #ffffff;
+}
+
+.skillTag::after {
+  content: '•';
+  position: absolute;
+  right: -2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--skill-fill);
+  font-size: 1.8rem;
+  opacity: 0.8;
+}
+
+.skillTag:last-child::after {
+  display: none;
+}
+
+.skillTag:hover {
+  color: transparent;
+  transform: scale(1.05);
+}
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .sideText {
+    width: 80px;
+  }
+  
+  .sideTextLine {
+    font-size: 2.5rem;
+  }
+  
+  .imageWrapper {
+    width: 220px;
+    height: 220px;
+  }
+  
+  .title span {
+    font-size: 5rem;
+  }
+  
+  .title span:last-child {
+    font-size: 4.5rem;
+  }
+  
+  .titleOverlay {
+    top: -70px;
+  }
+  
+  .skillsBar {
+    padding: 1.5rem 0;
+  }
+  
+  .skillTag {
+    font-size: 1rem;
+  }
+  
+  .skillsTrack {
+    gap: 2.5rem;
+    animation: scrollSkills 25s linear infinite;
+  }
 }
 
 @media (max-width: 768px) {
   .hero {
-    padding: 0.75rem 1rem 0.5rem;
-    justify-content: center;
-    gap: 0.9rem;
-    min-height: auto;
+    min-height: calc(100vh - 80px);
   }
-
-  .spinWrapper {
-    position: relative;
-    top: auto;
-    right: auto;
-    align-self: flex-end;
-    width: 110px;
-    height: 110px;
-    margin-right: 0.25rem;
-    margin-bottom: 0.15rem;
+  
+  .nav {
+    padding: 1rem 1.5rem;
   }
-
-  .spinText {
-    font-size: 0.75rem;
+  
+  .navCenter {
+    display: none;
   }
-
+  
+  .navContainer {
+    justify-content: space-between;
+  }
+  
   .content {
-    margin-top: 0;
+    padding: 5rem 1.5rem 1rem 1.5rem;
+    flex-direction: column;
+    gap: 1rem;
   }
-
-  .content h1 {
-    margin-bottom: 0.6rem;
+  
+  .sideText {
+    display: none;
   }
-
-  .subtitle {
-    max-width: 100%;
-    padding: 0 0.25rem;
-    margin-top: 0.35rem;
+  
+  .imageWrapper {
+    width: 180px;
+    height: 180px;
+    margin-top: 30px;
+  }
+  
+  .titleOverlay {
+    position: relative;
+    top: 0;
+    transform: none;
+    margin-bottom: 0.5rem;
+  }
+  
+  .titleOverlay.visible {
+    transform: none;
+  }
+  
+  .title span {
+    font-size: 2.5rem;
+  }
+  
+  .title span:last-child {
+    font-size: 2.2rem;
+  }
+  
+  .skillsBar {
+    padding: 1.2rem 0;
+  }
+  
+  .skillTag {
+    font-size: 0.9rem;
+  }
+  
+  .skillsTrack {
+    gap: 2rem;
+    animation: scrollSkills 18s linear infinite;
+    padding: 0 1rem;
   }
 }
 
 @media (max-width: 480px) {
   .hero {
-    padding: 0.5rem 0.85rem 0.35rem;
-    gap: 0.7rem;
-    min-height: auto;
+    min-height: calc(100vh - 60px);
   }
-
-  .content {
-    margin-top: 0;
+  
+  .imageWrapper {
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
   }
-
-  .content h1 {
-    font-size: 1.9rem;
-    margin-bottom: 0.45rem;
+  
+  .title span {
+    font-size: 1.8rem;
   }
-
-  .content > :last-child {
-    margin-top: 0.55rem;
+  
+  .title span:last-child {
+    font-size: 1.6rem;
   }
-
-  .spinWrapper {
-    width: 90px;
-    height: 90px;
-    margin-right: 0.1rem;
-    margin-bottom: 0.1rem;
+  
+  .skillsBar {
+    padding: 1rem 0;
   }
-
-  .spinText {
-    font-size: 0.68rem;
-    letter-spacing: 0.1em;
+  
+  .skillTag {
+    font-size: 0.8rem;
   }
-
-  .subtitle {
-    line-height: 1.5;
-    font-size: 0.9rem;
-    margin-top: 0.2rem;
+  
+  .skillsTrack {
+    gap: 1.5rem;
+    animation: scrollSkills 14s linear infinite;
+    padding: 0 0.5rem;
   }
 }

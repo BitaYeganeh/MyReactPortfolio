@@ -25,36 +25,43 @@ function App() {
   };
 
   return (
-    <div ref={scrollContainerRef} style={{ height: "100%", overflowY: "auto" }}>
-      <Header onOpenSkills={() => setIsSkillsOpen(true)} />
+    <div ref={scrollContainerRef} className="app-container">
+      {/* Header is now integrated into Hero, so we remove it from here */}
+      {/* <Header onOpenSkills={() => setIsSkillsOpen(true)} /> */}
 
-      <main>
-        <section id="hero">
-          <Hero />
-        </section>
-        <section id="about">
-          <About />
-        </section>
-        <section id="projects">
-          <Projects />
-        </section>
-        <section id="education">
-          <Education />
-        </section>
-                <section id="experience">
-          <Experience />
-        </section>
-        <section id="certificates">
-          <Certificates />
-        </section>
+      <main className="app-main">
+        {/* Hero - Full screen, no wrapper section */}
+        <Hero />
+        
+        {/* All other sections with container class */}
+        <div className="sections-wrapper">
+          <section id="about" className="section-container">
+            <About />
+          </section>
+          
+          <section id="projects" className="section-container">
+            <Projects />
+          </section>
+          
+          <section id="education" className="section-container">
+            <Education />
+          </section>
+          
+          <section id="experience" className="section-container">
+            <Experience />
+          </section>
+          
+          <section id="certificates" className="section-container">
+            <Certificates />
+          </section>
 
-        <section id="contact">
-          <Contact />
-        </section>
+          <section id="contact" className="section-container">
+            <Contact />
+          </section>
+        </div>
       </main>
 
       <Skills isOpen={isSkillsOpen} onClose={() => setIsSkillsOpen(false)} />
-
       <Footer scrollToTop={scrollToTop} />
     </div>
   );

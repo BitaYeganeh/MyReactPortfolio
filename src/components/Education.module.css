@@ -66,8 +66,8 @@ background: linear-gradient(135deg, #f5f6f9, #a7c1ee);
 .focus {
   font-style: italic;
   font-weight: 500;
-  margin-bottom: 0.75rem;
-  color: rgb(67, 65, 165);
+  margin-top: 2rem;
+  color: rgb(6, 4, 110);
 }
 
 /* Dark mode */
