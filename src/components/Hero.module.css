@@ -1,5 +1,5 @@
 .hero {
-  min-height: calc(100vh - 150px); /* Increased from 100px to 150px */
+  min-height: calc(100vh - 150px);
   width: 100%;
   background: #FF6B00;
   display: flex;
@@ -9,6 +9,7 @@
   margin: 0;
   padding: 0;
 }
+
 /* ===== BACKGROUND PATTERN ===== */
 .bgPattern {
   position: absolute;
@@ -40,19 +41,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .navCenter {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2.5rem;
+  gap: 1.8rem;
   flex: 1;
+  flex-wrap: wrap;
+  min-width: 260px;
 }
 
 .logo {
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1.7rem;
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -60,13 +65,13 @@
 }
 
 .logoText {
-  color: #000000; /* Black text for "Bita" */
-  -webkit-text-stroke: 0; /* No border needed for black text */
+  color: #000000;
+  -webkit-text-stroke: 0;
   text-stroke: 0;
 }
 
 .logoAccent {
-  color: #ffffff; /* White text for "Yeganeh" */
+  color: #ffffff;
 }
 
 .navLink {
@@ -120,7 +125,6 @@
   color: #ffffff;
 }
 
-/* Underline effect */
 .contactLink::after {
   content: '';
   position: absolute;
@@ -135,60 +139,65 @@
 .contactLink:hover::after {
   width: 100%;
 }
+
 /* ===== MAIN CONTENT ===== */
 .content {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 6rem 4rem 2rem 4rem;
+  padding: 2rem 4rem 2rem 4rem;
   position: relative;
   z-index: 1;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 /* ===== SIDE TEXT ===== */
 .sideText {
   display: flex;
   flex-direction: column;
-  font-family: 'Courier New', monospace; /* Match navbar font */
-  font-weight: 500; /* Match navbar weight */
-  font-size: 0.9rem; /* Match navbar size */
+  font-family: 'Courier New', monospace;
+  font-weight: 500;
+  font-size: 0.9rem;
   opacity: 0;
   transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   flex: 0 0 auto;
   width: 420px;
-  color: rgba(255, 255, 255, 0.8); /* Match navbar text color */
-  line-height: 1.6; /* Better readability */
-  padding: 0; /* Remove default padding */
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  padding: 0;
 }
 
 .leftText {
-  transform: translateX(-10px);
-  text-align: left;
-  padding-top: 80px; /* Add padding from top */
+  transform: translateX(40px);
+  text-align: justify;
+  padding-left: 20px;
+  margin-top: 300px;
 }
 
 .rightText {
-  transform: translateX(50px);
-  text-align: right;
-  padding-bottom: 80px; /* Add padding from bottom */
+  transform: translateX(-30px);
+  text-align: justify;
+  padding-bottom: 80px;
   margin-top: 300px;
+  padding-right: 2px;
 }
 
 .sideTextLine {
   display: block;
-  font-family: 'Courier New', monospace; /* Ensure monospace font */
-  font-weight: 500; /* Match navbar */
-  font-size: 0.9rem; /* Match navbar */
-  color: rgba(255, 255, 255, 0.8); /* Match navbar */
-  letter-spacing: normal; /* Remove uppercase letter spacing */
-  text-transform: none; /* Remove uppercase transformation */
+  font-family: 'Courier New', monospace;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: justify;
 }
 
 .sideTextLine:last-child {
-  color: rgba(255, 255, 255, 0.8); /* Match navbar color */
+  color: rgba(255, 255, 255, 0.8);
 }
+
 /* ===== CENTER CONTENT ===== */
 .centerContent {
   display: flex;
@@ -197,21 +206,24 @@
   justify-content: center;
   position: relative;
   flex: 1;
-  max-width: 500px;
+  max-width: 360px;
 }
 
-/* ===== TITLE OVERLAY ===== */
-/* ===== TITLE OVERLAY ===== */
+/* ===== TITLE OVERLAY - CENTERED ===== */
 .titleOverlay {
-  position: absolute;
-  top: -70px;
-  z-index: 5;
+  position: relative;
   text-align: center;
   opacity: 0;
-  transform: translateY(-30px) translateX(-50%);
-  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(-15px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   white-space: normal;
-  word-spacing: 2rem;
+  word-spacing: 0.5rem;
+  margin-top: -160px;
+}
+
+.titleOverlay.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .title {
@@ -224,43 +236,41 @@
 
 .title span {
   display: block;
+  font-weight: 1700;
   font-size: 5.5rem;
-  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
   color: #ffffff;
   letter-spacing: -0.05em;
   text-transform: uppercase;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, monospace;
-  text-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
-  white-space: nowrap;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 .title span:last-child {
   color: #ffffff;
+  font-weight: 1200;
   font-size: 5.5rem;
-  word-spacing: 1rem;
-  
-  /* Black border only on DEVELOPER */
-  -webkit-text-stroke: 2px #000000;
-  text-stroke: 2px #000000;
-  
-  /* Keep text white with black outline */
-  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  word-spacing: 0.8rem;
 }
-/* ===== PROFILE IMAGE ===== */
+
+
+/* ===== PROFILE IMAGE - TOP RIGHT UNDER CONTACT ME ===== */
 .imageWrapper {
-  width: 200px;
-  height: 200px;
+  position: absolute;
+  top: 120px;
+  right: 130px;
+  width: 150px;
+  height: 150px;
   border-radius: 10%;
-  border: 6px solid white;
+  border: 1px solid blck;
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   opacity: 0;
   transform: scale(0.8);
   transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  z-index: 2;
-  animation: float 6s ease-in-out infinite;
-  margin-top: 150px;
+  z-index: 10;
 }
 
 .profileImage {
@@ -284,7 +294,7 @@
 .skillsBar {
   width: 100%;
   background: #FF6B00;
-  padding: 2rem 0; /* Increased padding for bigger text */
+  padding: 2rem 0;
   overflow: hidden;
   position: relative;
   z-index: 10;
@@ -295,7 +305,7 @@
 .skillsTrack {
   display: flex;
   align-items: center;
-  gap: 4rem; /* Increased gap for bigger text */
+  gap: 4rem;
   animation: scrollSkills 60s linear infinite;
   white-space: nowrap;
   width: max-content;
@@ -320,7 +330,6 @@
   }
 }
 
-/* Apply the font styles to the actual text elements */
 .skillTag {
   --skill-fill: #ffffff;
   --skill-stroke: #000000;
@@ -359,9 +368,9 @@
 }
 
 .skillTag:hover {
-  color: transparent;
   transform: scale(1.05);
 }
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
   .sideText {
@@ -369,12 +378,14 @@
   }
   
   .sideTextLine {
-    font-size: 2.5rem;
+    font-size: 0.95rem;
   }
   
   .imageWrapper {
-    width: 220px;
-    height: 220px;
+    width: 120px;
+    height: 120px;
+    top: 70px;
+    right: 30px;
   }
   
   .title span {
@@ -383,10 +394,6 @@
   
   .title span:last-child {
     font-size: 4.5rem;
-  }
-  
-  .titleOverlay {
-    top: -70px;
   }
   
   .skillsBar {
@@ -413,7 +420,11 @@
   }
   
   .navCenter {
-    display: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.85rem;
+    width: 100%;
   }
   
   .navContainer {
@@ -431,28 +442,23 @@
   }
   
   .imageWrapper {
-    width: 180px;
-    height: 180px;
-    margin-top: 30px;
+    width: 100px;
+    height: 100px;
+    top: 70px;
+    right: 20px;
   }
   
   .titleOverlay {
     position: relative;
-    top: 0;
-    transform: none;
-    margin-bottom: 0.5rem;
-  }
-  
-  .titleOverlay.visible {
-    transform: none;
   }
   
   .title span {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 6vw, 3rem);
+    
   }
   
   .title span:last-child {
-    font-size: 2.2rem;
+    font-size: clamp(1.9rem, 5vw, 2.6rem);
   }
   
   .skillsBar {
@@ -476,9 +482,10 @@
   }
   
   .imageWrapper {
-    width: 150px;
-    height: 150px;
-    margin-top: 20px;
+    width: 80px;
+    height: 80px;
+    top: 65px;
+    right: 15px;
   }
   
   .title span {
@@ -502,4 +509,141 @@
     animation: scrollSkills 14s linear infinite;
     padding: 0 0.5rem;
   }
+}
+/* =========================
+   SELECTION STYLES FOR HERO
+   Add this at the end of Hero.module.css
+========================= */
+
+/* Base selection for hero - orange background */
+.hero ::selection {
+  background: #FF6B00 !important;
+  color: #ffffff !important;
+}
+
+.hero ::-moz-selection {
+  background: #FF6B00 !important;
+  color: #ffffff !important;
+}
+
+/* Skills bar selection */
+.skillsBar ::selection {
+  background: #FF6B00 !important;
+  color: #00C853 !important;
+}
+
+.skillsBar ::-moz-selection {
+  background: #FF6B00 !important;
+  color: #00C853 !important;
+}
+
+/* Slash (//) turns green when selected */
+.hero .contactSlash::selection,
+.hero .sideTextLine::selection,
+.hero [class*="slash"]::selection,
+.hero .sideTextLine::-moz-selection,
+.hero .contactSlash::-moz-selection,
+.hero [class*="slash"]::-moz-selection {
+  background: #FF6B00 !important;
+  color: #00C853 !important;
+}
+
+/* Side text selection - turns green */
+.hero .sideTextLine::selection {
+  background: #FF6B00 !important;
+  color: #00C853 !important;
+}
+
+.hero .sideTextLine::-moz-selection {
+  background: #FF6B00 !important;
+  color: #00C853 !important;
+}
+
+/* Title text selection - white text on orange */
+.hero .title span::selection {
+  background: #FF6B00 !important;
+  color: #ffffff !important;
+}
+
+.hero .title span::-moz-selection {
+  background: #FF6B00 !important;
+  color: #ffffff !important;
+}
+
+/* Nav links selection - white text */
+.hero .navLink::selection {
+  background: #FF6B00 !important;
+  color: #ffffff !important;
+}
+
+.hero .navLink::-moz-selection {
+  background: #FF6B00 !important;
+  color: #ffffff !important;
+}
+
+/* Logo selection - white text */
+.hero .logoText::selection,
+.hero .logoAccent::selection {
+  background: #FF6B00 !important;
+  color: #ffffff !important;
+}
+
+.hero .logoText::-moz-selection,
+.hero .logoAccent::-moz-selection {
+  background: #FF6B00 !important;
+  color: #ffffff !important;
+}
+
+/* Contact link selection - white text */
+.hero .contactLink::selection {
+  background: #FF6B00 !important;
+  color: #ffffff !important;
+}
+
+.hero .contactLink::-moz-selection {
+  background: #FF6B00 !important;
+  color: #ffffff !important;
+}
+
+/* Skill tags - green text on orange when selected */
+.skillTag::selection {
+  background: #FF6B00 !important;
+  color: #00C853 !important;
+}
+
+.skillTag::-moz-selection {
+  background: #FF6B00 !important;
+  color: #00C853 !important;
+}
+
+/* =========================
+   GLOBAL SELECTION OVERRIDE FOR HERO
+   Make ALL orange text in hero turn green
+========================= */
+
+/* This targets any orange text in the hero section */
+.hero [style*="color: #FF6B00"]::selection,
+.hero [style*="color: #ff6b00"]::selection,
+.hero [style*="color: orange"]::selection,
+.hero [class*="orange"]::selection {
+  background: #FF6B00 !important;
+  color: #00C853 !important;
+}
+
+.hero [style*="color: #FF6B00"]::-moz-selection,
+.hero [style*="color: #ff6b00"]::-moz-selection,
+.hero [style*="color: orange"]::-moz-selection,
+.hero [class*="orange"]::-moz-selection {
+  background: #FF6B00 !important;
+  color: #00C853 !important;
+}
+/* Title text - GREEN on orange when selected */
+.hero .title span::selection {
+  background: #FF6B00 !important;
+  color: #00C853 !important;
+}
+
+.hero .title span::-moz-selection {
+  background: #FF6B00 !important;
+  color: #00C853 !important;
 }

@@ -113,7 +113,7 @@ const Hero = () => {
               className={styles.imageWrapper}
             >
               <img 
-                src="/images/Bita.png"
+                src="/images/Bitaa.png"
                 alt="Bita Yeganeh - Full Stack Developer"
                 className={styles.profileImage}
               />
@@ -148,4 +148,4 @@ WHILE YOU SLEEP</span>
   );
 };
 
-export default Hero
+export default Hero;

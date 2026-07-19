@@ -1,119 +1,93 @@
 import React from "react";
 import styles from "./About.module.css";
-import profileImage from "../assets/CVimage.jpeg";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const About = () => {
   return (
     <section id="about" className={styles.about}>
-      <h2>About Me</h2>
-
       <div className={styles.container}>
-        {/* Left Side */}
-        <div className={styles.profileWrapper}>
-          <img
-            src={profileImage}
-            alt="Bita Yeganeh"
-            className={styles.profileImage}
-          />
-
-          <h3 className={styles.title}>
-            Software Developer
-          </h3>
-
-          <p className={styles.subtitle}>
-            📍 Helsinki, Finland • ICT Student
-          </p>
-
-          <div className={styles.badges}>
-            <span>React</span>
-            <span>JavaScript</span>
-            <span>Python</span>
-            <span>Astro</span>
+        {/* Two-column layout */}
+        <div className={styles.aboutGrid}>
+          {/* Left Column - Title with 01 and bar */}
+          <div className={styles.leftColumn}>
+            <span className={styles.number}>01</span>
+            <h2 className={styles.title}>ABOUT</h2>
+            <div className={styles.bar}></div>
           </div>
-          
-          <div className={styles.socials}>
-  <a
-    href="https://github.com/BitaYeganeh"
-    target="_blank"
-    rel="noopener noreferrer"
-     aria-label={styles.github}
-  >
-    <FaGithub />
-    
-  </a>
 
-  <a
-    href="https://www.linkedin.com/in/bita-yeganeh-503144237/"
-    target="_blank"
-    rel="noopener noreferrer"
-     aria-label={styles.linkedin}
-  >
-    <FaLinkedin />
-    
-  </a>
-</div>
+          {/* Right Column - Content */}
+          <div className={styles.rightColumn}>
+            {/* Description */}
+            <div className={styles.description}>
+              <p>
+                Software Developer and ICT student based in Helsinki, Finland, with 
+                a multidisciplinary background in <strong>Electronic Engineering</strong> and 
+                <strong> Renewable Energy</strong>. I create responsive, user-friendly applications 
+                and turn complex challenges into clean, maintainable code.
+              </p>
+              <p>
+                Currently working as a <strong>Cybersecurity Trainee</strong>, I bridge 
+                frontend development with security best practices — building experiences 
+                that are both beautiful and robust.
+              </p>
+            </div>
 
-          <p className={styles.status}>
-            🚀 Open to Trainee Opportunities
-          </p>
-        </div>
+            {/* Stats Grid */}
+            <div className={styles.statsGrid}>
+              <div className={styles.statItem}>
+                <span className={styles.statNumber}>20+</span>
+                <span className={styles.statLabel}>PROJECTS BUILT</span>
+              </div>
+              <div className={styles.statItem}>
+                <span className={styles.statNumber}>98%</span>
+                <span className={styles.statLabel}>SUCCESS RATE</span>
+              </div>
+              <div className={styles.statItem}>
+                <span className={styles.statNumber}>40%</span>
+                <span className={styles.statLabel}>EFFICIENCY GAIN</span>
+              </div>
+              <div className={styles.statItem}>
+                <span className={styles.statNumber}>16</span>
+                <span className={styles.statLabel}>TECH STACK</span>
+              </div>
+            </div>
 
-        {/* Right Side */}
-        <div className={styles.text}>
-          <p>
-            I'm a <strong>Software Developer and ICT student</strong> based in
-            Helsinki, Finland, with a multidisciplinary background in{" "}
-            <strong>Electronic Engineering and Renewable Energy</strong>. I
-            enjoy building responsive, user-friendly web applications and
-            solving real-world problems through clean, maintainable code.
-          </p>
+            {/* Divider */}
+            <hr className={styles.divider} />
 
-          <p>
-            I've built several React-based projects and I'm currently working
-            as a <strong>Cybersecurity Trainee</strong>, where I contribute to
-            redesigning company websites with a focus on frontend development,
-            usability, accessibility, and security best practices.
-          </p>
-
-          <p>
-            My technical toolkit includes{" "}
-            <strong>
-              React, JavaScript, HTML, CSS, Astro, Python, SQL, PHP, and
-              WordPress
-            </strong>
-            . I enjoy turning ideas into intuitive digital experiences while
-            following modern development, accessibility, and clean coding
-            principles.
-          </p>
-
-          <p>
-            My diverse background has strengthened my adaptability,
-            communication, and analytical thinking. I'm currently seeking a{" "}
-            <strong>
-              Software Developer, Frontend Developer, or Full-Stack Trainee
-            </strong>{" "}
-            opportunity where I can contribute to meaningful projects, continue
-            learning, and grow as a professional developer.
-          </p>
+            {/* Footer */}
+            <div className={styles.footer}>
+              <div className={styles.techStack}>
+                <span>React</span>
+                <span>JavaScript</span>
+                <span>Python</span>
+                <span>Astro</span>
+                <span>SQL</span>
+                <span>PHP</span>
+              </div>
+              
+              <div className={styles.socials}>
+                <a
+                  href="https://github.com/BitaYeganeh"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                >
+                  <FaGithub />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/bita-yeganeh-503144237/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                >
+                  <FaLinkedin />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <section id="languages" className={styles.languages}>
-        <h3>Languages</h3>
-
-        <ul>
-          <li>
-            <strong>Finnish:</strong> B1–B2 (actively improving)
-          </li>
-
-          <li>
-            <strong>English:</strong> Fluent
-          </li>
-
-          
-        </ul>
-      </section>
     </section>
   );
 };
