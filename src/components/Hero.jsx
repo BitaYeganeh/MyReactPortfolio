@@ -95,19 +95,19 @@ const Hero = () => {
           </div>
 
           {/* Center - Image with Title Overlay */}
-          <div className={styles.centerContent}>
-            {/* Title on top of image */}
-            <div 
-              ref={titleRef}
-              className={styles.titleOverlay}
-            >
-              <h1 className={styles.title}>
-                <span>FULLSTACK</span>
-                <span>SOFTWARE DEVELOPER</span>
-              </h1>
-            </div>
-
-            {/* Profile Image */}
+<div className={styles.centerContent}>
+  {/* Title on top of image */}
+  <div 
+    ref={titleRef}
+    className={styles.titleOverlay}
+  >
+    <h1 className={styles.title}>
+      <span>FULLSTACK</span>
+      <span>SOFTWARE DEVELOPER</span>
+    </h1>
+  </div>
+  
+              {/* Profile Image */}
             <div 
               ref={imageRef}
               className={styles.imageWrapper}

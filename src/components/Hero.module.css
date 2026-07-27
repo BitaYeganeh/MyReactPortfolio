@@ -156,15 +156,15 @@
 .sideText {
   display: flex;
   flex-direction: column;
-  font-family: 'Courier New', monospace;
-  font-weight: 500;
-  font-size: 0.9rem;
+  font-family: 'Comic neue', sans-serif;
+  font-weight: 200;
+  font-size: 1rem;
   opacity: 0;
   transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   flex: 0 0 auto;
   width: 420px;
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.7;
   padding: 0;
 }
 
@@ -173,25 +173,30 @@
   text-align: justify;
   padding-left: 20px;
   margin-top: 300px;
+  text-transform: uppercase;
+  font-style: italic;
 }
 
 .rightText {
-  transform: translateX(-30px);
+  transform: translateX(-400px);
   text-align: justify;
-  padding-bottom: 80px;
-  margin-top: 300px;
-  padding-right: 2px;
+  padding-bottom: 6px;
+  margin-top: 400px;
+  text-transform: uppercase;
+  font-style: italic;
+  
 }
 
 .sideTextLine {
   display: block;
-  font-family: 'Courier New', monospace;
-  font-weight: 500;
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.8);
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  color: inherit;
   letter-spacing: normal;
   text-transform: none;
   text-align: justify;
+  text-transform: uppercase;
 }
 
 .sideTextLine:last-child {
@@ -209,7 +214,7 @@
   max-width: 360px;
 }
 
-/* ===== TITLE OVERLAY - CENTERED ===== */
+/* ===== TITLE - INLINE SINGLE LINE ===== */
 .titleOverlay {
   position: relative;
   text-align: center;
@@ -217,50 +222,55 @@
   transform: translateY(-15px);
   transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   white-space: normal;
-  word-spacing: 0.5rem;
-  margin-top: -160px;
-}
-
-.titleOverlay.visible {
-  opacity: 1;
-  transform: translateY(0);
+  margin-top: -80px;
+  width: 100%;
 }
 
 .title {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  line-height: 1;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  line-height: 1.2;
   margin: 0;
 }
 
 .title span {
-  display: block;
-  font-weight: 1700;
-  font-size: 5.5rem;
+  display: inline-block;
+  font-weight: 1000;
+  font-size: 6rem;
   text-align: center;
   text-transform: uppercase;
-  color: #ffffff;
+  color: black;
+    -webkit-text-stroke: 2px #ffffff;
+  text-stroke: 2px #ffffff;
   letter-spacing: -0.05em;
-  text-transform: uppercase;
   font-family: 'JetBrains Mono', monospace;
+  line-height: 1.2;
 }
 
 .title span:last-child {
   color: #ffffff;
-  font-weight: 1200;
-  font-size: 5.5rem;
+  font-weight: 1000;
+  font-size: 6rem;
   text-align: center;
   text-transform: uppercase;
   word-spacing: 0.8rem;
+  line-height: 1.2;
+  font-family: 'JetBrains Mono', monospace;
+  padding: 0 15px;
+  border-radius: 6px;
+  /* 👇 Keep on one line */
+  white-space: nowrap;
 }
-
 
 /* ===== PROFILE IMAGE - TOP RIGHT UNDER CONTACT ME ===== */
 .imageWrapper {
   position: absolute;
-  top: 120px;
-  right: 130px;
+  top: 160px;
+  right: 100px;
   width: 150px;
   height: 150px;
   border-radius: 10%;
@@ -334,7 +344,7 @@
   --skill-fill: #ffffff;
   --skill-stroke: #000000;
   color: var(--skill-fill);
-  font-family: 'Courier New', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-weight: 900;
   font-size: 4.5rem;
   padding: 0.5rem 1rem;
@@ -432,7 +442,7 @@
   }
   
   .content {
-    padding: 5rem 1.5rem 1rem 1.5rem;
+    padding: 1rem 4rem 2rem 4rem;
     flex-direction: column;
     gap: 1rem;
   }
