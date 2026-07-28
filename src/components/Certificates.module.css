@@ -3,9 +3,9 @@
 }
 
 .certificates h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 2.5rem;
-  color: rgb(67, 65, 165);
+  color: #FF6B00;
   text-align: center;
   font-weight: 700;
 }
@@ -21,9 +21,8 @@
 .card {
   overflow: hidden;
   border-radius: 14px;
-  border: 10px solid #184356;
-  background: linear-gradient(135deg, #f5f6f9, #a7c1ee);
-  color: #3879ea;
+  border: 4px solid black;
+  color: #FF6B00;
 }
 
 .previewBox {
@@ -54,11 +53,8 @@
 }
 
 .title {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  min-height: 4.5em;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
 }
 
 .issuer {
