@@ -1,12 +1,12 @@
 // src/components/Projects.jsx
 import React, { useState } from "react";
 import projects from "../data/projects";
-import ProjectCard from "./ProjectCard";
 import styles from "./Projects.module.css";
 
 const Projects = () => {
   const [showAll, setShowAll] = useState(false);
-  const initialProjects = 3; // Show first 3 projects
+  const initialProjects = 4; // Show first 4 projects initially
+  const visibleProjects = showAll ? projects : projects.slice(0, initialProjects);
 
   // Function to generate description from title
   const getDescription = (title) => {
@@ -54,47 +54,83 @@ const Projects = () => {
     return dates[id] || "2025";
   };
 
-  // Get displayed projects
-  const displayedProjects = showAll ? projects : projects.slice(0, initialProjects);
-
   return (
     <section id="projects" className={styles.projectsSection}>
       <div className={styles.container}>
-        {/* Header */}
+        {/* Header - matching Stack section */}
         <div className={styles.header}>
-          <h2 className={styles.title}>FEATURED WORK</h2>
-          <span className={styles.label}>03-Featured work</span>
+          <h2 className={styles.title}>PROJECTS</h2>
+          <span className={styles.label}>03-PROJECTS</span>
         </div>
 
-        {/* Projects Grid with ProjectCard */}
+        {/* Projects Grid - Single Column */}
         <div className={styles.projectsGrid}>
-          {displayedProjects.map((project, index) => (
-            <div key={project.id} className={styles.projectWrapper}>
-              {/* Project Number */}
-              <div className={styles.projectNumber}>
-                {String(index + 1).padStart(2, '0')}
+          {visibleProjects.map((project) => (
+            <div 
+              key={project.id} 
+              className={styles.projectCard}
+              onClick={() => {
+                if (project.live) {
+                  window.open(project.live, '_blank');
+                } else if (project.github) {
+                  window.open(project.github, '_blank');
+                }
+              }}
+            >
+              {/* Left: Content */}
+              <div className={styles.cardContent}>
+                <div className={styles.cardHeader}>
+                  <h3 className={styles.projectTitle}>{project.title}</h3>
+                  <span className={styles.projectDate}>{getDate(project.id)}</span>
+                </div>
+                <p className={styles.projectDescription}>{getDescription(project.title)}</p>
+                <div className={styles.projectTags}>
+                  {getTags(project.title).map((tag, index) => (
+                    <span key={index} className={styles.tag}>{tag}</span>
+                  ))}
+                </div>
+                <div className={styles.cardLinks}>
+                  {project.live && (
+                    <a 
+                      href={project.live} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className={styles.liveLink}
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      Live →
+                    </a>
+                  )}
+                  {project.github && (
+                    <a 
+                      href={project.github} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className={styles.githubLink}
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      GitHub
+                    </a>
+                  )}
+                </div>
               </div>
-              <ProjectCard
-                title={project.title}
-                subtitle={getDate(project.id)}
-                description={getDescription(project.title)}
-                techTags={getTags(project.title)}
-                image={project.image}
-                liveUrl={project.live}
-                githubUrl={project.github}
-              />
+
+              {/* Right: Image */}
+              <div className={styles.cardImage}>
+                <img src={project.image} alt={project.alt || project.title} />
+              </div>
             </div>
           ))}
         </div>
 
-        {/* See More Button */}
+        {/* See All Button - shows only if more than 4 projects */}
         {projects.length > initialProjects && (
           <div className={styles.seeMoreWrapper}>
             <button 
               className={styles.seeMoreButton}
               onClick={() => setShowAll(!showAll)}
             >
-              {showAll ? 'Show Less ↑' : `See All Projects (${projects.length}) ↓`}
+              {showAll ? 'Show Less ↑' : `See More Projects (${projects.length}) ↓`}
             </button>
           </div>
         )}

@@ -3,10 +3,9 @@
 ========================= */
 
 .stack {
-  padding: 4rem 3rem;
+  padding: 2rem 3rem 4rem 3rem;  
   background: #ffffff;
   color: #000000;
-  min-height: 100vh;
 }
 
 .container {
@@ -32,7 +31,7 @@
   line-height: 1;
   margin: 0;
   margin-bottom: 0.2rem;
-  background: linear-gradient(135deg, #FF6B00 0%, #e1cca5 70%);
+  background: linear-gradient(115deg, white 40%, #FF6B00 0%);
   -webkit-text-stroke: 2px #000000;
   background-size: 300% 300%;
   -webkit-background-clip: text;

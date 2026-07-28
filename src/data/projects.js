@@ -1,44 +1,48 @@
 // src/data/projects.js
 
 const projects = [
-  {
+    {
     id: 1,
+    title: "WordPress/PHP - ABC OF MEDIA Website",
+    image: "/images/abc.png",
+    alt: "WordPress/PHP Project - ABC OF MEDIA Website",
+    github: "https://github.com/BitaYeganeh/WordPress-Project---ABC-OF-MEDIA",
+  },
+    {
+    id: 2,
     title: "React - HR Management System",
     image: "/images/hrapp-screenshot.png", // replace with actual screenshot
     alt: "HR Management System",
     github: "https://github.com/BitaYeganeh/hrApp",
     live: "https://hrapp-1-68tb.onrender.com",
   },
+
+
   {
-    id: 2,
+    id: 3,
+    title: "JavaScript - Pancake Order System",
+    image: "/images/project2.png",
+    alt: "Pancake Order Project",
+    github: "https://github.com/BitaYeganeh/Summer-tasks/tree/main/Pannukakku",
+  },
+      {
+    id: 4,
     title: "WordPress/PHP - Tech News",
     image: "/images/technews.png",
     alt: "WordPress/PHP Project - Tech News",
     github: "https://github.com/BitaYeganeh/WordPress-PHP-Project---Tech-News",
   },
+
+
     {
-    id: 3,
+    id: 5,
     title: "Figma - Cafe Website UI Design",
     image: "/images/figma-cafe.png",
     alt: "Café website UI design in Figma",
     live: "https://www.figma.com/proto/LOFz2qhMrQFBrMrCsotQfl/prototype-for-a-caf%C3%A9-website?node-id=1-2&starting-point-node-id=1%3A2&t=taVksUnCMCTiGYTj-1",
   },
 
-  {
-    id: 4,
-    title: "JavaScript - Pancake Order System",
-    image: "/images/project2.png",
-    alt: "Pancake Order Project",
-    github: "https://github.com/BitaYeganeh/Summer-tasks/tree/main/Pannukakku",
-  },
 
-  {
-    id: 5,
-    title: "WordPress/PHP - ABC OF MEDIA Website",
-    image: "/images/abc.png",
-    alt: "WordPress/PHP Project - ABC OF MEDIA Website",
-    github: "https://github.com/BitaYeganeh/WordPress-Project---ABC-OF-MEDIA",
-  },
   {
     id: 6,
     title: "JavaScript - Eläintarha",

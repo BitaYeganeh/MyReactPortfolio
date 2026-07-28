@@ -3,10 +3,9 @@
 ========================= */
 
 .about {
-  padding: 1rem 3rem 5rem 3rem;
+  padding: 1rem 3rem 2rem 3rem;
   background: #ffffff;
   color: #000000;
-  min-height: 100vh;
   display: flex;
   align-items: flex-start;
 }
@@ -50,8 +49,8 @@
   font-weight: 900;
   line-height: 1;
   margin: 0;
- margin-bottom: 0.1rem;
-  background: linear-gradient(135deg, #FF6B00 0%, #e1cca5 70%);
+  margin-bottom: 0.1rem;
+  background: linear-gradient(115deg, white 40%, #FF6B00 0%);
   -webkit-text-stroke: 2px #000000;
   background-size: 300% 300%;
   -webkit-background-clip: text;
@@ -98,7 +97,7 @@
   text-transform: uppercase;
   color: black;
   margin-top: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;  /* ← Changed: reduced from 30px to 10px */
   position: relative;
   padding-left: 2rem;
   opacity: 0.8;
@@ -167,7 +166,7 @@
 .description {
   max-width: 100%;
   margin-bottom: 2rem;
-  margin-top: 6rem;
+  margin-top: 2rem;  /* ← Changed: reduced from 6rem to 2rem */
 }
 
 .description p {
@@ -199,24 +198,24 @@
 
 .statsGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);  /* ← 4 equal columns */
+  grid-template-columns: repeat(4, 1fr);
   gap: 0.8rem 3rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;  /* ← Changed: reduced from 2.5rem to 1rem */
   max-width: 100%;
 }
 
 .statItem {
   display: flex;
-  flex-direction: column;  /* ← Changed */
-  align-items: center;     /* ← Changed */
-  gap: 0.2rem;            /* ← Adjusted */
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
   padding: 0.3rem 0;
-  text-align: center;     /* ← Added */
+  text-align: center;
 }
 
 .statNumber {
   font-size: 1.5rem;
-  font-weight: 600;  /* Slightly bolder */
+  font-weight: 600;
   color: #000000;
   letter-spacing: -0.02em;
   white-space: nowrap;
@@ -226,12 +225,13 @@
 .statLabel {
   font-size: 0.5rem;
   font-family: 'JetBrains Mono', monospace;
-  font-weight: 400;  /* Slightly bolder for readability */
-  color: #666666;    /* Or #FF6B00 for orange accents */
+  font-weight: 400;
+  color: #666666;
   text-transform: uppercase;
-  letter-spacing: 0.08em;  /* Add some letter spacing */
+  letter-spacing: 0.08em;
   margin-top: 0.7rem;
 }
+
 /* =========================
    Selection Styles
 ========================= */
@@ -292,7 +292,7 @@
 
 @media (max-width: 768px) {
   .about {
-    padding: 4rem 1.5rem;
+    padding: 2rem 1.5rem;  /* ← Changed: reduced padding */
     min-height: auto;
   }
 
@@ -315,6 +315,7 @@
   .label {
     font-size: 0.7rem;
     margin-top: -2px;
+    margin-bottom: 5px;  /* ← Added */
   }
 
   .bar {
@@ -333,7 +334,7 @@
   }
 
   .description {
-    margin-top: 1rem;
+    margin-top: 0.5rem;  /* ← Changed */
   }
 
   .description p {
@@ -343,6 +344,7 @@
   .statsGrid {
     grid-template-columns: 1fr 1fr;
     gap: 0.6rem 1.5rem;
+    margin-bottom: 0.5rem;  /* ← Added */
   }
 
   .statNumber {
@@ -356,7 +358,7 @@
 
 @media (max-width: 480px) {
   .about {
-    padding: 3rem 1rem;
+    padding: 1.5rem 1rem;  /* ← Changed */
   }
 
   .aboutGrid {
@@ -369,6 +371,7 @@
 
   .label {
     font-size: 0.6rem;
+    margin-bottom: 3px;  /* ← Added */
   }
 
   .bar {
@@ -392,6 +395,7 @@
   .statsGrid {
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem 1rem;
+    margin-bottom: 0.3rem;  /* ← Added */
   }
 
   .statNumber {

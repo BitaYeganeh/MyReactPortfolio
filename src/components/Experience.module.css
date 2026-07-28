@@ -1,225 +1,291 @@
-/* ===========================
+/* src/components/Experience.module.css */
+
+/* =========================
    Experience Section
-=========================== */
+========================= */
 
 .experience {
-  padding: 4rem 2rem;
+  padding: 5rem 3rem;
+  background: #ffffff;
+  color: #000000;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
-.experience h2 {
-  text-align: center;
-  font-size: 2rem;
-  color: rgb(67, 65, 165);
-  margin-bottom: 3rem;
-}
-
-/* ===========================
-   Timeline Layout
-=========================== */
-
-.timeline {
-  max-width: 950px;
+.container {
+  max-width: 1100px;
   margin: 0 auto;
-
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-/* ===========================
-   Card
-=========================== */
-
-.card {
-  background: linear-gradient(135deg,  #f5f6f9, #a7c1ee);
-
-  border: 10px solid #184356;
-  border-radius: 10px;
-
-  box-shadow: 0 8px 20px rgba(0,0,0,.15);
-
-  padding: 1.8rem;
-
-  transition: all .3s ease;
-
-  position: relative;
-  overflow: hidden;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 35px rgba(0,0,0,.25);
-}
-
-/* Left accent */
-
-.card::before {
-  content: "";
-
-  position: absolute;
-  left: 0;
-  top: 0;
-
-  width: 8px;
-  height: 100%;
-
-  background: #184356;
-}
-
-/* ===========================
-   Header
-=========================== */
-
-.header {
-  display: flex;
-  gap: 1.2rem;
-  align-items: flex-start;
-
-  margin-bottom: 1.4rem;
-}
-
-.icon {
-  font-size: 2rem;
-  flex-shrink: 0;
-}
-
-.header h3 {
-  margin: 0;
-  font-size: 1.35rem;
-  color: #0f172a;
-}
-
-.header h4 {
-  margin: .3rem 0 .7rem;
-  font-size: 1rem;
-  color: #184356;
-  font-weight: 600;
-}
-
-.meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-
-  font-size: .9rem;
-  color: #243b53;
-}
-
-/* ===========================
-   Achievements
-=========================== */
-
-.achievements {
-  margin: 0;
-  padding-left: 1.3rem;
-
-  line-height: 1.7;
-}
-
-.achievements li {
-  margin-bottom: .6rem;
-}
-
-.achievements li::marker {
-  color: #184356;
-}
-
-/* ===========================
-   Skills
-=========================== */
-
-.skills {
-  margin-top: 1.5rem;
-
-  display: flex;
-  flex-wrap: wrap;
-  gap: .7rem;
-}
-
-.skills span {
-  background: #184356;
-  color: white;
-
-  padding: 6px 14px;
-
-  border-radius: 999px;
-
-  font-size: .85rem;
-  font-weight: 600;
-
-  transition: .3s ease;
-}
-
-.skills span:hover {
-  background: #0f172a;
-  transform: translateY(-2px);
-}
-/* ===========================
-   Card Content
-=========================== */
-
-.content {
-
-  display: grid;
-
-  grid-template-columns: 2.2fr 1fr;
-
-  gap: 2rem;
-
-  margin-top: 1.5rem;
-
-  align-items: start;
-
-}
-
-/* Left column */
-
-.left {
   width: 100%;
 }
 
-/* Right column */
+/* =========================
+   Header - Matching Projects (03-EXPERIENCE)
+========================= */
 
-.right {
-
-  border-left: 2px solid rgba(24,67,86,.2);
-
-  padding-left: 1.5rem;
-
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 3rem;
 }
 
-.right h5 {
+.title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 900;
+  line-height: 1;
+  margin: 0;
+  margin-bottom: 0.2rem;
+  background: linear-gradient(115deg, white 40%, #FF6B00 0%);
+  -webkit-text-stroke: 2px #000000;
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 4s ease-in-out infinite;
+  font-family: "Comic Neue", "Comic Sans MS", "Chalkboard SE", cursive, sans-serif;
+  display: inline-block;
+}
 
-  margin: 0 0 1rem;
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 
-  color: #184356;
-
-  font-size: .95rem;
-
+.label {
+  font-family: "JetBrains Mono", monospace;
+  font-style: italic;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-
-  letter-spacing: 1px;
-
+  color: black;
+  margin-top: 5px;
+  position: relative;
+  padding-left: 2rem;
+  opacity: 0.8;
+  transition: all 0.3s ease;
 }
-.skills span {
+
+.label::before {
+  content: '// ';
+  color: #FF6B00;
+  font-weight: 700;
+  opacity: 0.6;
+}
+
+.label:hover {
+  opacity: 1;
+  padding-left: 2.5rem;
+  letter-spacing: 0.3em;
+}
+
+/* =========================
+   Experience List
+========================= */
+
+.experienceList {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* =========================
+   Country Block
+========================= */
+
+.countryBlock {
+  position: relative;
+}
+
+.countryHeader {
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid #f0f0f0;
+  position: relative;
+}
+
+.countryHeader::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 80px;
+  height: 2px;
+  background: #FF6B00;
+}
+
+.countryFlag {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #FF6B00;
+  letter-spacing: 0.02em;
+}
+
+.countryPeriod {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #999999;
+  letter-spacing: 0.02em;
+}
+
+/* =========================
+   Companies
+========================= */
+
+.companies {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding-left: 0.5rem;
+}
+
+/* =========================
+   Company Block
+========================= */
+
+.companyBlock {
+  border-left: 2px solid #f0f0f0;
+  padding-left: 1.5rem;
+  transition: border-color 0.3s ease;
+}
+
+.companyBlock:hover {
+  border-left-color: #FF6B00;
+}
+
+.companyHeader {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.companyName {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000000;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.companyBlock:hover .companyName {
+  color: #FF6B00;
+}
+
+.companyType {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #999999;
+  letter-spacing: 0.05em;
+}
+
+/* =========================
+   Roles
+========================= */
+
+.roles {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.roleItem {
+  padding-left: 0;
+}
+
+.roleHeader {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.roleTitle {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000000;
+  margin: 0;
+}
+
+.rolePeriod {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #FF6B00;
+  letter-spacing: 0.02em;
+}
+
+/* =========================
+   Achievements
+========================= */
+
+.achievements {
+  margin: 0;
+  padding-left: 1.2rem;
+  list-style: none;
+}
+
+.achievements li {
+  font-size: 0.9rem;
+  color: #555555;
+  line-height: 1.6;
+  margin-bottom: 0.3rem;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.achievements li::before {
+  content: '—';
+  position: absolute;
+  left: -0.5rem;
+  color: #FF6B00;
+  font-weight: 300;
+}
+
+/* =========================
+   Skills
+========================= */
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.8rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid #f5f5f5;
+}
+
+.skillTag {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-
-  background: #184356;
-  color: white;
-
-  padding: 7px 14px;
-
-  border-radius: 999px;
-
-  font-size: 0.85rem;
-  font-weight: 600;
-
-  transition: all .25s ease;
+  gap: 6px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.7rem;
+  padding: 0.3rem 0.8rem;
+  background: #f5f5f5;
+  color: #333333;
+  border-radius: 16px;
+  border: 1px solid #e5e5e5;
+  transition: all 0.2s ease;
 }
 
-.skills span:hover {
+.skillTag:hover {
+  background: #FF6B00;
+  color: #ffffff;
+  border-color: #FF6B00;
   transform: translateY(-2px);
 }
 
@@ -230,161 +296,241 @@
 }
 
 .skillIcon svg {
-  font-size: 18px;
-}
-.skillIcon svg {
-  font-size: 18px;
+  font-size: 14px;
 }
 
-.react {
-  color: #61DAFB;
+/* =========================
+   Icon Colors
+========================= */
+
+.react { color: #61DAFB; }
+.javascript { color: #F7DF1E; }
+.python { color: #3776AB; }
+.astro { color: #FF5D01; }
+.html { color: #E34F26; }
+.css { color: #1572B6; }
+.php { color: #777BB4; }
+.mysql { color: #4479A1; }
+.wordpress { color: #21759B; }
+.typescript { color: #3178C6; }
+.n8n { color: #FF6B00; }
+.langchain { color: #1C3C3C; }
+
+.skillTag:hover .react,
+.skillTag:hover .javascript,
+.skillTag:hover .python,
+.skillTag:hover .astro,
+.skillTag:hover .html,
+.skillTag:hover .css,
+.skillTag:hover .php,
+.skillTag:hover .mysql,
+.skillTag:hover .wordpress,
+.skillTag:hover .typescript,
+.skillTag:hover .n8n,
+.skillTag:hover .langchain {
+  color: #ffffff;
 }
 
-.javascript {
-  color: #F7DF1E;
-}
-
-.python {
-  color: #3776AB;
-}
-
-.astro {
-  color: #FF5D01;
-}
-
-.html {
-  color: #E34F26;
-}
-
-.css {
-  color: #1572B6;
-}
-
-.php {
-  color: #777BB4;
-}
-
-.mysql {
-  color: #4479A1;
-}
-
-.wordpress {
-  color: #21759B;
-}
-
-/* ===========================
+/* =========================
    Dark Mode
-=========================== */
+========================= */
 
-:global(body.dark-mode) .experience h2 {
-  color: white;
+:global(body.dark-mode) .experience {
+  background: #1a1a1a;
 }
 
-:global(body.dark-mode) .card {
-
-  background: #4f0202;
-
-  border-color: #6b0b0b;
-
-  color: #ececec;
+:global(body.dark-mode) .label {
+  color: #cccccc;
 }
 
-:global(body.dark-mode) .card::before {
-  background: #facc15;
+:global(body.dark-mode) .countryFlag {
+  color: #FF6B00;
 }
 
-:global(body.dark-mode) .header h3 {
-  color: white;
+:global(body.dark-mode) .countryPeriod {
+  color: #666666;
 }
 
-:global(body.dark-mode) .header h4 {
-  color: #d6d6d6;
+:global(body.dark-mode) .countryHeader {
+  border-bottom-color: #2a2a2a;
 }
 
-:global(body.dark-mode) .meta {
-  color: #bbbbbb;
+:global(body.dark-mode) .countryHeader::after {
+  background: #FF6B00;
 }
 
-:global(body.dark-mode) .skills span {
-  background: #facc15;
-  color: #111;
+:global(body.dark-mode) .companyBlock {
+  border-left-color: #2a2a2a;
 }
 
-:global(body.dark-mode) .skills span:hover {
-  background: #fde047;
-}
-:global(body.dark-mode) .right {
-
-  border-left: 2px solid rgba(255,255,255,.15);
-
+:global(body.dark-mode) .companyBlock:hover {
+  border-left-color: #FF6B00;
 }
 
-:global(body.dark-mode) .right h5 {
-
-  color: #facc15;
-
+:global(body.dark-mode) .companyName {
+  color: #ffffff;
 }
 
-/* ===========================
-   Mobile
-=========================== */
+:global(body.dark-mode) .companyType {
+  color: #666666;
+}
+
+:global(body.dark-mode) .roleTitle {
+  color: #ffffff;
+}
+
+:global(body.dark-mode) .achievements li {
+  color: #aaaaaa;
+}
+
+:global(body.dark-mode) .skills {
+  border-top-color: #2a2a2a;
+}
+
+:global(body.dark-mode) .skillTag {
+  background: #2a2a2a;
+  color: #cccccc;
+  border-color: #3a3a3a;
+}
+
+:global(body.dark-mode) .skillTag:hover {
+  background: #FF6B00;
+  color: #ffffff;
+  border-color: #FF6B00;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 1024px) {
+  .experience {
+    padding: 4rem 2rem;
+  }
+}
 
 @media (max-width: 768px) {
-
   .experience {
-    padding: 3rem 1rem;
+    padding: 3rem 1.5rem;
+    min-height: auto;
   }
 
-  .header {
+  .title {
+    font-size: clamp(2.5rem, 7vw, 3.5rem);
+  }
+
+  .label {
+    font-size: 0.7rem;
+    margin-top: -2px;
+  }
+
+  .countryHeader {
     flex-direction: column;
-    gap: .7rem;
+    gap: 0.3rem;
+    margin-bottom: 1rem;
   }
 
-  .icon {
-    font-size: 1.8rem;
+  .countryFlag {
+    font-size: 1rem;
   }
 
-  .header h3 {
-    font-size: 1.2rem;
+  .countryPeriod {
+    font-size: 0.7rem;
   }
 
-  .meta {
+  .companies {
+    padding-left: 0;
+  }
+
+  .companyBlock {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 1.2rem;
+  }
+
+  :global(body.dark-mode) .companyBlock {
+    border-top-color: #2a2a2a;
+  }
+
+  .companyHeader {
     flex-direction: column;
-    gap: .35rem;
+    gap: 0.3rem;
   }
 
-  .card {
-    padding: 1.4rem;
-    border-width: 6px;
+  .companyName {
+    font-size: 1rem;
   }
-  @media (max-width:768px){
 
-.content{
+  .roleHeader {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
 
-grid-template-columns:1fr;
+  .roleTitle {
+    font-size: 0.9rem;
+  }
 
-gap:1.5rem;
+  .achievements li {
+    font-size: 0.85rem;
+  }
 
+  .experienceList {
+    gap: 2rem;
+  }
 }
 
-.right{
+@media (max-width: 480px) {
+  .experience {
+    padding: 2rem 1rem;
+  }
 
-border-left:none;
+  .title {
+    font-size: 2rem;
+  }
 
-border-top:1px solid rgba(0,0,0,.15);
+  .label {
+    font-size: 0.6rem;
+  }
 
-padding-left:0;
+  .countryFlag {
+    font-size: 0.9rem;
+  }
 
-padding-top:1rem;
+  .countryPeriod {
+    font-size: 0.6rem;
+  }
 
-}
+  .companyName {
+    font-size: 0.9rem;
+  }
 
-:global(body.dark-mode) .right{
+  .companyType {
+    font-size: 0.6rem;
+  }
 
-border-top:1px solid rgba(255,255,255,.15);
+  .roleTitle {
+    font-size: 0.8rem;
+  }
 
-}
+  .rolePeriod {
+    font-size: 0.6rem;
+  }
 
-}
+  .achievements li {
+    font-size: 0.8rem;
+  }
 
+  .skillTag {
+    font-size: 0.6rem;
+    padding: 0.2rem 0.6rem;
+  }
+
+  .skillIcon svg {
+    font-size: 12px;
+  }
+
+  .companies {
+    gap: 1.5rem;
+  }
 }
