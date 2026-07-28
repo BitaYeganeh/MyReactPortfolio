@@ -9,7 +9,7 @@ const Stack = () => {
       items: ["Python", "TypeScript", "JavaScript", "PHP", "HTML5", "CSS3"]
     },
     {
-      title: "WEB / FRONTEND",
+      title: "FRONTEND / WEB",
       icon: "🎨",
       items: ["React", "Next.js", "Tailwind CSS", "WordPress", "UI/UX Design"]
     },
@@ -31,8 +31,8 @@ const Stack = () => {
     {
     title: "AI & AUTOMATION",
     icon: "⚡",
-    items: ["ChatGPT", "DeepSeek", "Claude", "Copilot", "Cursor AI", "n8n", "LangChain"]
-    },
+    items: ["Claude", "Copilot", "ChatGPT", "DeepSeek"]
+  },
     {
       title: "INFRA / CLOUD",
       icon: "☁️",

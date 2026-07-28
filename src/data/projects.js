@@ -31,23 +31,16 @@ const projects = [
     alt: "Pancake Order Project",
     github: "https://github.com/BitaYeganeh/Summer-tasks/tree/main/Pannukakku",
   },
-    {
-    id: 5,
-    title: "JavaScript - Pancake kitchen view",
-    image: "/images/project3.png",
-    alt: "Pancake Project 2",
-    github: "https://github.com/BitaYeganeh/Summer-tasks/tree/main/Pannukakku",
-  },
 
   {
-    id: 6,
+    id: 5,
     title: "WordPress/PHP - ABC OF MEDIA Website",
     image: "/images/abc.png",
     alt: "WordPress/PHP Project - ABC OF MEDIA Website",
     github: "https://github.com/BitaYeganeh/WordPress-Project---ABC-OF-MEDIA",
   },
   {
-    id: 7,
+    id: 6,
     title: "JavaScript - Eläintarha",
     image: "/images/project1.png",
     alt: "Eläintarha JavaScript Project",
@@ -55,7 +48,7 @@ const projects = [
       "https://github.com/BitaYeganeh/HTML-CSS-JS-projektit/tree/main/JS/Projects/Eläintarha",
   },
   {
-    id: 8,
+    id: 7,
     title: "WordPress - Business College Helsinki",
     image: "/images/bcd.png",
     alt: "WordPress Project - Business College Helsinki Networking Page",
@@ -64,7 +57,7 @@ const projects = [
 
   },
   {
-    id: 9,
+    id: 8,
     title: "Figma - Personal Mood Board",
     image: "/images/moodboard.png",
     alt: "Mood Board UI design in Figma",
@@ -72,15 +65,7 @@ const projects = [
 
   },
   {
-    id: 10,
-    title: "Flexbox Layout Project",
-    image: "/images/project4.png",
-    alt: "Flexbox Layout Project",
-    github:
-      "https://github.com/BitaYeganeh/HTML-CSS-JS-projektit/tree/main/HTML-KURSSI/Projects/FlexProjekt",
-  },
-  {
-    id: 11,
+    id: 9,
     title: "Social-links-profile-card",
     image: "/images/project7.png",
     alt: "Social-links-profile-card Project",
@@ -88,20 +73,12 @@ const projects = [
       "https://github.com/BitaYeganeh/Summer-tasks/tree/main/FrontendMentor/Social-links-profile",
   },
   {
-    id: 12,
+    id: 10,
     title: "Base Apparel Coming Soon",
     image: "/images/project8.png",
     alt: "Base Apparel Coming Soon Project",
     github:
       "https://github.com/BitaYeganeh/Summer-tasks/tree/main/FrontendMentor/base-apparel-coming-soon-master",
-  },
-  {
-    id: 13,
-    title: "SignUp Form",
-    image: "/images/project9.png",
-    alt: "SignUp Form Project",
-    github:
-      "https://github.com/BitaYeganeh/HTML-CSS-JS-projektit/tree/main/HTML-KURSSI/Projects/Tilauslomake",
   },
 ];
 
