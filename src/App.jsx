@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Stack from "./components/ui/Stack";
 import Experience from "./components/Experience";
 import Certificates from "./components/Certificates";
 import Projects from "./components/Projects";
@@ -37,6 +38,10 @@ function App() {
         <div className="sections-wrapper">
           <section id="about" className="section-container">
             <About />
+          </section>
+
+          <section id="stack" className="section-container">
+            <Stack />
           </section>
           
           <section id="projects" className="section-container">
