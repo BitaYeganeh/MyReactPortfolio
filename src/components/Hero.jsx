@@ -8,19 +8,16 @@ const Hero = () => {
   const rightTextRef = useRef(null);
   const trackRef = useRef(null);
 
-  // Your skills/technologies - matching the example
   const skills = [
     "PYTHON", "REACT", "NODE.JS", "JAVASCRIPT", "HTML", "CSS",
     "SQL", "GIT", "GITHUB", "SQL", "UI/UX","FIGMA", "DJANGO",
     "RESTAPI", "Docker", 
-  "TypeScript", "QC", "QA", "PHP", "WORDPRESS", "AI"
+    "TypeScript", "QC", "QA", "PHP", "WORDPRESS", "AI"
   ];
 
-  // Duplicate skills for seamless scrolling
   const duplicatedSkills = [...skills, ...skills];
 
   useEffect(() => {
-    // Animation sequence
     const timer1 = setTimeout(() => {
       if (titleRef.current) {
         titleRef.current.style.opacity = '1';
@@ -63,7 +60,6 @@ const Hero = () => {
   return (
     <>
       <section className={styles.hero}>
-        {/* Background Pattern */}
         <div className={styles.bgPattern}></div>
 
         {/* Top Navigation */}
@@ -86,7 +82,7 @@ const Hero = () => {
 
         {/* Main Content */}
         <div className={styles.content}>
-          {/* Left Text - "FULL STACK" */}
+          {/* Left Text - Hidden on mobile, shows under title on mobile */}
           <div 
             ref={leftTextRef}
             className={`${styles.sideText} ${styles.leftText}`}
@@ -95,19 +91,19 @@ const Hero = () => {
           </div>
 
           {/* Center - Image with Title Overlay */}
-<div className={styles.centerContent}>
-  {/* Title on top of image */}
-  <div 
-    ref={titleRef}
-    className={styles.titleOverlay}
-  >
-    <h1 className={styles.title}>
-      <span>FULLSTACK</span>
-      <span>SOFTWARE DEVELOPER</span>
-    </h1>
-  </div>
-  
-              {/* Profile Image */}
+          <div className={styles.centerContent}>
+            {/* Title on top of image */}
+            <div 
+              ref={titleRef}
+              className={styles.titleOverlay}
+            >
+              <h1 className={styles.title}>
+                <span>FULLSTACK</span>
+                <span>SOFTWARE DEVELOPER</span>
+              </h1>
+            </div>
+            
+            {/* Profile Image */}
             <div 
               ref={imageRef}
               className={styles.imageWrapper}
@@ -118,9 +114,19 @@ const Hero = () => {
                 className={styles.profileImage}
               />
             </div>
+
+            {/* Mobile Side Texts - Under Title */}
+            <div className={styles.mobileSideTexts}>
+              <div className={styles.mobileLeftText}>
+                <span className={styles.mobileSideTextLine}>// Passionate about creating intuitive and engaging user experiences.</span>
+              </div>
+              <div className={styles.mobileRightText}>
+                <span className={styles.mobileSideTextLine}>// AUTOMATIONS THAT SHIP WHILE YOU SLEEP</span>
+              </div>
+            </div>
           </div>
 
-          {/* Right Text - "// I'M BITA" */}
+          {/* Right Text - Hidden on mobile, shows under title on mobile */}
           <div 
             ref={rightTextRef}
             className={`${styles.sideText} ${styles.rightText}`}
@@ -131,7 +137,7 @@ WHILE YOU SLEEP</span>
         </div>
       </section>
 
-      {/* Thick Skills Bar - OUTSIDE hero section */}
+      {/* Skills Bar - ALWAYS VISIBLE */}
       <div className={styles.skillsBar}>
         <div 
           ref={trackRef}

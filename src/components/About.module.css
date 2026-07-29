@@ -8,6 +8,7 @@
   color: #000000;
   display: flex;
   align-items: flex-start;
+  min-height: 100vh;
 }
 
 .container {
@@ -97,7 +98,7 @@
   text-transform: uppercase;
   color: black;
   margin-top: 10px;
-  margin-bottom: 10px;  /* ← Changed: reduced from 30px to 10px */
+  margin-bottom: 10px;
   position: relative;
   padding-left: 2rem;
   opacity: 0.8;
@@ -166,7 +167,7 @@
 .description {
   max-width: 100%;
   margin-bottom: 2rem;
-  margin-top: 2rem;  /* ← Changed: reduced from 6rem to 2rem */
+  margin-top: 2rem;
 }
 
 .description p {
@@ -193,14 +194,14 @@
 }
 
 /* =========================
-   Stats Grid - Inline 2 columns
+   Stats Grid
 ========================= */
 
 .statsGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0.8rem 3rem;
-  margin-bottom: 1rem;  /* ← Changed: reduced from 2.5rem to 1rem */
+  margin-bottom: 1rem;
   max-width: 100%;
 }
 
@@ -264,11 +265,16 @@
   color: #00C853 !important;
 }
 
-/* =========================
-   Responsive
-========================= */
+/* ========================================
+   RESPONSIVE - IMPROVED
+======================================== */
 
+/* ===== TABLET (1024px and below) ===== */
 @media (max-width: 1024px) {
+  .about {
+    padding: 1.5rem 2rem;
+  }
+
   .aboutGrid {
     gap: 40px;
   }
@@ -290,15 +296,16 @@
   }
 }
 
+/* ===== MOBILE (768px and below) ===== */
 @media (max-width: 768px) {
   .about {
-    padding: 2rem 1.5rem;  /* ← Changed: reduced padding */
+    padding: 2rem 1.5rem;
     min-height: auto;
   }
 
   .aboutGrid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 1.5rem;
   }
 
   .leftColumn {
@@ -315,36 +322,44 @@
   .label {
     font-size: 0.7rem;
     margin-top: -2px;
-    margin-bottom: 5px;  /* ← Added */
+    margin-bottom: 5px;
   }
 
-  .bar {
-    width: 40px;
-    height: 3px;
-    margin-top: 10px;
-    margin-bottom: 24px;
+  .tagline {
+    margin-top: 0.5rem;
   }
 
   .tagline p {
     font-size: 1.8rem;
+    line-height: 1.4;
   }
 
   .tagline em {
     font-size: 2rem;
   }
 
+  .rightColumn {
+    margin-top: 0;
+  }
+
   .description {
-    margin-top: 0.5rem;  /* ← Changed */
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
   }
 
   .description p {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .divider {
+    margin: 0 0 1.5rem 0;
   }
 
   .statsGrid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.6rem 1.5rem;
-    margin-bottom: 0.5rem;  /* ← Added */
+    margin-bottom: 0.5rem;
   }
 
   .statNumber {
@@ -356,46 +371,55 @@
   }
 }
 
+/* ===== SMALL MOBILE (480px and below) ===== */
 @media (max-width: 480px) {
   .about {
-    padding: 1.5rem 1rem;  /* ← Changed */
+    padding: 1rem 1rem 1.5rem 1rem;
   }
 
   .aboutGrid {
-    gap: 16px;
+    gap: 1rem;
   }
 
   .title {
-    font-size: 2rem;
+    font-size: clamp(2rem, 6vw, 2.8rem);
+    margin-bottom: 0.1rem;
   }
 
   .label {
-    font-size: 0.6rem;
-    margin-bottom: 3px;  /* ← Added */
-  }
-
-  .bar {
-    width: 30px;
-    height: 3px;
-    margin-bottom: 16px;
+    font-size: 0.55rem;
+    margin-top: 5px;
+    margin-bottom: 3px;
+    padding-left: 1.5rem;
   }
 
   .tagline p {
     font-size: 1.4rem;
+    line-height: 1.4;
   }
 
   .tagline em {
     font-size: 1.5rem;
   }
 
+  .description {
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+  }
+
   .description p {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .divider {
+    margin: 0 0 1rem 0;
   }
 
   .statsGrid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem 1rem;
-    margin-bottom: 0.3rem;  /* ← Added */
+    margin-bottom: 0.3rem;
   }
 
   .statNumber {
@@ -404,6 +428,133 @@
   }
 
   .statLabel {
-    font-size: 0.6rem;
+    font-size: 0.55rem;
+    margin-top: 0.3rem;
+    letter-spacing: 0.06em;
+  }
+}
+
+/* ===== EXTRA SMALL (360px and below) ===== */
+@media (max-width: 360px) {
+  .about {
+    padding: 0.8rem 0.8rem 1rem 0.8rem;
+  }
+
+  .title {
+    font-size: clamp(1.6rem, 5vw, 2rem);
+  }
+
+  .tagline p {
+    font-size: 1.1rem;
+  }
+
+  .tagline em {
+    font-size: 1.2rem;
+  }
+
+  .label {
+    font-size: 0.5rem;
+    padding-left: 1.2rem;
+  }
+
+  .description p {
+    font-size: 0.75rem;
+  }
+
+  .statsGrid {
+    gap: 0.3rem 0.8rem;
+  }
+
+  .statNumber {
+    font-size: 1.1rem;
+    min-width: 30px;
+  }
+
+  .statLabel {
+    font-size: 0.45rem;
+  }
+}
+
+/* ===== LARGE SCREEN (1400px and above) ===== */
+@media (min-width: 1400px) {
+  .about {
+    padding: 2rem 5rem 3rem 5rem;
+  }
+
+  .aboutGrid {
+    gap: 80px;
+  }
+
+  .title {
+    font-size: clamp(5rem, 6vw, 6.5rem);
+  }
+
+  .tagline p {
+    font-size: 3.5rem;
+  }
+
+  .tagline em {
+    font-size: 3.8rem;
+  }
+
+  .description p {
+    font-size: 1.1rem;
+  }
+
+  .statsGrid {
+    gap: 1rem 4rem;
+  }
+
+  .statNumber {
+    font-size: 2rem;
+  }
+
+  .statLabel {
+    font-size: 0.7rem;
+  }
+}
+
+/* ===== LANDSCAPE ORIENTATION ===== */
+@media (max-height: 600px) and (orientation: landscape) {
+  .about {
+    padding: 1rem 2rem;
+    min-height: auto;
+  }
+
+  .aboutGrid {
+    gap: 2rem;
+  }
+
+  .title {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+
+  .tagline p {
+    font-size: 1.5rem;
+  }
+
+  .tagline em {
+    font-size: 1.6rem;
+  }
+
+  .description {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .description p {
+    font-size: 0.85rem;
+  }
+
+  .statsGrid {
+    gap: 0.5rem 1.5rem;
+  }
+
+  .statNumber {
+    font-size: 1.2rem;
+  }
+
+  .statLabel {
+    font-size: 0.5rem;
   }
 }
