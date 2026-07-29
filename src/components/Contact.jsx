@@ -1,3 +1,4 @@
+// src/components/Contact.jsx
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import styles from "./Contact.module.css";
@@ -34,51 +35,75 @@ const Contact = () => {
 
   return (
     <section id="contact" className={styles.contactSection}>
-      <h2>Contact Me</h2>
-      <form
-        ref={formRef}
-        onSubmit={handleSubmit}
-        className={styles.contactForm}
-      >
-        <label htmlFor="from_name">Name:</label>
-        <input
-          type="text"
-          name="from_name"
-          id="from_name"
-          placeholder="Your Name"
-          required
-        />
+      {/* CTA Section - "Got a hard problem? Let's build it." */}
+      <div className={styles.ctaSection}>
+        <p className={styles.ctaText}>
+          Got a hard problem? <span className={styles.ctaHighlight}>Let's build it.</span>
+        </p>
+        <a href="mailto:red@nskr.dev" className={styles.emailLink}>
+          red@nskr.dev →
+        </a>
+      </div>
 
-        <label htmlFor="from_email">Email:</label>
-        <input
-          type="email"
-          name="from_email"
-          id="from_email"
-          placeholder="Your Email"
-          required
-        />
+      <div className={styles.container}>
+        {/* Header - matching other sections */}
+        <div className={styles.header}>
+          <h2 className={styles.title}>CONTACT</h2>
+          <span className={styles.label}>08-CONTACT</span>
+        </div>
 
-        <label htmlFor="phone">Phone:</label>
-        <input
-          type="tel"
-          name="phone"
-          id="phone"
-          placeholder="Your Phone (optional)"
-        />
+        <div className={styles.content}>
+          <p className={styles.subtitle}>
+            Have a question or want to work together? Feel free to reach out!
+          </p>
 
-        <label htmlFor="message">Message:</label>
-        <textarea
-          name="message"
-          id="message"
-          rows="5"
-          placeholder="Your Message"
-          required
-        />
+          <form
+            ref={formRef}
+            onSubmit={handleSubmit}
+            className={styles.contactForm}
+          >
+            {/* Name - with placeholder instead of label above */}
+            <div className={styles.formGroup}>
+              <input
+                type="text"
+                name="from_name"
+                id="from_name"
+                placeholder="Your Name"
+                className={styles.formInput}
+                required
+              />
+            </div>
 
-        <button type="submit" disabled={loading}>
-          {loading ? "Sending..." : "Send Message"}
-        </button>
-      </form>
+            {/* Email - with placeholder instead of label above */}
+            <div className={styles.formGroup}>
+              <input
+                type="email"
+                name="from_email"
+                id="from_email"
+                placeholder="Your Email"
+                className={styles.formInput}
+                required
+              />
+            </div>
+
+            {/* Message - with placeholder instead of label above */}
+            <div className={styles.formGroup}>
+              <textarea
+                name="message"
+                id="message"
+                rows="5"
+                placeholder="Your Message"
+                className={styles.formTextarea}
+                required
+              />
+            </div>
+
+            <button type="submit" disabled={loading} className={styles.submitButton}>
+              {loading ? "Sending..." : "Send Message"}
+            </button>
+          </form>
+        </div>
+      </div>
     </section>
   );
 };

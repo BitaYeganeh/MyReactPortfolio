@@ -1,102 +1,531 @@
+/* src/components/Contact.module.css */
+
+/* =========================
+   Contact Section
+========================= */
+
 .contactSection {
-  padding: 4rem 2rem;
-  max-width: 600px;
+  padding: 5rem 3rem;
+  background: #ffffff;
+  color: #000000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  max-width: 700px;
   margin: 0 auto;
+  width: 100%;
+}
+
+/* =========================
+   CTA Section - "Got a hard problem? Let's build it."
+========================= */
+
+.ctaSection {
   text-align: center;
+  margin-bottom: 3rem;
+  padding: 2.5rem 2rem;
+  background: rgba(255, 107, 0, 0.03);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 107, 0, 0.08);
+  max-width: 700px;
+  width: 100%;
+  transition: all 0.3s ease;
 }
 
-.contactSection h2 {
-  font-size: 2rem;
-  color: rgb(67, 65, 165);
-  margin-bottom: 2rem;
+.ctaSection:hover {
+  border-color: rgba(255, 107, 0, 0.2);
+  box-shadow: 0 8px 30px rgba(255, 107, 0, 0.06);
 }
 
-/* ===== FORM ===== */
+.ctaText {
+  font-family: "JetBrains Mono", monospace;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 400;
+  color: #000000;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.3;
+}
+
+.ctaHighlight {
+  color: #FF6B00;
+  font-weight: 600;
+}
+
+.emailLink {
+  font-family: "JetBrains Mono", monospace;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: #FF6B00;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: relative;
+}
+
+.emailLink::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #FF6B00;
+  transition: width 0.3s ease;
+}
+
+.emailLink:hover {
+  transform: translateX(4px);
+  color: #e55a00;
+}
+
+.emailLink:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   Header - Matching other sections
+========================= */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+}
+
+.title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 900;
+  line-height: 1;
+  margin: 0;
+  margin-bottom: 0.2rem;
+  background: linear-gradient(115deg, white 40%, #FF6B00 0%);
+  -webkit-text-stroke: 2px #000000;
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 4s ease-in-out infinite;
+  font-family: "Comic Neue", "Comic Sans MS", "Chalkboard SE", cursive, sans-serif;
+  display: inline-block;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.label {
+  font-family: "JetBrains Mono", monospace;
+  font-style: italic;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: black;
+  margin-top: 5px;
+  position: relative;
+  padding-left: 2rem;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.label::before {
+  content: '// ';
+  color: #FF6B00;
+  font-weight: 700;
+  opacity: 0.6;
+}
+
+.label:hover {
+  opacity: 1;
+  padding-left: 2.5rem;
+  letter-spacing: 0.3em;
+}
+
+/* =========================
+   Content
+========================= */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+/* =========================
+   Subtitle - Typewriter Effect (Continuous Loop)
+========================= */
+
+.subtitle {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1rem;
+  color: #FF6B00;
+  margin: 0;
+  line-height: 1.6;
+  text-align: center;
+  display: inline-block;
+  width: auto;
+  cursor: default;
+  overflow: hidden;
+  border-right: 2px solid #FF6B00;
+  white-space: nowrap;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 5px;
+  font-weight: 400;
+  /* Continuous loop animation */
+  animation: typing 4s steps(40, end) infinite, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  0% { width: 0; }
+  40% { width: 100%; }
+  60% { width: 100%; }
+  100% { width: 0; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #FF6B00; }
+}
+
+/* =========================
+   Form - Clean with placeholder only
+========================= */
+
 .contactForm {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
-  background-color: #111111;
+  background: #ffffff;
   padding: 2rem;
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.35);
-  transition: background-color 0.3s ease, color 0.3s ease,
-    border-color 0.3s ease;
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
 }
 
-.contactForm label {
-  font-weight: bold;
+.contactForm:hover {
+  border-color: #FF6B00;
+  box-shadow: 0 8px 25px rgba(255, 107, 0, 0.06);
+}
+
+/* =========================
+   Form Group - No labels, just placeholders
+========================= */
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.formInput,
+.formTextarea {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9rem;
+  padding: 0.9rem 1.2rem;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+  background: #fafafa;
+  color: #000000;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formInput::placeholder,
+.formTextarea::placeholder {
+  color: #aaaaaa;
+  font-weight: 300;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.formInput:focus,
+.formTextarea:focus {
+  outline: none;
+  border-color: #FF6B00;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.08);
+}
+
+.formTextarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* =========================
+   Submit Button - Centered
+========================= */
+
+.submitButton {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.9rem 1.5rem;
+  background: black;
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.05em;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+  margin-top: 0.5rem;
+  width: 30%;
+  min-width: 160px;
+  max-width: 280px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.submitButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.submitButton:hover:not(:disabled)::before {
+  left: 100%;
+}
+
+.submitButton:hover:not(:disabled) {
+  background: #FF6B00;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 107, 0, 0.4);
+}
+
+.submitButton:active:not(:disabled) {
+  transform: translateY(0px);
+  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* =========================
+   Dark Mode
+========================= */
+
+:global(body.dark-mode) .contactSection {
+  background: #1a1a1a;
+}
+
+:global(body.dark-mode) .ctaSection {
+  background: rgba(255, 107, 0, 0.05);
+  border-color: rgba(255, 107, 0, 0.1);
+}
+
+:global(body.dark-mode) .ctaSection:hover {
+  border-color: rgba(255, 107, 0, 0.25);
+}
+
+:global(body.dark-mode) .ctaText {
   color: #ffffff;
 }
 
-.contactForm input,
-.contactForm textarea {
-  padding: 10px;
-  font-size: 1rem;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  width: 100%;
-  box-sizing: border-box;
-  transition: border-color 0.3s ease, background-color 0.3s ease,
-    color 0.3s ease;
+:global(body.dark-mode) .label {
+  color: #cccccc;
 }
 
-.contactForm input:focus,
-.contactForm textarea:focus {
-  outline: none;
-  border-color: #c20808;
-  background-color: #fff8f8;
+:global(body.dark-mode) .subtitle {
+  color: #ffffff;
+  border-right-color: #FF6B00;
 }
 
-/* ===== BUTTON ===== */
-.contactForm button {
-  background-color: #6596ec;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+:global(body.dark-mode) .contactForm {
+  background: #1a1a1a;
+  border-color: #2a2a2a;
 }
 
-.contactForm button:hover {
-  background-color: #c20808;
-  transform: scale(1.05);
+:global(body.dark-mode) .contactForm:hover {
+  border-color: #FF6B00;
 }
 
-/* ===== DARK MODE ===== */
-body.dark-mode .contactForm {
-  background-color: #222;
-  border: 2px solid white;
-  color: #eee;
+:global(body.dark-mode) .formInput,
+:global(body.dark-mode) .formTextarea {
+  background: #2a2a2a;
+  border-color: #3a3a3a;
+  color: #ffffff;
 }
 
-body.dark-mode .contactForm label {
-  color: #e0e0e0;
+:global(body.dark-mode) .formInput::placeholder,
+:global(body.dark-mode) .formTextarea::placeholder {
+  color: #666666;
 }
 
-body.dark-mode .contactForm input,
-body.dark-mode .contactForm textarea {
-  background-color: #333;
-  border-color: #555;
-  color: #eee;
+:global(body.dark-mode) .formInput:focus,
+:global(body.dark-mode) .formTextarea:focus {
+  border-color: #FF6B00;
+  background: #1a1a1a;
+  box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.1);
 }
 
-body.dark-mode .contactForm input:focus,
-body.dark-mode .contactForm textarea:focus {
-  border-color: #c20808;
-  background-color: #444;
-  color: #fff;
+:global(body.dark-mode) .submitButton {
+  background: #FF6B00;
+  color: #ffffff;
 }
 
-body.dark-mode .contactForm button {
-  background-color: #4f0202;
-  color: #fff;
+:global(body.dark-mode) .submitButton:hover:not(:disabled) {
+  background: #e55a00;
+  box-shadow: 0 8px 25px rgba(255, 107, 0, 0.5);
 }
 
-body.dark-mode .contactForm button:hover {
-  background-color: #c20808;
-  transform: scale(1.05);
+:global(body.dark-mode) .emailLink {
+  color: #FF6B00;
+}
+
+:global(body.dark-mode) .emailLink:hover {
+  color: #e55a00;
+}
+
+:global(body.dark-mode) .emailLink::after {
+  background: #FF6B00;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 1024px) {
+  .contactSection {
+    padding: 4rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactSection {
+    padding: 3rem 1.5rem;
+    min-height: auto;
+  }
+
+  .ctaSection {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .ctaText {
+    font-size: 1.3rem;
+  }
+
+  .emailLink {
+    font-size: 1rem;
+  }
+
+  .title {
+    font-size: clamp(2.5rem, 7vw, 3.5rem);
+  }
+
+  .label {
+    font-size: 0.7rem;
+    margin-top: -2px;
+  }
+
+  .contactForm {
+    padding: 1.5rem;
+  }
+
+  /* Disable typewriter on tablet */
+  .subtitle {
+    white-space: normal;
+    animation: none;
+    border-right: none;
+    padding-right: 0;
+    width: 100% !important;
+    color: #666666;
+  }
+
+  :global(body.dark-mode) .subtitle {
+    color: #ffffff;
+  }
+
+  .formInput,
+  .formTextarea {
+    font-size: 0.85rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .submitButton {
+    width: 50%;
+    padding: 0.8rem 1.2rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactSection {
+    padding: 2rem 1rem;
+  }
+
+  .ctaSection {
+    padding: 1.2rem 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .ctaText {
+    font-size: 1.1rem;
+  }
+
+  .emailLink {
+    font-size: 0.9rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .label {
+    font-size: 0.6rem;
+  }
+
+  .contactForm {
+    padding: 1rem;
+    gap: 0.8rem;
+  }
+
+  /* Disable typewriter on mobile */
+  .subtitle {
+    white-space: normal;
+    animation: none;
+    border-right: none;
+    padding-right: 0;
+    width: 100% !important;
+    font-size: 0.8rem;
+    color: #666666;
+  }
+
+  :global(body.dark-mode) .subtitle {
+    color: #ffffff;
+  }
+
+  .formInput,
+  .formTextarea {
+    font-size: 0.8rem;
+    padding: 0.7rem 0.9rem;
+  }
+
+  .submitButton {
+    width: 80%;
+    padding: 0.7rem 1rem;
+    font-size: 0.75rem;
+    min-width: unset;
+  }
 }

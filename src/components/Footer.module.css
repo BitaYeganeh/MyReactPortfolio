@@ -1,7 +1,7 @@
 .footer {
   text-align: center;
   padding: 0.75rem 1.5rem;
-  background-color: #000000;
+  background-color: #FF6B00;
   color: white;
   position: relative;
   display: flex;
@@ -29,7 +29,7 @@
 }
 
 .footerLink:hover {
-  color: #c20808;
+  color: black;
   transform: translateY(-2px);
 }
 
@@ -37,7 +37,7 @@
 .footer p {
   margin: 0;
   font-size: 14px;
-  color: #e8bc43;
+  color: black;
 }
 
 /* =========================
@@ -55,8 +55,8 @@
   border: none;
   border-radius: 50%;
 
-  background: linear-gradient(135deg, #4156dd, #1f260d);
-  color: white;
+  background: linear-gradient(135deg, #1f260d);
+  color: #FF6B00;
 
   display: flex;
   align-items: center;
@@ -77,8 +77,9 @@
 
 .backToTop:hover {
   transform: translateY(-5px) scale(1.08);
-  background: linear-gradient(135deg, #e8bc43, #1f260d);
-  box-shadow: 0 12px 30px rgba(232, 188, 67, 0.45);
+  background: linear-gradient(135deg, #e26308, #1f260d);
+  box-shadow: 0 12px 30px rgba(214, 74, 4, 0.45);
+  color: white;
 }
 
 .backToTop:active {
