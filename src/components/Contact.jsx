@@ -35,15 +35,6 @@ const Contact = () => {
 
   return (
     <section id="contact" className={styles.contactSection}>
-      {/* CTA Section - "Got a hard problem? Let's build it." */}
-      <div className={styles.ctaSection}>
-        <p className={styles.ctaText}>
-          Got a hard problem? <span className={styles.ctaHighlight}>Let's build it.</span>
-        </p>
-        <a href="mailto:red@nskr.dev" className={styles.emailLink}>
-          red@nskr.dev →
-        </a>
-      </div>
 
       <div className={styles.container}>
         {/* Header - matching other sections */}
