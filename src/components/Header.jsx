@@ -47,9 +47,6 @@ const Header = ({ onOpenSkills }) => {
           About
         </a>
 
-
-
-
         <button
           className={styles.navButton}
           onClick={() => {
@@ -63,10 +60,10 @@ const Header = ({ onOpenSkills }) => {
         <a href="#education" onClick={closeMenu}>
           Education
         </a>
-                <a href="#projects" onClick={closeMenu}>
+        <a href="#projects" onClick={closeMenu}>
           Projects
         </a>
-                <a href="#experience" onClick={closeMenu}>
+        <a href="#experience" onClick={closeMenu}>
           Experience
         </a>
 
@@ -74,27 +71,28 @@ const Header = ({ onOpenSkills }) => {
           Certificates
         </a>
 
-
         <a href="#contact" onClick={closeMenu}>
           Contact Me
         </a>
       </nav>
 
-      <button
-        className={styles.modeToggle}
-        onClick={toggleMode}
-        aria-label="Toggle dark/light mode"
-      >
-        {darkMode ? "☀️" : "🌙"}
-      </button>
+      <div className={styles.headerRight}>
+        <button
+          className={styles.modeToggle}
+          onClick={toggleMode}
+          aria-label="Toggle dark/light mode"
+        >
+          {darkMode ? "☀️" : "🌙"}
+        </button>
 
-      <button
-        className={styles.menuToggle}
-        onClick={toggleMenu}
-        aria-label="Toggle navigation menu"
-      >
-        ☰
-      </button>
+        <button
+          className={styles.menuToggle}
+          onClick={toggleMenu}
+          aria-label="Toggle navigation menu"
+        >
+          {isMenuOpen ? "✕" : "☰"}
+        </button>
+      </div>
     </header>
   );
 };
