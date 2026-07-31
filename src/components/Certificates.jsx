@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import styles from "./Certificates.module.css";
 import chatgptExcel from "../assets/certificates/ChatGPT - Käyttö Excelin kanssa.pdf";
 import chatgptWriting from "../assets/certificates/ChatGPT - Kirjoittaminen ja tekstin tuottaminen.pdf";
@@ -102,32 +103,54 @@ const certificates = [
 ];
 
 const Certificates = () => {
+  const [showAll, setShowAll] = useState(false);
+  const initialCount = 3;
+  const visibleCertificates = showAll ? certificates : certificates.slice(0, initialCount);
+
   return (
     <section id="certificates" className={styles.certificates}>
-      <h2>Certificates</h2>
+      <div className={styles.container}>
+        {/* Header - matching other sections */}
+        <div className={styles.header}>
+          <h2 className={styles.title}>CERTIFICATES</h2>
+          <span className={styles.label}>06-CERTIFICATES</span>
+        </div>
 
-      <div className={styles.grid}>
-        {certificates.map((item) => (
-          <article className={styles.card} key={item.title}>
-            <div className={styles.previewBox}>
-              {item.preview ? (
-                <iframe
-                  className={styles.preview}
-                  src={item.preview}
-                  title={item.title}
-                />
-              ) : (
-                <div className={styles.placeholder}>Certificate Preview</div>
-              )}
-            </div>
+        <div className={styles.grid}>
+          {visibleCertificates.map((item) => (
+            <article className={styles.card} key={item.title}>
+              <div className={styles.previewBox}>
+                {item.preview ? (
+                  <iframe
+                    className={styles.preview}
+                    src={item.preview}
+                    title={item.title}
+                  />
+                ) : (
+                  <div className={styles.placeholder}>Certificate Preview</div>
+                )}
+              </div>
 
-            <div className={styles.content}>
-              <h3 className={styles.title}>{item.title}</h3>
-              <p className={styles.issuer}>{item.issuer}</p>
-              <p className={styles.date}>{item.date}</p>
-            </div>
-          </article>
-        ))}
+              <div className={styles.content}>
+                <h3 className={styles.title}>{item.title}</h3>
+                <p className={styles.issuer}>{item.issuer}</p>
+                <p className={styles.date}>{item.date}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        {/* Show More / Show Less Button */}
+        {certificates.length > initialCount && (
+          <div className={styles.seeMoreWrapper}>
+            <button 
+              className={styles.seeMoreButton}
+              onClick={() => setShowAll(!showAll)}
+            >
+              {showAll ? 'Show Less ↑' : `See All Certificates (${certificates.length}) ↓`}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

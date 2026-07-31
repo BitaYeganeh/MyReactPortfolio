@@ -1,33 +1,119 @@
+/* src/components/Certificates.module.css */
+
+/* =========================
+   Certificates Section
+========================= */
+
 .certificates {
-  padding: 4rem 2rem;
+  padding: 5rem 3rem;
+  background: #ffffff;
+  color: #000000;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
-.certificates h2 {
-  font-size: 3rem;
-  margin-bottom: 2.5rem;
-  color: #FF6B00;
-  text-align: center;
-  font-weight: 700;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
+
+/* =========================
+   Header - Matching other sections
+========================= */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 900;
+  line-height: 1;
+  margin: 0;
+  margin-bottom: 0.2rem;
+  background: linear-gradient(115deg, white 40%, #FF6B00 0%);
+  -webkit-text-stroke: 2px #000000;
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 4s ease-in-out infinite;
+  font-family: "Comic Neue", "Comic Sans MS", "Chalkboard SE", cursive, sans-serif;
+  display: inline-block;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.label {
+  font-family: "JetBrains Mono", monospace;
+  font-style: italic;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: black;
+  margin-top: 5px;
+  position: relative;
+  padding-left: 2rem;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.label::before {
+  content: '// ';
+  color: #FF6B00;
+  font-weight: 700;
+  opacity: 0.6;
+}
+
+.label:hover {
+  opacity: 1;
+  padding-left: 2.5rem;
+  letter-spacing: 0.3em;
+}
+
+/* =========================
+   Grid
+========================= */
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 100%;
+  margin-bottom: 2rem;
 }
+
+/* =========================
+   Card
+========================= */
 
 .card {
   overflow: hidden;
-  border-radius: 14px;
-  border: 4px solid black;
-  color: #FF6B00;
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(255, 107, 0, 0.08);
+  border-color: #FF6B00;
 }
 
 .previewBox {
   aspect-ratio: 4 / 3;
-  background: rgba(255, 255, 255, 0.08);
+  background: #f8f8f8;
   overflow: hidden;
 }
 
@@ -44,54 +130,232 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #f7e5dc;
+  color: #cccccc;
   font-weight: 600;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9rem;
 }
 
+/* =========================
+   Card Content
+========================= */
+
 .content {
-  padding: 1rem 1rem 1.25rem;
+  padding: 1.2rem 1.2rem 1.5rem;
 }
 
 .title {
-  font-weight: 700;
-  margin-bottom: 0.35rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #000000;
+  margin: 0 0 0.4rem 0;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 3.8em;
 }
 
 .issuer {
-  font-weight: 600;
-  margin-bottom: 0.95rem;
-  color: #184356
-
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #666666;
+  margin: 0 0 0.2rem 0;
 }
 
 .date {
-  font-size: 1rem;
-  color: #184356;
-  margin-bottom: 0.35rem;
-
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #FF6B00;
+  margin: 0;
 }
 
-.description {
-  line-height: 1.6;
-  color: #dce8f7;
-  margin-bottom: 0.7rem;
+/* =========================
+   See All Button
+========================= */
+
+.seeMoreWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  width: 100%;
 }
 
-.link {
-  color: #facc15;
-  text-decoration: none;
-  font-weight: 600;
+.seeMoreButton {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.8rem 2.5rem;
+  background: #FF6B00;
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.05em;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
 }
 
-.link:hover {
-  text-decoration: underline;
+.seeMoreButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
 }
 
-:global(body.dark-mode) .certificates h2 {
-  color: #e0e0e0;
+.seeMoreButton:hover::before {
+  left: 100%;
+}
+
+.seeMoreButton:hover {
+  background: #e55a00;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 107, 0, 0.4);
+}
+
+.seeMoreButton:active {
+  transform: translateY(0px);
+  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+}
+
+/* =========================
+   Dark Mode
+========================= */
+
+:global(body.dark-mode) .certificates {
+  background: #1a1a1a;
+}
+
+:global(body.dark-mode) .label {
+  color: #cccccc;
 }
 
 :global(body.dark-mode) .card {
-  background-color: #4f0202;
-  color: #e0e0e0;
+  background: #1a1a1a;
+  border-color: #2a2a2a;
+}
+
+:global(body.dark-mode) .card:hover {
+  border-color: #FF6B00;
+}
+
+:global(body.dark-mode) .title {
+  color: #ffffff;
+}
+
+:global(body.dark-mode) .issuer {
+  color: #aaaaaa;
+}
+
+:global(body.dark-mode) .previewBox {
+  background: #2a2a2a;
+}
+
+:global(body.dark-mode) .seeMoreButton {
+  background: #FF6B00;
+  color: #ffffff;
+}
+
+:global(body.dark-mode) .seeMoreButton:hover {
+  background: #e55a00;
+  box-shadow: 0 8px 25px rgba(255, 107, 0, 0.5);
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 1024px) {
+  .certificates {
+    padding: 4rem 2rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .certificates {
+    padding: 3rem 1.5rem;
+    min-height: auto;
+  }
+
+  .title {
+    font-size: clamp(2.5rem, 7vw, 3.5rem);
+  }
+
+  .label {
+    font-size: 0.7rem;
+    margin-top: -2px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 0.8rem;
+    min-height: 3.2em;
+  }
+
+  .issuer {
+    font-size: 0.65rem;
+  }
+
+  .date {
+    font-size: 0.6rem;
+  }
+
+  .seeMoreButton {
+    font-size: 0.8rem;
+    padding: 0.6rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .certificates {
+    padding: 2rem 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .label {
+    font-size: 0.6rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .title {
+    font-size: 0.85rem;
+  }
+
+  .seeMoreButton {
+    font-size: 0.7rem;
+    padding: 0.5rem 1.5rem;
+    width: 100%;
+    max-width: 280px;
+  }
 }
