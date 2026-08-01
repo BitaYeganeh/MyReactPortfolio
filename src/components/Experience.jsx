@@ -39,7 +39,7 @@ const experiences = [
         type: "TRAINEE · HYBRID",
         roles: [
           {
-            title: "Cybersecurity Trainee",
+            title: "ICT Trainee",
             period: "JUN 2026 – PRESENT",
             achievements: [
               "Redesigning the company website using modern frontend technologies",
@@ -56,7 +56,7 @@ const experiences = [
         type: "FULL-TIME · HELSINKI",
         roles: [
           {
-            title: "Lasten Hoitaja",
+            title: "Lasten Hoitaja - learning Finnish language and culture",
             period: "OCT 2023 – JUL 2026",
             achievements: [
               "Worked in a Finnish-speaking environment",
