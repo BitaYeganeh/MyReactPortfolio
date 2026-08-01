@@ -1,15 +1,11 @@
 /* src/components/Header.module.css */
 
-/* ========================================
-   HEADER - TALLER NAVBAR
-======================================== */
-
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1.2rem 2.5rem;  /* ← Increased padding */
+  padding: 1.2rem 2.5rem;  /* ← Increased padding for taller navbar */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,29 +13,19 @@
   color: white;
   z-index: 999;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  min-height: 76px;  /* ← Taller navbar */
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  min-height: 70px;  /* ← Added minimum height */
 }
-
-/* ========================================
-   LOGO
-======================================== */
 
 .logo {
   font-weight: 800;
   font-size: 28px;
   letter-spacing: -0.03em;
   white-space: nowrap;
-  font-family: 'JetBrains Mono', monospace;
 }
-
-/* ========================================
-   NAVIGATION
-======================================== */
 
 .nav {
   display: flex;
-  gap: 28px;  /* ← More spacing between links */
+  gap: 24px;  /* ← Increased gap */
   align-items: center;
 }
 
@@ -56,67 +42,37 @@
   border: none;
   cursor: pointer;
   transition: color 0.3s ease;
-  font-family: 'Courier New', monospace;
-  position: relative;
-}
-
-/* Underline animation on hover */
-.nav a::after,
-.navButton::after {
-  content: '';
-  position: absolute;
-  bottom: 4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #FF6B00;
-  transition: width 0.3s ease;
-}
-
-.nav a:hover::after,
-.navButton:hover::after {
-  width: 100%;
 }
 
 .nav a:hover,
 .navButton:hover {
   color: #FF6B00;
+  text-decoration: underline;
 }
 
-/* ========================================
-   RIGHT SIDE - Mode & Menu Toggle
-======================================== */
-
-.headerRight {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
+.menuToggle {
+  display: none;
+  font-size: 28px;  /* ← Bigger hamburger */
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 8px;
 }
 
 .modeToggle {
-  font-size: 22px;
+  margin-right: 10px;
+  font-size: 22px;  /* ← Slightly bigger */
   background: none;
   border: none;
   cursor: pointer;
   color: white;
   padding: 8px;
   transition: transform 0.3s ease;
-  line-height: 1;
 }
 
 .modeToggle:hover {
-  transform: rotate(20deg) scale(1.1);
-}
-
-.menuToggle {
-  display: none;
-  font-size: 28px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: white;
-  padding: 8px;
-  line-height: 1;
+  transform: rotate(20deg);
 }
 
 /* ========================================
@@ -125,29 +81,27 @@
 
 @media (max-width: 768px) {
   .header {
-    padding: 0.8rem 1.2rem;
-    min-height: 68px;
+    padding: 0.8rem 1.2rem;  /* ← Slightly more padding on mobile */
+    min-height: 65px;
   }
 
   .logo {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .nav {
     position: absolute;
-    top: 68px;  /* ← Matches header height */
+    top: 65px;  /* ← Matches header height */
     left: 0;
     width: 100%;
     flex-direction: column;
     background-color: #000000;
     display: none;
-    padding: 1.5rem 1.8rem;
+    padding: 1.2rem 1.5rem;  /* ← More padding */
     align-items: flex-start;
-    gap: 0.8rem;
+    gap: 0.8rem;  /* ← Gap between nav items */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-    max-height: calc(100vh - 68px);
-    overflow-y: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   }
 
   .nav.active {
@@ -159,25 +113,24 @@
     font-size: 18px;  /* ← Bigger text on mobile */
     padding: 12px 0;  /* ← More padding for easier tapping */
     width: 100%;
-    color: white;
-  }
-
-  .nav a::after,
-  .navButton::after {
-    bottom: 8px;
   }
 
   .menuToggle {
     display: block;
-    font-size: 30px;
+    color: white;
+    font-size: 30px;  /* ← Bigger hamburger */
   }
 
   .modeToggle {
-    font-size: 24px;
+    font-size: 24px;  /* ← Bigger on mobile */
+    margin-right: 5px;
   }
 
+  /* Right side group */
   .headerRight {
-    gap: 0.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
 }
 
@@ -188,16 +141,16 @@
 @media (max-width: 480px) {
   .header {
     padding: 0.6rem 1rem;
-    min-height: 60px;
+    min-height: 58px;
   }
 
   .logo {
-    font-size: 17px;
+    font-size: 18px;
   }
 
   .nav {
-    top: 60px;
-    padding: 1.2rem 1.2rem;
+    top: 58px;
+    padding: 1rem 1.2rem;
     gap: 0.6rem;
   }
 
@@ -220,70 +173,63 @@
    DARK MODE
 ======================================== */
 
-:global(body.dark-mode) .header {
+body.dark-mode .header {
   background-color: #1a1a1a;
   color: #f0f0f0;
   border-bottom-color: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
-:global(body.dark-mode) .nav {
+body.dark-mode .nav {
   background-color: #1a1a1a;
 }
 
-:global(body.dark-mode) .nav a,
-:global(body.dark-mode) .navButton {
+body.dark-mode .nav a,
+body.dark-mode .navButton {
   color: #f0f0f0;
 }
 
-:global(body.dark-mode) .nav a:hover,
-:global(body.dark-mode) .navButton:hover {
+body.dark-mode .menuToggle,
+body.dark-mode .modeToggle {
+  color: #f0f0f0;
+}
+
+body.dark-mode .nav a:hover,
+body.dark-mode .navButton:hover {
   color: #FF6B00;
-}
-
-:global(body.dark-mode) .modeToggle {
-  color: #f0f0f0;
-}
-
-:global(body.dark-mode) .menuToggle {
-  color: #f0f0f0;
 }
 
 /* ========================================
    LIGHT MODE
 ======================================== */
 
-:global(body.light-mode) .header {
+body.light-mode .header {
   background-color: #ffffff;
   color: #000000;
-  border-bottom-color: rgba(0, 0, 0, 0.08);
+  border-bottom-color: rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
 }
 
-:global(body.light-mode) .nav {
+body.light-mode .nav {
   background-color: #ffffff;
 }
 
-:global(body.light-mode) .nav a,
-:global(body.light-mode) .navButton {
+body.light-mode .nav a,
+body.light-mode .navButton {
   color: #000000;
 }
 
-:global(body.light-mode) .nav a:hover,
-:global(body.light-mode) .navButton:hover {
+body.light-mode .menuToggle,
+body.light-mode .modeToggle {
+  color: #000000;
+}
+
+body.light-mode .nav a:hover,
+body.light-mode .navButton:hover {
   color: #FF6B00;
 }
 
-:global(body.light-mode) .modeToggle {
-  color: #000000;
-}
-
-:global(body.light-mode) .menuToggle {
-  color: #000000;
-}
-
 /* ========================================
-   UTILITY
+   UTILITY - Hide scrollbar on mobile menu
 ======================================== */
 
 .nav::-webkit-scrollbar {

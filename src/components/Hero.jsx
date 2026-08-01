@@ -10,8 +10,8 @@ const Hero = () => {
 
   const skills = [
     "PYTHON", "REACT", "NODE.JS", "JAVASCRIPT", "HTML", "CSS",
-    "SQL", "GIT", "GITHUB", "SQL", "UI/UX","FIGMA", "DJANGO",
-    "RESTAPI", "Docker", 
+    "SQL", "GIT", "GITHUB", "UI/UX","FIGMA", "DJANGO",
+    "RESTAPI", "Docker", "TailwindCSS", 
     "TypeScript", "QC", "QA", "PHP", "WORDPRESS", "AI"
   ];
 
