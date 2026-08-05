@@ -18,7 +18,7 @@
 }
 
 /* Footer links */
-.footerLink {
+.footerLinkgit {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -28,8 +28,22 @@
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.footerLink:hover {
+.footerLinkgit:hover {
   color: black;
+  transform: translateY(-2px);
+}
+.footerLinklinkedin {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footerLinklinkedin:hover {
+  color: blue;
   transform: translateY(-2px);
 }
 

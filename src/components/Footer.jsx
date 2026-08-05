@@ -9,7 +9,7 @@ const Footer = ({ scrollToTop }) => {
           href="https://github.com/BitaYeganeh"
           target="_blank"
           rel="noopener noreferrer"
-          className={styles.footerLink}
+          className={styles.footerLinkgit}
         >
           <FaGithub /> GitHub
         </a>
@@ -17,7 +17,7 @@ const Footer = ({ scrollToTop }) => {
           href="https://www.linkedin.com/in/bita-yeganeh-503144237/"
           target="_blank"
           rel="noopener noreferrer"
-          className={styles.footerLink}
+          className={styles.footerLinklinkedin}
         >
           <FaLinkedin /> LinkedIn
         </a>
