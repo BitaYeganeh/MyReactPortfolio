@@ -696,6 +696,21 @@
     font-size: 0.9rem;
   }
 }
+.resumeLink {
+  background-color: #FF6B00;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.resumeLink:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+  text-decoration: none;
+}
 
 /* ===== LARGE SCREEN (1400px and above) ===== */
 @media (min-width: 1400px) {
@@ -782,6 +797,13 @@
   
   .skillTag {
     font-size: 1.2rem;
+  }
+}
+@media (max-width: 768px) {
+  .resumeLink {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+    order: 4; /* keeps it last, own line if others wrap */
   }
 }
 

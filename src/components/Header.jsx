@@ -66,6 +66,14 @@ const Header = ({ onOpenSkills }) => {
         <a href="#experience" onClick={closeMenu}>
           Experience
         </a>
+        <a href="/BitaYeganeh_Resume.pdf"
+  download="Bita_Yeganeh_Resume.pdf"
+  onClick={closeMenu}
+  className={styles.resumeButton}
+>
+  Resume/CV
+</a>
+
 
         <a href="#certificates" onClick={closeMenu}>
           Certificates

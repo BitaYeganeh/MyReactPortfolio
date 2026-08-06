@@ -16,7 +16,7 @@ const Stack = () => {
     {
       title: "BACKEND",
       icon: "🔧",
-      items: ["FastAPI", "Node.js"]
+      items: ["FastAPI", "Node.js", "Django", "REST API"]
     },
     {
       title: "DATABASES",
