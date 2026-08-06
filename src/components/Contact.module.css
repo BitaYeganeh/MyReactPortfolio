@@ -44,7 +44,7 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: gradientShift 4s ease-in-out infinite;
-  font-family: "Comic Neue", "Comic Sans MS", "Chalkboard SE", cursive, sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   display: inline-block;
 }
 

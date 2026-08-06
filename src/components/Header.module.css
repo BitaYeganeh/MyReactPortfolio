@@ -74,19 +74,7 @@
 .modeToggle:hover {
   transform: rotate(20deg);
 }
-.resumeButton {
-  background-color: #ff7a1a; /* match your orange accent */
-  color: #fff;
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-weight: 600;
-  transition: transform 0.15s ease, opacity 0.15s ease;
-}
 
-.resumeButton:hover {
-  transform: translateY(-1px);
-  opacity: 0.9;
-}
 
 /* ========================================
    MOBILE (768px and below)

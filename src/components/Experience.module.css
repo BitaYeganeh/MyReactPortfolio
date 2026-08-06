@@ -43,7 +43,7 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: gradientShift 4s ease-in-out infinite;
-  font-family: "Comic Neue", "Comic Sans MS", "Chalkboard SE", cursive, sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   display: inline-block;
 }
 
@@ -533,4 +533,49 @@
   .companies {
     gap: 1.5rem;
   }
+}
+/* =========================
+   Intro framing text
+========================= */
+
+.intro {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  color: #555555;
+  max-width: 640px;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+:global(body.dark-mode) .intro {
+  color: #aaaaaa;
+}
+
+/* =========================
+   One-liner (compact/minimal tiers)
+========================= */
+
+.oneLiner {
+  font-size: 0.85rem;
+  color: #555555;
+  line-height: 1.6;
+  margin: 0.3rem 0 0 0;
+}
+
+:global(body.dark-mode) .oneLiner {
+  color: #aaaaaa;
+}
+
+/* =========================
+   Minimal tier de-emphasis
+========================= */
+
+.companyBlock[data-tier="minimal"] .companyName {
+  font-size: 0.95rem;
+  color: #777777;
+  font-weight: 500;
+}
+
+:global(body.dark-mode) .companyBlock[data-tier="minimal"] .companyName {
+  color: #888888;
 }

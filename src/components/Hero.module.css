@@ -158,7 +158,7 @@
 .sideText {
   display: flex;
   flex-direction: column;
-  font-family: 'Comic neue', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-weight: 200;
   font-size: 0.75rem;
   opacity: 0;
@@ -278,7 +278,7 @@
 
 .mobileLeftText,
 .mobileRightText {
-  font-family: 'Comic neue', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-weight: 300;
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.9);

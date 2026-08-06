@@ -58,7 +58,7 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: gradientShift 4s ease-in-out infinite;
-  font-family: "Comic Neue", "Comic Sans MS", "Chalkboard SE", cursive, sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   position: relative;
   display: inline-block;
 }
@@ -220,7 +220,7 @@
   color: #000000;
   letter-spacing: -0.02em;
   white-space: nowrap;
-  font-family: 'Comic Neue', 'Comic Sans MS', cursive;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 .statLabel {
