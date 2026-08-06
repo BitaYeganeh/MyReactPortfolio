@@ -1,88 +1,68 @@
 // src/data/projects.js
 
 const projects = [
-    {
+  {
+  id: 0,
+  title: "Cyber Security Finland — Website Redesign",
+  subtitle: "PROFESSIONAL PROJECT · ASTRO",
+  date: "JUN 2026 – PRESENT",
+  description:
+    "Redesigned the live company website for Cyber Security Finland (cybersecurity.fi) as part of my ICT traineeship — moving from a traditional serif-heavy layout to a modern, gradient-driven visual identity while preserving the site's compliance-focused messaging (ISO 27001, NIS2, GDPR, DORA).",
+  tags: ["Astro", "JavaScript", "HTML", "CSS", "Security"],
+  image: "/images/cybersecurity-redesign.png",
+  alt: "Cyber Security Finland website redesign — enterprise cybersecurity and compliance advisory homepage",
+  live: "https://cybersecurity-pearl.vercel.app",
+},
+  {
     id: 1,
-    title: "WordPress/PHP - ABC OF MEDIA Website",
-    image: "/images/abc.png",
-    alt: "WordPress/PHP Project - ABC OF MEDIA Website",
-    github: "https://github.com/BitaYeganeh/WordPress-Project---ABC-OF-MEDIA",
-  },
-    {
-    id: 2,
-    title: "React - HR Management System",
-    image: "/images/hrapp-screenshot.png", // replace with actual screenshot
+    title: "HR Management System",
+    subtitle: "REACT · NODE.JS",
+    date: "NOV 2025",
+    description:
+      "Full-stack HR platform for managing employee records, departments, and salaries. Built the React frontend and Node.js/Express backend, with a focus on clean data flow between the UI and API.",
+    tags: ["React", "Node.js", "Full-Stack"],
+    image: "/images/hrapp-screenshot.png",
     alt: "HR Management System",
     github: "https://github.com/BitaYeganeh/hrApp",
     live: "https://hrapp-1-68tb.onrender.com",
   },
-
-
+  {
+    id: 2,
+    title: "ABC OF MEDIA Website",
+    subtitle: "WORDPRESS · PHP",
+    date: "DEC 2025 – PRESENT",
+    description:
+      "Ongoing WordPress/PHP site built for a media literacy initiative, including custom page templates and content structure to support press releases, media, and educational resources.",
+    tags: ["WordPress", "PHP"],
+    image: "/images/abc.png",
+    alt: "WordPress/PHP Project - ABC OF MEDIA Website",
+    github:
+      "https://github.com/BitaYeganeh/WordPress-Project---ABC-OF-MEDIA",
+  },
   {
     id: 3,
-    title: "JavaScript - Pancake Order System",
+    title: "Pancake Order System",
+    subtitle: "JAVASCRIPT",
+    date: "AUG 2025",
+    description:
+      "Interactive ordering system built in vanilla JavaScript, handling dynamic pricing, topping selection, and order summaries without any framework — focused on clean DOM manipulation and state logic.",
+    tags: ["JavaScript", "DOM"],
     image: "/images/project2.png",
     alt: "Pancake Order Project",
-    github: "https://github.com/BitaYeganeh/Summer-tasks/tree/main/Pannukakku",
+    github:
+      "https://github.com/BitaYeganeh/Summer-tasks/tree/main/Pannukakku",
   },
-      {
+  {
     id: 4,
-    title: "WordPress/PHP - Tech News",
-    image: "/images/technews.png",
-    alt: "WordPress/PHP Project - Tech News",
-    github: "https://github.com/BitaYeganeh/WordPress-PHP-Project---Tech-News",
-  },
-
-
-    {
-    id: 5,
-    title: "Figma - Cafe Website UI Design",
+    title: "Cafe Website UI Design",
+    subtitle: "FIGMA · UI/UX",
+    date: "JUL 2025",
+    description:
+      "End-to-end UI/UX design for a café website, from wireframes to a clickable prototype — covering layout, typography, and interaction design for a warm, brand-driven feel.",
+    tags: ["Figma", "UI/UX Design"],
     image: "/images/figma-cafe.png",
     alt: "Café website UI design in Figma",
     live: "https://www.figma.com/proto/LOFz2qhMrQFBrMrCsotQfl/prototype-for-a-caf%C3%A9-website?node-id=1-2&starting-point-node-id=1%3A2&t=taVksUnCMCTiGYTj-1",
-  },
-
-
-  {
-    id: 6,
-    title: "JavaScript - Eläintarha",
-    image: "/images/project1.png",
-    alt: "Eläintarha JavaScript Project",
-    github:
-      "https://github.com/BitaYeganeh/HTML-CSS-JS-projektit/tree/main/JS/Projects/Eläintarha",
-  },
-  {
-    id: 7,
-    title: "WordPress - Business College Helsinki",
-    image: "/images/bcd.png",
-    alt: "WordPress Project - Business College Helsinki Networking Page",
-    github:
-      "https://github.com/BitaYeganeh/wordpress_Ohjelmistokehitysprojekti-1/tree/main",
-
-  },
-  {
-    id: 8,
-    title: "Figma - Personal Mood Board",
-    image: "/images/moodboard.png",
-    alt: "Mood Board UI design in Figma",
-    live: "https://www.figma.com/design/T0DHRgheR5owxqJPjMSCew/Mood-Borad?t=0w1cZSds6tZsp8H0-1",
-
-  },
-  {
-    id: 9,
-    title: "Social-links-profile-card",
-    image: "/images/project7.png",
-    alt: "Social-links-profile-card Project",
-    github:
-      "https://github.com/BitaYeganeh/Summer-tasks/tree/main/FrontendMentor/Social-links-profile",
-  },
-  {
-    id: 10,
-    title: "Base Apparel Coming Soon",
-    image: "/images/project8.png",
-    alt: "Base Apparel Coming Soon Project",
-    github:
-      "https://github.com/BitaYeganeh/Summer-tasks/tree/main/FrontendMentor/base-apparel-coming-soon-master",
   },
 ];
 
