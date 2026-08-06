@@ -175,58 +175,20 @@
 }
 
 /* =========================
-   See All Button
+   Footnote
 ========================= */
 
-.seeMoreWrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
-  width: 100%;
-}
-
-.seeMoreButton {
+.footnote {
   font-family: "JetBrains Mono", monospace;
-  font-size: 0.9rem;
-  font-weight: 500;
-  padding: 0.8rem 2.5rem;
-  background: #FF6B00;
-  color: #ffffff;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  letter-spacing: 0.05em;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+  font-size: 0.8rem;
+  color: #888888;
+  text-align: center;
+  margin-top: 1.5rem;
+  font-style: italic;
 }
 
-.seeMoreButton::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.5s ease;
-}
-
-.seeMoreButton:hover::before {
-  left: 100%;
-}
-
-.seeMoreButton:hover {
-  background: #e55a00;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(255, 107, 0, 0.4);
-}
-
-.seeMoreButton:active {
-  transform: translateY(0px);
-  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+:global(body.dark-mode) .footnote {
+  color: #777777;
 }
 
 /* =========================
@@ -260,16 +222,6 @@
 
 :global(body.dark-mode) .previewBox {
   background: #2a2a2a;
-}
-
-:global(body.dark-mode) .seeMoreButton {
-  background: #FF6B00;
-  color: #ffffff;
-}
-
-:global(body.dark-mode) .seeMoreButton:hover {
-  background: #e55a00;
-  box-shadow: 0 8px 25px rgba(255, 107, 0, 0.5);
 }
 
 /* =========================
@@ -324,9 +276,8 @@
     font-size: 0.6rem;
   }
 
-  .seeMoreButton {
-    font-size: 0.8rem;
-    padding: 0.6rem 2rem;
+  .footnote {
+    font-size: 0.7rem;
   }
 }
 
@@ -352,10 +303,7 @@
     font-size: 0.85rem;
   }
 
-  .seeMoreButton {
-    font-size: 0.7rem;
-    padding: 0.5rem 1.5rem;
-    width: 100%;
-    max-width: 280px;
+  .footnote {
+    font-size: 0.65rem;
   }
 }
