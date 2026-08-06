@@ -2,18 +2,6 @@
 
 const projects = [
   {
-  id: 0,
-  title: "Cyber Security Finland — Website Redesign",
-  subtitle: "PROFESSIONAL PROJECT · ASTRO",
-  date: "JUN 2026 – PRESENT",
-  description:
-    "Redesigned the live company website for Cyber Security Finland (cybersecurity.fi) as part of my ICT traineeship — moving from a traditional serif-heavy layout to a modern, gradient-driven visual identity while preserving the site's compliance-focused messaging (ISO 27001, NIS2, GDPR, DORA).",
-  tags: ["Astro", "JavaScript", "HTML", "CSS", "Security"],
-  image: "/images/cybersecurity-redesign.png",
-  alt: "Cyber Security Finland website redesign — enterprise cybersecurity and compliance advisory homepage",
-  live: "https://cybersecurity-pearl.vercel.app",
-},
-  {
     id: 1,
     title: "HR Management System",
     subtitle: "REACT · NODE.JS",
