@@ -558,3 +558,25 @@
     font-size: 0.5rem;
   }
 }
+/* Add text justification for mobile */
+@media (max-width: 768px) {
+  /* Justify description text on mobile */
+  .description p {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    word-break: break-word;
+  }
+}
+
+/* For very small screens, improve justification */
+@media (max-width: 480px) {
+  .description p {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    word-break: break-word;
+    /* Optional: adjust word spacing for better appearance */
+    word-spacing: -0.05em;
+  }
+}

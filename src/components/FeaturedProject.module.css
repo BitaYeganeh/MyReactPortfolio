@@ -27,6 +27,7 @@
   padding: 0.4rem 1rem;
   border-radius: 20px;
   margin-bottom: 1.2rem;
+  text-align: left !important;
 }
 
 .pin {
@@ -53,6 +54,7 @@
   color: #000000;
   margin: 0;
   line-height: 1.3;
+  text-align: left !important;
 }
 
 .featuredDate {
@@ -61,10 +63,11 @@
   color: #FF6B00;
   font-weight: 500;
   white-space: nowrap;
+  text-align: left !important;
 }
 
 /* =========================
-   Description
+   Description - Justified on Mobile
 ========================= */
 
 .featuredDescription {
@@ -73,6 +76,18 @@
   line-height: 1.7;
   margin: 0 0 1.2rem 0;
   max-width: 800px;
+}
+
+/* Mobile text justification */
+@media (max-width: 768px) {
+  .featuredDescription,
+  .comparisonNote,
+  .featured p {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    word-break: break-word;
+  }
 }
 
 /* =========================
@@ -94,6 +109,7 @@
   color: #333333;
   border-radius: 16px;
   border: 1px solid #e5e5e5;
+  text-align: left !important;
 }
 
 /* =========================
@@ -118,6 +134,7 @@
   font-weight: 600;
   color: #000000;
   margin-bottom: 1rem;
+  text-align: left !important;
 }
 
 .comparisonNote {
@@ -126,6 +143,16 @@
   line-height: 1.6;
   margin: 0.8rem 0 0 0;
   max-width: 700px;
+}
+
+/* Mobile justification for comparison notes */
+@media (max-width: 768px) {
+  .comparisonNote {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    word-break: break-word;
+  }
 }
 
 /* =========================
@@ -143,6 +170,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
+  min-width: 0;
 }
 
 .compareLabel {
@@ -151,7 +179,7 @@
   font-weight: 700;
   letter-spacing: 0.1em;
   color: #999999;
-  text-align: center;
+  text-align: center !important;
 }
 
 .afterLabel {
@@ -164,7 +192,8 @@
   overflow: hidden;
   border: 1px solid #e5e5e5;
   transition: all 0.3s ease;
-  aspect-ratio: 16 / 10;
+  position: relative;
+  width: 100%;
   background: #f8f8f8;
 }
 
@@ -176,8 +205,7 @@
 
 .compareImage {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
 }
 
@@ -185,6 +213,8 @@
   font-size: 1.5rem;
   color: #FF6B00;
   font-weight: 700;
+  flex-shrink: 0;
+  padding: 0 0.5rem;
 }
 
 /* =========================
@@ -208,6 +238,7 @@
   padding: 0.3rem 0.9rem;
   border-radius: 16px;
   margin-bottom: 1rem;
+  text-align: left !important;
 }
 
 .newAdditionImageWrapper {
@@ -216,6 +247,7 @@
   border: 1px solid #e5e5e5;
   background: #f8f8f8;
   max-width: 100%;
+  position: relative;
 }
 
 .newAdditionImage {
@@ -233,6 +265,7 @@
   gap: 1rem;
   flex-wrap: wrap;
   margin-top: 0.5rem;
+  text-align: left !important;
 }
 
 .liveLink {
@@ -245,6 +278,7 @@
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
+  text-align: left !important;
 }
 
 .liveLink:hover {
@@ -315,6 +349,8 @@
   .featuredDescription {
     font-size: 1.05rem;
     max-width: 900px;
+    text-align: left;
+    hyphens: none;
   }
 
   .compareGrid {
@@ -323,6 +359,28 @@
 
   .compareArrow {
     font-size: 1.8rem;
+  }
+
+  .compareImageWrapper {
+    max-height: 400px;
+  }
+
+  .comparisonNote {
+    text-align: left;
+    hyphens: none;
+  }
+}
+
+/* ===== DESKTOP (1025px - 1399px) ===== */
+@media (max-width: 1399px) and (min-width: 1025px) {
+  .compareImageWrapper {
+    max-height: 350px;
+  }
+
+  .featuredDescription,
+  .comparisonNote {
+    text-align: left;
+    hyphens: none;
   }
 }
 
@@ -348,6 +406,19 @@
   .comparisonBlock {
     margin-bottom: 2rem;
   }
+
+  .compareImageWrapper {
+    max-height: 280px;
+  }
+
+  /* Justify text on tablet */
+  .featuredDescription,
+  .comparisonNote,
+  .featured p {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+  }
 }
 
 @media (max-width: 768px) {
@@ -362,16 +433,29 @@
 
   .featuredDescription {
     font-size: 0.9rem;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    word-break: break-word;
   }
 
   .compareGrid {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 0.8rem;
   }
 
   .compareArrow {
     transform: rotate(90deg);
     text-align: center;
+    padding: 0.2rem 0;
+  }
+
+  .compareItem {
+    gap: 0.4rem;
+  }
+
+  .compareImageWrapper {
+    max-height: 250px;
   }
 
   .featuredLinks {
@@ -379,13 +463,20 @@
   }
 
   .liveLink {
-    text-align: center;
+    text-align: center !important;
+  }
+
+  .comparisonNote {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    word-break: break-word;
   }
 }
 
 @media (max-width: 480px) {
   .featured {
-    padding: 1.2rem;
+    padding: 1rem;
     border-radius: 12px;
   }
 
@@ -395,6 +486,7 @@
 
   .featuredLabel {
     font-size: 0.65rem;
+    padding: 0.3rem 0.8rem;
   }
 
   .comparisonSectionLabel {
@@ -404,6 +496,10 @@
   .comparisonBlock {
     margin-bottom: 1.6rem;
     padding-top: 1.2rem;
+  }
+
+  .comparisonBlock:first-of-type {
+    padding-top: 0;
   }
 
   .newAddition {
@@ -418,15 +514,75 @@
 
   .comparisonNote {
     font-size: 0.78rem;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    word-break: break-word;
   }
 
   .featuredDescription {
     font-size: 0.85rem;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    word-break: break-word;
   }
 
   .tag {
     font-size: 0.62rem;
     padding: 0.25rem 0.7rem;
+  }
+
+  .compareLabel {
+    font-size: 0.65rem;
+  }
+
+  .compareImageWrapper {
+    max-height: 180px;
+  }
+
+  .compareArrow {
+    font-size: 1.2rem;
+  }
+}
+
+/* ===== EXTRA SMALL (360px and below) ===== */
+@media (max-width: 360px) {
+  .featured {
+    padding: 0.8rem;
+  }
+
+  .featuredTitle {
+    font-size: 0.95rem;
+  }
+
+  .featuredDate {
+    font-size: 0.65rem;
+  }
+
+  .compareImageWrapper {
+    max-height: 140px;
+  }
+
+  .comparisonNote {
+    font-size: 0.7rem;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    word-break: break-word;
+  }
+
+  .featuredDescription {
+    font-size: 0.75rem;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    word-break: break-word;
+  }
+
+  .liveLink {
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
   }
 }
 
@@ -442,5 +598,45 @@
 
   .featured {
     padding: 1.5rem;
+  }
+
+  .compareImageWrapper {
+    max-height: 200px;
+  }
+
+  .featuredTitle {
+    font-size: 1.2rem;
+  }
+
+  /* Keep justified on landscape mobile */
+  .featuredDescription,
+  .comparisonNote,
+  .featured p {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+  }
+}
+
+/* ===== HIGH DPI / RETINA SCREENS ===== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .compareImage {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  .compareImageWrapper {
+    transition: none;
+  }
+  
+  .compareImageWrapper:hover {
+    transform: none;
+  }
+  
+  .liveLink:hover {
+    transform: none;
   }
 }

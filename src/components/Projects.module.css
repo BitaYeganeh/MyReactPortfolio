@@ -154,6 +154,9 @@
   color: #666666;
   margin: 0;
   line-height: 1.5;
+  text-align: justify;        /* Aligns text to both margins */
+  hyphens: auto;              /* Enables hyphenation */
+  word-break: break-word; 
 }
 
 .projectTags {

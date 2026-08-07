@@ -82,7 +82,7 @@
 }
 
 /* =========================
-   Intro framing text
+   Intro framing text - WITH JUSTIFICATION
 ========================= */
 
 .intro {
@@ -92,6 +92,11 @@
   max-width: 640px;
   margin-bottom: 2.5rem;
   line-height: 1.6;
+  /* 👇 ADD JUSTIFICATION */
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  word-break: break-word;
 }
 
 :global(body.dark-mode) .intro {
@@ -153,7 +158,7 @@
 }
 
 /* =========================
-   Section (Education )
+   Section (Education)
 ========================= */
 
 .section {
@@ -189,7 +194,7 @@
 }
 
 /* =========================
-   Entry - Like Reference Image
+   Entry - Like Reference Image - WITH JUSTIFICATION
 ========================= */
 
 .entry {
@@ -210,6 +215,8 @@
   color: #FF6B00;
   letter-spacing: 0.02em;
   margin-bottom: 0.2rem;
+  /* Dates stay left-aligned */
+  text-align: left;
 }
 
 .entryTitle {
@@ -219,6 +226,8 @@
   color: #000000;
   margin: 0;
   line-height: 1.3;
+  /* Titles stay left-aligned */
+  text-align: left;
 }
 
 .entrySchool {
@@ -227,6 +236,11 @@
   color: #555555;
   margin: 0.3rem 0 0.1rem 0;
   font-weight: 400;
+  /* 👇 ADD JUSTIFICATION - School names */
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  word-break: break-word;
 }
 
 .entryDetail {
@@ -235,6 +249,11 @@
   color: #888888;
   margin: 0.1rem 0 0 0;
   font-weight: 300;
+  /* 👇 ADD JUSTIFICATION - Detail text */
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  word-break: break-word;
 }
 
 /* =========================
@@ -275,19 +294,48 @@
 }
 
 /* =========================
-   Responsive
+   Responsive - WITH OPTIMIZED JUSTIFICATION
 ========================= */
 
 @media (min-width: 1400px) {
   .intro {
     font-size: 1.05rem;
     max-width: 720px;
+    /* Keep justification on large screens */
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    word-break: break-word;
+  }
+
+  .entrySchool {
+    font-size: 1rem;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    word-break: break-word;
+  }
+
+  .entryDetail {
+    font-size: 0.9rem;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    word-break: break-word;
   }
 }
 
 @media (max-width: 1024px) {
   .education {
     padding: 4rem 2rem;
+  }
+
+  .intro {
+    font-size: 0.95rem;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    word-break: break-word;
   }
 }
 
@@ -309,6 +357,13 @@
   .intro {
     font-size: 0.9rem;
     margin-bottom: 2rem;
+    /* Justification with optimized spacing */
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    word-break: break-word;
+    word-spacing: -0.01em;
+    line-height: 1.7;
   }
 
   .statusBadge {
@@ -351,10 +406,22 @@
 
   .entrySchool {
     font-size: 0.85rem;
+    /* Justification for school names */
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    word-break: break-word;
+    word-spacing: -0.01em;
   }
 
   .entryDetail {
     font-size: 0.8rem;
+    /* Justification for details */
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    word-break: break-word;
+    word-spacing: -0.01em;
   }
 
   .entries {
@@ -382,6 +449,13 @@
   .intro {
     font-size: 0.8rem;
     margin-bottom: 1.5rem;
+    /* Enhanced justification for small screens */
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    word-break: break-word;
+    word-spacing: -0.02em;
+    line-height: 1.6;
   }
 
   .statusBadge {
@@ -410,10 +484,22 @@
 
   .entrySchool {
     font-size: 0.8rem;
+    /* Small screen justification */
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    word-break: break-word;
+    word-spacing: -0.02em;
   }
 
   .entryDetail {
     font-size: 0.75rem;
+    /* Small screen justification */
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    word-break: break-word;
+    word-spacing: -0.02em;
   }
 
   .entries {
@@ -422,5 +508,118 @@
 
   .content {
     gap: 1.5rem;
+  }
+}
+
+/* ===== EXTRA SMALL (360px and below) ===== */
+@media (max-width: 360px) {
+  .education {
+    padding: 1.5rem 0.8rem;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .label {
+    font-size: 0.5rem;
+    padding-left: 1.2rem;
+  }
+
+  .intro {
+    font-size: 0.7rem;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    word-break: break-word;
+    word-spacing: -0.03em;
+    line-height: 1.5;
+  }
+
+  .entryTitle {
+    font-size: 0.85rem;
+  }
+
+  .entrySchool {
+    font-size: 0.7rem;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    word-break: break-word;
+    word-spacing: -0.03em;
+  }
+
+  .entryDetail {
+    font-size: 0.65rem;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    word-break: break-word;
+    word-spacing: -0.03em;
+  }
+
+  .entryDate {
+    font-size: 0.65rem;
+  }
+}
+
+/* ===== LANDSCAPE ORIENTATION ===== */
+@media (max-height: 600px) and (orientation: landscape) {
+  .education {
+    padding: 2rem 2rem;
+    min-height: auto;
+  }
+
+  .title {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+
+  .intro {
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    word-break: break-word;
+  }
+
+  .entrySchool {
+    font-size: 0.8rem;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    word-break: break-word;
+  }
+
+  .entryDetail {
+    font-size: 0.75rem;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    word-break: break-word;
+  }
+
+  .entries {
+    gap: 1rem;
+  }
+
+  .content {
+    gap: 1.5rem;
+  }
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  .title {
+    animation: none;
+  }
+
+  .label {
+    transition: none;
+  }
+
+  .label:hover {
+    padding-left: 2rem;
+    letter-spacing: 0.2em;
   }
 }

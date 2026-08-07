@@ -240,6 +240,7 @@
 
 .achievements li {
   font-size: 0.9rem;
+  text-align: justify;
   color: #555555;
   line-height: 1.6;
   margin-bottom: 0.3rem;
@@ -540,6 +541,7 @@
 
 .intro {
   font-family: "Space Grotesk", sans-serif;
+  text-align:justify;
   font-size: 1rem;
   color: #555555;
   max-width: 640px;
@@ -557,6 +559,7 @@
 
 .oneLiner {
   font-size: 0.85rem;
+  text-align: justify;
   color: #555555;
   line-height: 1.6;
   margin: 0.3rem 0 0 0;

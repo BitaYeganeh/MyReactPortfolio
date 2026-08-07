@@ -730,6 +730,13 @@
   .skillTag {
     font-size: 5.5rem;
   }
+
+  .imageWrapper {
+    width: 190px;
+    height: 190px;
+    top: 140px;
+    right: 220px;
+  }
 }
 
 /* ===== LANDSCAPE ORIENTATION ===== */
