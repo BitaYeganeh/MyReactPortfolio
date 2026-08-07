@@ -82,6 +82,66 @@
 }
 
 /* =========================
+   Intro framing text
+========================= */
+
+.intro {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  color: #555555;
+  max-width: 640px;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+:global(body.dark-mode) .intro {
+  color: #aaaaaa;
+}
+
+/* =========================
+   Status Badge (IN PROGRESS)
+========================= */
+
+.statusBadge {
+  display: inline-block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  background: #FF6B00;
+  padding: 0.15rem 0.6rem;
+  border-radius: 10px;
+  margin-left: 0.6rem;
+  vertical-align: middle;
+}
+
+:global(body.dark-mode) .statusBadge {
+  background: #FF6B00;
+  color: #ffffff;
+}
+
+.statusBadgeUpcoming {
+  display: inline-block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #FF6B00;
+  background: transparent;
+  border: 1px solid #FF6B00;
+  padding: 0.13rem 0.55rem;
+  border-radius: 10px;
+  margin-left: 0.6rem;
+  vertical-align: middle;
+}
+
+:global(body.dark-mode) .statusBadgeUpcoming {
+  color: #FF6B00;
+  border-color: #FF6B00;
+}
+
+/* =========================
    Content
 ========================= */
 
@@ -218,6 +278,13 @@
    Responsive
 ========================= */
 
+@media (min-width: 1400px) {
+  .intro {
+    font-size: 1.05rem;
+    max-width: 720px;
+  }
+}
+
 @media (max-width: 1024px) {
   .education {
     padding: 4rem 2rem;
@@ -237,6 +304,21 @@
   .label {
     font-size: 0.7rem;
     margin-top: -2px;
+  }
+
+  .intro {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+
+  .statusBadge {
+    font-size: 0.6rem;
+    padding: 0.12rem 0.5rem;
+  }
+
+  .statusBadgeUpcoming {
+    font-size: 0.6rem;
+    padding: 0.1rem 0.45rem;
   }
 
   .section {
@@ -295,6 +377,23 @@
 
   .label {
     font-size: 0.6rem;
+  }
+
+  .intro {
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .statusBadge {
+    font-size: 0.55rem;
+    padding: 0.1rem 0.45rem;
+    margin-left: 0.4rem;
+  }
+
+  .statusBadgeUpcoming {
+    font-size: 0.55rem;
+    padding: 0.08rem 0.4rem;
+    margin-left: 0.4rem;
   }
 
   .sectionTitle {
