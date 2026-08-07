@@ -12,12 +12,11 @@ const Education = () => {
           <span className={styles.label}>04-EDUCATION</span>
         </div>
 
-        {/* Framing note for the sequential path */}
+        {/* Framing note for the pathway relationship */}
         <p className={styles.intro}>
-          Finishing a Software Development diploma at Business College
-          Helsinki in October 2026 — currently completing the program's
-          internship — before continuing into a Bachelor's degree in ICT
-          at Metropolia.
+          Currently completing a vocational ICT qualification at Business
+          College Helsinki, with an active study-cooperation pathway into
+          further studies at Metropolia University of Applied Sciences.
         </p>
 
         {/* Content */}
@@ -26,14 +25,17 @@ const Education = () => {
           <div className={styles.section}>
             <h3 className={styles.sectionTitle}>EDUCATION</h3>
             <div className={styles.entries}>
-              {/* Education 1 - Business College (current, finishing soon) */}
+              {/* Education 1 - Business College (current vocational qualification) */}
               <div className={styles.entry}>
                 <div className={styles.entryHeader}>
                   <span className={styles.entryDate}>
-                    MAR 2025 – OCT 2026
-                    <span className={styles.statusBadge}>INTERNSHIP</span>
+                    MAR 2025 – PRESENT
+                    <span className={styles.statusBadge}>ENROLLED</span>
                   </span>
-                  <h4 className={styles.entryTitle}>Software Development</h4>
+                  <h4 className={styles.entryTitle}>
+                    Vocational Qualification — Information & Communications
+                    Technology
+                  </h4>
                 </div>
                 <p className={styles.entrySchool}>
                   Business College Helsinki
@@ -44,17 +46,15 @@ const Education = () => {
                 </p>
               </div>
 
-              {/* Education 2 - Metropolia (starts after Business College) */}
+              {/* Education 2 - Metropolia (parallel study-cooperation pathway) */}
               <div className={styles.entry}>
                 <div className={styles.entryHeader}>
                   <span className={styles.entryDate}>
-                    OCT 2026 – DEC 2027
-                    <span className={styles.statusBadgeUpcoming}>
-                      STARTING NEXT
-                    </span>
+                    OCT 2025 – 2027
+                    <span className={styles.statusBadge}>ACTIVE</span>
                   </span>
                   <h4 className={styles.entryTitle}>
-                    Bachelor's Degree - Information and Communication
+                    Study Cooperation Pathway — Information and Communication
                     Technology
                   </h4>
                 </div>
@@ -83,7 +83,7 @@ const Education = () => {
                   </h4>
                 </div>
                 <p className={styles.entrySchool}>
-                  University Garmsar Iran
+                  Islamic Azad University, Garmsar Branch
                 </p>
               </div>
             </div>
