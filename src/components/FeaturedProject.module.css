@@ -97,6 +97,38 @@
 }
 
 /* =========================
+   Comparison Blocks
+========================= */
+
+.comparisonBlock {
+  margin-bottom: 2.2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.comparisonBlock:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.comparisonSectionLabel {
+  display: block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+.comparisonNote {
+  font-size: 0.85rem;
+  color: #777777;
+  line-height: 1.6;
+  margin: 0.8rem 0 0 0;
+  max-width: 700px;
+}
+
+/* =========================
    Before / After Comparison
 ========================= */
 
@@ -105,7 +137,6 @@
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   gap: 1.5rem;
-  margin-bottom: 2rem;
 }
 
 .compareItem {
@@ -157,6 +188,43 @@
 }
 
 /* =========================
+   New Addition Callout
+========================= */
+
+.newAddition {
+  margin-bottom: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.newAdditionLabel {
+  display: inline-block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #00A86B;
+  background: rgba(0, 168, 107, 0.08);
+  padding: 0.3rem 0.9rem;
+  border-radius: 16px;
+  margin-bottom: 1rem;
+}
+
+.newAdditionImageWrapper {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e5e5e5;
+  background: #f8f8f8;
+  max-width: 100%;
+}
+
+.newAdditionImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =========================
    Links
 ========================= */
 
@@ -164,6 +232,7 @@
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  margin-top: 0.5rem;
 }
 
 .liveLink {
@@ -181,25 +250,6 @@
 .liveLink:hover {
   background: #e55a00;
   transform: scale(1.03);
-}
-
-.originalLink {
-  font-family: "JetBrains Mono", monospace;
-  font-size: 0.85rem;
-  padding: 0.6rem 1.4rem;
-  background: transparent;
-  color: #333333;
-  border: 1px solid #dddddd;
-  border-radius: 20px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.originalLink:hover {
-  background: #333333;
-  color: #ffffff;
-  border-color: #333333;
 }
 
 /* =========================
@@ -225,28 +275,80 @@
   border-color: #3a3a3a;
 }
 
+:global(body.dark-mode) .comparisonBlock,
+:global(body.dark-mode) .newAddition {
+  border-top-color: #2a2a2a;
+}
+
+:global(body.dark-mode) .comparisonSectionLabel {
+  color: #ffffff;
+}
+
+:global(body.dark-mode) .comparisonNote {
+  color: #999999;
+}
+
 :global(body.dark-mode) .compareLabel {
   color: #777777;
 }
 
-:global(body.dark-mode) .compareImageWrapper {
+:global(body.dark-mode) .compareImageWrapper,
+:global(body.dark-mode) .newAdditionImageWrapper {
   border-color: #2a2a2a;
   background: #2a2a2a;
-}
-
-:global(body.dark-mode) .originalLink {
-  color: #cccccc;
-  border-color: #444444;
-}
-
-:global(body.dark-mode) .originalLink:hover {
-  background: #ffffff;
-  color: #000000;
 }
 
 /* =========================
    Responsive
 ========================= */
+
+/* ===== LARGE SCREEN (1400px and above) ===== */
+@media (min-width: 1400px) {
+  .featured {
+    padding: 3rem;
+  }
+
+  .featuredTitle {
+    font-size: 1.8rem;
+  }
+
+  .featuredDescription {
+    font-size: 1.05rem;
+    max-width: 900px;
+  }
+
+  .compareGrid {
+    gap: 2rem;
+  }
+
+  .compareArrow {
+    font-size: 1.8rem;
+  }
+}
+
+/* ===== TABLET (1024px and below) ===== */
+@media (max-width: 1024px) {
+  .featured {
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .featuredTitle {
+    font-size: 1.45rem;
+  }
+
+  .compareGrid {
+    gap: 1.2rem;
+  }
+
+  .compareArrow {
+    font-size: 1.3rem;
+  }
+
+  .comparisonBlock {
+    margin-bottom: 2rem;
+  }
+}
 
 @media (max-width: 768px) {
   .featured {
@@ -276,8 +378,7 @@
     flex-direction: column;
   }
 
-  .liveLink,
-  .originalLink {
+  .liveLink {
     text-align: center;
   }
 }
@@ -294,5 +395,52 @@
 
   .featuredLabel {
     font-size: 0.65rem;
+  }
+
+  .comparisonSectionLabel {
+    font-size: 0.75rem;
+  }
+
+  .comparisonBlock {
+    margin-bottom: 1.6rem;
+    padding-top: 1.2rem;
+  }
+
+  .newAddition {
+    margin-bottom: 1.6rem;
+    padding-top: 1.2rem;
+  }
+
+  .newAdditionLabel {
+    font-size: 0.65rem;
+    padding: 0.25rem 0.7rem;
+  }
+
+  .comparisonNote {
+    font-size: 0.78rem;
+  }
+
+  .featuredDescription {
+    font-size: 0.85rem;
+  }
+
+  .tag {
+    font-size: 0.62rem;
+    padding: 0.25rem 0.7rem;
+  }
+}
+
+/* ===== LANDSCAPE ORIENTATION (short viewports) ===== */
+@media (max-height: 600px) and (orientation: landscape) {
+  .compareGrid {
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+  .compareArrow {
+    transform: none;
+  }
+
+  .featured {
+    padding: 1.5rem;
   }
 }
