@@ -94,9 +94,10 @@
   line-height: 1.6;
   /* 👇 ADD JUSTIFICATION */
   text-align: justify;
-  text-justify: inter-word;
   hyphens: auto;
   word-break: break-word;
+  text-align: center;
+  font-style: italic;
 }
 
 :global(body.dark-mode) .intro {

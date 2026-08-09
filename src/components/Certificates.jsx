@@ -55,7 +55,8 @@ const Certificates = () => {
         {/* Footnote for additional coursework instead of a wall of thin certs */}
         <p className={styles.footnote}>
           Plus 12 additional short courses in AI tools and digital security
-          via Eduhouse — several are sub-modules of Cyber Security Basics.
+          via Eduhouse < br/>
+          — several are sub-modules of Cyber Security Basics.
         </p>
       </div>
     </section>
