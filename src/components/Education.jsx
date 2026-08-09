@@ -12,11 +12,11 @@ const Education = () => {
           <span className={styles.label}>04-EDUCATION</span>
         </div>
 
-        {/* Framing note for the pathway relationship */}
+        {/* Framing note */}
         <p className={styles.intro}>
           Currently completing a vocational ICT qualification at Business
-          College Helsinki, with an active study-cooperation pathway into
-          further studies at Metropolia University of Applied Sciences.
+          College Helsinki alongside a Bachelor's degree in ICT at
+          Metropolia University of Applied Sciences.
         </p>
 
         {/* Content */}
@@ -29,7 +29,7 @@ const Education = () => {
               <div className={styles.entry}>
                 <div className={styles.entryHeader}>
                   <span className={styles.entryDate}>
-                    MAR 2025 – PRESENT
+                    MAR 2025 – OCT 2026
                     <span className={styles.statusBadge}>ENROLLED</span>
                   </span>
                   <h4 className={styles.entryTitle}>
@@ -46,45 +46,54 @@ const Education = () => {
                 </p>
               </div>
 
-              {/* Education 2 - Metropolia (parallel study-cooperation pathway) */}
+              {/* Education 2 - Metropolia (Bachelor's, in progress) */}
               <div className={styles.entry}>
                 <div className={styles.entryHeader}>
                   <span className={styles.entryDate}>
-                    OCT 2025 – 2027
-                    <span className={styles.statusBadge}>ACTIVE</span>
+                    OCT 2025 – DEC 2027
+                    <span className={styles.statusBadge}>IN PROGRESS</span>
                   </span>
                   <h4 className={styles.entryTitle}>
-                    Study Cooperation Pathway — Information and Communication
+                    Bachelor's Degree — Information and Communication
                     Technology
                   </h4>
                 </div>
                 <p className={styles.entrySchool}>
                   Metropolia University of Applied Sciences
                 </p>
-              </div>
-
-              {/* Education 3 */}
-              <div className={styles.entry}>
-                <div className={styles.entryHeader}>
-                  <span className={styles.entryDate}>2013</span>
-                  <h4 className={styles.entryTitle}>Renewable Energy</h4>
-                </div>
-                <p className={styles.entrySchool}>
-                  University Kebangsaan Malaysia
+                <p className={styles.entryDetail}>
+                  Completed coursework: Python Programming, English for ICT
+                  Students, Mathematics (Expressions and Equations)
                 </p>
               </div>
 
-              {/* Education 4 */}
+              {/* Education 3 - UKM Master's */}
               <div className={styles.entry}>
                 <div className={styles.entryHeader}>
-                  <span className={styles.entryDate}>2009</span>
+                  <span className={styles.entryDate}>JAN 2014 – DEC 2015</span>
                   <h4 className={styles.entryTitle}>
-                    Bachelor's Degree - Electronic Engineering
+                    Postgraduate Studies (Master's) — Renewable Energy
                   </h4>
                 </div>
                 <p className={styles.entrySchool}>
-                  Islamic Azad University, Garmsar Branch
+                  National University of Malaysia (UKM)
                 </p>
+                <p className={styles.entryDetail}>
+                  Research on thermoelectric power generation; awarded FRGS
+                  grant studentship and published 3 papers in international
+                  journals
+                </p>
+              </div>
+
+              {/* Education 4 - Garmsar Bachelor's */}
+              <div className={styles.entry}>
+                <div className={styles.entryHeader}>
+                  <span className={styles.entryDate}>JAN 2005 – JUN 2009</span>
+                  <h4 className={styles.entryTitle}>
+                    Bachelor's Degree — Electrical Engineering (Electronics)
+                  </h4>
+                </div>
+                <p className={styles.entrySchool}>University of Garmsar</p>
               </div>
             </div>
           </div>
