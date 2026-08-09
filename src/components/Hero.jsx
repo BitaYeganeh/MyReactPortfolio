@@ -73,13 +73,14 @@ const Hero = () => {
               <a href="#about" className={styles.navLink}>About</a>
               <a href="#projects" className={styles.navLink}>Projects</a>
               <a href="#experience" className={styles.navLink}>Experience</a>
-              <a href="/images/Bita_Yeganeh_Resume.pdf"
-    target="_blank"
-    rel="noopener noreferrer"
-    className={styles.resumeLink}
-  >
-    Resume/CV
-  </a>
+              <a
+                href="/images/Bita_Yeganeh_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.resumeLink}
+              >
+                Resume/CV
+              </a>
             </div>
             <a href="#contact" className={styles.contactLink}>
               <span className={styles.contactSlash}>//</span> Contact Me
