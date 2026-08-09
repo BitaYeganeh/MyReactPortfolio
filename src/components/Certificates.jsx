@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./Certificates.module.css";
 import qaJam from "../assets/certificates/QAjam.pdf";
 import cyberBasics from "../assets/certificates/Cyber Security Basics.pdf";
-import teamsSecurity from "../assets/certificates/Teams and Office 365 security.pdf";
 
 const certificates = [
   {
@@ -16,12 +15,6 @@ const certificates = [
     issuer: "Eduhouse Oy",
     date: "Issued Feb 2026",
     preview: cyberBasics,
-  },
-  {
-    title: "Teams and Office 365 Security",
-    issuer: "Eduhouse Oy",
-    date: "Issued Feb 2026",
-    preview: teamsSecurity,
   },
 ];
 
@@ -61,8 +54,8 @@ const Certificates = () => {
 
         {/* Footnote for additional coursework instead of a wall of thin certs */}
         <p className={styles.footnote}>
-          Plus 8+ additional short courses in AI tools and digital security
-          via Eduhouse.
+          Plus 12 additional short courses in AI tools and digital security
+          via Eduhouse — several are sub-modules of Cyber Security Basics.
         </p>
       </div>
     </section>
