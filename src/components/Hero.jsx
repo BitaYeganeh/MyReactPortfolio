@@ -74,7 +74,7 @@ const Hero = () => {
               <a href="#projects" className={styles.navLink}>Projects</a>
               <a href="#experience" className={styles.navLink}>Experience</a>
               <a
-                href="/images/Bita_Yeganeh_Resume.pdf"
+                href="/images/BitaYeganeh.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.resumeLink}
