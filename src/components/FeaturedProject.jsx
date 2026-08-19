@@ -109,7 +109,7 @@ const FeaturedProject = () => {
 
       <div className={styles.featuredLinks}>
         <a
-          href="https://cybersecurity-pearl.vercel.app"
+          href="https://www.cybersecurity.fi/"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.liveLink}
