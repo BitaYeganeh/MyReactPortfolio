@@ -64,6 +64,17 @@ body {
 }
 
 /* ===== SECTION CONTAINER (for non-hero sections) ===== */
+/* Keep section headings clear of the fixed header when jumping via the nav */
+.app-main section[id] {
+  scroll-margin-top: 96px;
+}
+
+@media (max-width: 380px) {
+  .app-main section[id] {
+    scroll-margin-top: 130px;
+  }
+}
+
 .section-container {
   max-width: 1200px;
   margin: 0 auto;

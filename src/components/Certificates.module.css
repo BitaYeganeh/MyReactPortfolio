@@ -32,7 +32,7 @@
 
 .title {
   font-size: clamp(3rem, 6vw, 5rem);
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1;
   margin: 0;
   margin-bottom: 0.2rem;
@@ -182,7 +182,7 @@
   font-family: var(--font-body);
   font-size: 0.9rem;
   color: #888888;
-  text-align: center;
+  text-align: left;
   margin-top: 1.5rem;
   font-style: normal;
 }
@@ -304,7 +304,49 @@
 
   .footnote {
     font-size: 0.85rem;
-    text-align: center;
+    text-align: left;
     font-style: normal;
+  }
+}
+
+/* ===== Mobile type scale (kept last so it wins over earlier rules) ===== */
+@media (max-width: 768px) {
+  .certificates {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .cardTitle {
+    font-size: 1.1rem;
+  }
+
+  .issuer {
+    font-size: 0.85rem;
+  }
+
+  .footnote {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardTitle {
+    font-size: 1.05rem;
+  }
+
+  .issuer {
+    font-size: 0.8rem;
+  }
+
+  .footnote {
+    font-size: 0.8rem;
+  }
+}
+
+/* Phones: the page container already provides side spacing */
+@media (max-width: 480px) {
+  .certificates {
+    padding-left: 0;
+    padding-right: 0;
   }
 }

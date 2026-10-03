@@ -100,7 +100,7 @@
   .featured p {
     text-align: left;
     text-justify: inter-word;
-    hyphens: auto;
+    hyphens: manual;
     word-break: break-word;
   }
 }
@@ -117,7 +117,7 @@
 }
 
 .tag {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 0.7rem;
   padding: 0.3rem 0.9rem;
   background: #f5f5f5;
@@ -165,7 +165,7 @@
   .comparisonNote {
     text-align: left;
     text-justify: inter-word;
-    hyphens: auto;
+    hyphens: manual;
     word-break: break-word;
   }
 }
@@ -284,7 +284,7 @@
 }
 
 .liveLink {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 0.85rem;
   padding: 0.6rem 1.4rem;
   background: #FF6B00;
@@ -432,7 +432,7 @@
   .featured p {
     text-align: left;
     text-justify: inter-word;
-    hyphens: auto;
+    hyphens: manual;
   }
 }
 
@@ -450,7 +450,7 @@
     font-size: 0.9rem;
     text-align: left;
     text-justify: inter-word;
-    hyphens: auto;
+    hyphens: manual;
     word-break: break-word;
   }
 
@@ -484,7 +484,7 @@
   .comparisonNote {
     text-align: left;
     text-justify: inter-word;
-    hyphens: auto;
+    hyphens: manual;
     word-break: break-word;
   }
 }
@@ -531,7 +531,7 @@
     font-size: 0.78rem;
     text-align: left;
     text-justify: inter-word;
-    hyphens: auto;
+    hyphens: manual;
     word-break: break-word;
   }
 
@@ -539,7 +539,7 @@
     font-size: 0.85rem;
     text-align: left;
     text-justify: inter-word;
-    hyphens: auto;
+    hyphens: manual;
     word-break: break-word;
   }
 
@@ -583,7 +583,7 @@
     font-size: 0.7rem;
     text-align: left;
     text-justify: inter-word;
-    hyphens: auto;
+    hyphens: manual;
     word-break: break-word;
   }
 
@@ -591,7 +591,7 @@
     font-size: 0.75rem;
     text-align: left;
     text-justify: inter-word;
-    hyphens: auto;
+    hyphens: manual;
     word-break: break-word;
   }
 
@@ -629,7 +629,7 @@
   .featured p {
     text-align: left;
     text-justify: inter-word;
-    hyphens: auto;
+    hyphens: manual;
   }
 }
 
@@ -657,5 +657,34 @@
   
   .liveLink:hover {
     transform: none;
+  }
+}
+
+/* ===== Mobile type scale (kept last so it wins over earlier rules) ===== */
+@media (max-width: 768px) {
+  .featuredDescription {
+    font-size: 0.95rem;
+  }
+
+  .comparisonNote {
+    font-size: 0.85rem;
+  }
+
+  .featuredTitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .featuredDescription {
+    font-size: 0.9rem;
+  }
+
+  .comparisonNote {
+    font-size: 0.8rem;
+  }
+
+  .featuredTitle {
+    font-size: 1.05rem;
   }
 }

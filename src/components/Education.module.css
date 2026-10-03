@@ -32,7 +32,7 @@
 
 .title {
   font-size: clamp(3rem, 6vw, 5rem);
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1;
   margin: 0;
   margin-bottom: 0.2rem;
@@ -92,7 +92,7 @@
   max-width: 640px;
   margin-bottom: 2.5rem;
   /* 👇 ADD JUSTIFICATION */
-  hyphens: auto;
+  hyphens: manual;
   word-break: break-word;
   font-style: normal;
   text-align: left;
@@ -239,7 +239,7 @@
   /* 👇 ADD JUSTIFICATION - School names */
   text-align: left;
   text-justify: inter-word;
-  hyphens: auto;
+  hyphens: manual;
   word-break: break-word;
 }
 
@@ -248,11 +248,11 @@
   font-size: 0.85rem;
   color: #888888;
   margin: 0.1rem 0 0 0;
-  font-weight: 300;
+  font-weight: 400;
   /* 👇 ADD JUSTIFICATION - Detail text */
   text-align: left;
   text-justify: inter-word;
-  hyphens: auto;
+  hyphens: manual;
   word-break: break-word;
 }
 
@@ -304,7 +304,7 @@
     /* Keep justification on large screens */
     text-align: left;
     text-justify: inter-word;
-    hyphens: auto;
+    hyphens: manual;
     word-break: break-word;
   }
 
@@ -312,7 +312,7 @@
     font-size: 1rem;
     text-align: left;
     text-justify: inter-word;
-    hyphens: auto;
+    hyphens: manual;
     word-break: break-word;
   }
 
@@ -320,7 +320,7 @@
     font-size: 0.9rem;
     text-align: left;
     text-justify: inter-word;
-    hyphens: auto;
+    hyphens: manual;
     word-break: break-word;
   }
 }
@@ -334,7 +334,7 @@
     font-size: 0.95rem;
     text-align: left;
     text-justify: inter-word;
-    hyphens: auto;
+    hyphens: manual;
     word-break: break-word;
   }
 }
@@ -360,7 +360,7 @@
     /* Justification with optimized spacing */
     text-align: left;
     text-justify: inter-word;
-    hyphens: auto;
+    hyphens: manual;
     word-break: break-word;
     word-spacing: -0.01em;
     line-height: 1.7;
@@ -409,7 +409,7 @@
     /* Justification for school names */
     text-align: left;
     text-justify: inter-word;
-    hyphens: auto;
+    hyphens: manual;
     word-break: break-word;
     word-spacing: -0.01em;
   }
@@ -419,7 +419,7 @@
     /* Justification for details */
     text-align: left;
     text-justify: inter-word;
-    hyphens: auto;
+    hyphens: manual;
     word-break: break-word;
     word-spacing: -0.01em;
   }
@@ -452,7 +452,7 @@
     /* Enhanced justification for small screens */
     text-align: left;
     text-justify: inter-word;
-    hyphens: auto;
+    hyphens: manual;
     word-break: break-word;
     word-spacing: -0.02em;
     line-height: 1.6;
@@ -487,7 +487,7 @@
     /* Small screen justification */
     text-align: left;
     text-justify: inter-word;
-    hyphens: auto;
+    hyphens: manual;
     word-break: break-word;
     word-spacing: -0.02em;
   }
@@ -497,7 +497,7 @@
     /* Small screen justification */
     text-align: left;
     text-justify: inter-word;
-    hyphens: auto;
+    hyphens: manual;
     word-break: break-word;
     word-spacing: -0.02em;
   }
@@ -530,7 +530,7 @@
     font-size: 0.7rem;
     text-align: left;
     text-justify: inter-word;
-    hyphens: auto;
+    hyphens: manual;
     word-break: break-word;
     word-spacing: -0.03em;
     line-height: 1.5;
@@ -544,7 +544,7 @@
     font-size: 0.7rem;
     text-align: left;
     text-justify: inter-word;
-    hyphens: auto;
+    hyphens: manual;
     word-break: break-word;
     word-spacing: -0.03em;
   }
@@ -553,7 +553,7 @@
     font-size: 0.65rem;
     text-align: left;
     text-justify: inter-word;
-    hyphens: auto;
+    hyphens: manual;
     word-break: break-word;
     word-spacing: -0.03em;
   }
@@ -579,7 +579,7 @@
     margin-bottom: 1.5rem;
     text-align: left;
     text-justify: inter-word;
-    hyphens: auto;
+    hyphens: manual;
     word-break: break-word;
   }
 
@@ -587,7 +587,7 @@
     font-size: 0.8rem;
     text-align: left;
     text-justify: inter-word;
-    hyphens: auto;
+    hyphens: manual;
     word-break: break-word;
   }
 
@@ -595,7 +595,7 @@
     font-size: 0.75rem;
     text-align: left;
     text-justify: inter-word;
-    hyphens: auto;
+    hyphens: manual;
     word-break: break-word;
   }
 
@@ -622,4 +622,67 @@
     padding-left: 2rem;
     letter-spacing: 0.2em;
   }
+}
+
+/* ===== Mobile type scale (kept last so it wins over earlier rules) ===== */
+@media (max-width: 768px) {
+  .education {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .intro {
+    font-size: 0.95rem;
+  }
+
+  .entrySchool {
+    font-size: 0.95rem;
+  }
+
+  .entryDetail {
+    font-size: 0.85rem;
+  }
+
+  .entryTitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro {
+    font-size: 0.9rem;
+  }
+
+  .entrySchool {
+    font-size: 0.9rem;
+  }
+
+  .entryDetail {
+    font-size: 0.8rem;
+  }
+
+  .entryTitle {
+    font-size: 1.05rem;
+  }
+}
+
+/* Phones: the page container already provides side spacing */
+@media (max-width: 480px) {
+  .education {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* Date + status badge: wrap cleanly with no stray indent */
+.entryDate {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.6rem;
+}
+
+.entryDate .statusBadge,
+.entryDate .statusBadgeUpcoming {
+  margin-left: 0;
 }

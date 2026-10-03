@@ -33,7 +33,7 @@
 
 .title {
   font-size: clamp(3rem, 6vw, 5rem);
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1;
   margin: 0;
   margin-bottom: 0.2rem;
@@ -178,7 +178,7 @@
 .formInput::placeholder,
 .formTextarea::placeholder {
   color: #aaaaaa;
-  font-weight: 300;
+  font-weight: 400;
   font-family: var(--font-body);
 }
 
@@ -200,7 +200,7 @@
 ========================= */
 
 .submitButton {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 0.9rem;
   font-weight: 500;
   padding: 0.9rem 1.5rem;
@@ -524,3 +524,28 @@
   color: #FF6B00;
 }
 
+/* ===== Mobile type scale (kept last so it wins over earlier rules) ===== */
+@media (max-width: 768px) {
+  .contactSection {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+/* Phones: the page container already provides side spacing */
+@media (max-width: 480px) {
+  .contactSection {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

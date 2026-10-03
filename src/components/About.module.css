@@ -46,7 +46,7 @@
 
 .title {
   font-size: clamp(3rem, 6vw, 5rem);
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1;
   margin: 0;
   margin-bottom: 0.1rem;
@@ -564,7 +564,7 @@
   .description p {
     text-align: left;
     text-justify: inter-word;
-    hyphens: auto;
+    hyphens: manual;
     word-break: break-word;
   }
 }
@@ -574,9 +574,43 @@
   .description p {
     text-align: left;
     text-justify: inter-word;
-    hyphens: auto;
+    hyphens: manual;
     word-break: break-word;
     /* Optional: adjust word spacing for better appearance */
     word-spacing: -0.05em;
+  }
+}
+
+/* ===== Mobile type scale (kept last so it wins over earlier rules) ===== */
+@media (max-width: 768px) {
+  .about {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .description p {
+    font-size: 0.95rem;
+  }
+
+  .statLabel {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .description p {
+    font-size: 0.9rem;
+  }
+
+  .statLabel {
+    font-size: 0.65rem;
+  }
+}
+
+/* Phones: the page container already provides side spacing */
+@media (max-width: 480px) {
+  .about {
+    padding-left: 0;
+    padding-right: 0;
   }
 }

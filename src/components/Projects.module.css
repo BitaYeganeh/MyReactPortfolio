@@ -26,7 +26,7 @@
 
 .title {
   font-size: clamp(3rem, 6vw, 5rem);
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1;
   margin: 0;
   margin-bottom: 0.2rem;
@@ -152,7 +152,7 @@
 .projectDescription {
   color: #666666;
   margin: 0;
-  hyphens: auto;              /* Enables hyphenation */
+  hyphens: manual;
   word-break: break-word;
   font-size: 1rem;
   line-height: 1.6;
@@ -167,7 +167,7 @@
 }
 
 .tag {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 0.55rem;
   padding: 0.2rem 0.7rem;
   background: #f5f5f5;
@@ -190,7 +190,7 @@
 
 .liveLink,
 .githubLink {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 0.7rem;
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
@@ -199,6 +199,7 @@
 }
 
 .liveLink {
+  font-family: var(--font-body);
   background: #FF6B00;
   color: #ffffff;
 }
@@ -263,7 +264,7 @@
 }
 
 .seeMoreButton {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 0.9rem;
   font-weight: 500;
   padding: 0.8rem 2.5rem;
@@ -614,3 +615,67 @@
   }
 }
 
+/* ===== Mobile type scale (kept last so it wins over earlier rules) ===== */
+@media (max-width: 768px) {
+  .projectsSection {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .projectDescription {
+    font-size: 0.95rem;
+  }
+
+  .highlight dd {
+    font-size: 0.95rem;
+  }
+
+  .projectTitle {
+    font-size: 1.1rem;
+  }
+
+  .otherWorkName {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projectDescription {
+    font-size: 0.9rem;
+  }
+
+  .highlight dd {
+    font-size: 0.9rem;
+  }
+
+  .projectTitle {
+    font-size: 1.05rem;
+  }
+
+  .otherWorkName {
+    font-size: 1.05rem;
+  }
+}
+
+/* Small screens: image on top, text gets the full card width */
+@media (max-width: 640px) {
+  .projectCard {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    gap: 1.25rem;
+  }
+
+  .cardImage {
+    width: 100%;
+    height: 200px;
+    order: -1;
+  }
+}
+
+/* Phones: the page container already provides side spacing */
+@media (max-width: 480px) {
+  .projectsSection {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

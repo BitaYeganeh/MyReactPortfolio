@@ -59,6 +59,7 @@
 }
 
 .logo {
+  font-family: var(--font-display);
   text-decoration: none;
   font-size: 1.7rem;
   font-weight: 700;
@@ -68,12 +69,14 @@
 }
 
 .logoText {
+  font-family: var(--font-display);
   color: #000000;
   -webkit-text-stroke: 0;
   text-stroke: 0;
 }
 
 .logoAccent {
+  font-family: var(--font-display);
   color: #ffffff;
 }
 
@@ -82,7 +85,7 @@
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 500;
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   transition: all 0.3s ease;
   position: relative;
   padding-bottom: 4px;
@@ -112,7 +115,7 @@
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 500;
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   padding: 0.5rem 0;
   position: relative;
   transition: color 0.3s ease;
@@ -121,7 +124,7 @@
 .contactSlash {
   color: rgba(255, 255, 255, 0.5);
   margin-right: 4px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .contactLink:hover {
@@ -224,7 +227,7 @@
 
 .title span {
   display: block;
-  font-weight: 1000;
+  font-weight: 700;
   font-size: 4rem;
   white-space: nowrap;
   text-align: center;
@@ -238,8 +241,10 @@
 }
 
 .title span:last-child {
+  -webkit-text-stroke: 0;
+  text-stroke: 0;
   color: #ffffff;
-  font-weight: 1000;
+  font-weight: 700;
   font-size: 3.4rem;
   text-align: center;
   text-transform: uppercase;
@@ -351,7 +356,7 @@
   --skill-stroke: #000000;
   color: var(--skill-fill);
   font-family: var(--font-mono);
-  font-weight: 900;
+  font-weight: 700;
   font-size: 2rem;
   padding: 0.25rem 0.5rem;
   transition: all 0.3s ease;
@@ -538,8 +543,6 @@
     white-space: normal;
     padding: 0 5px;
     word-spacing: 0.3rem;
-    -webkit-text-stroke: 1.5px #ffffff;
-    text-stroke: 1.5px #ffffff;
   }
   
   .imageWrapper {
@@ -639,8 +642,6 @@
   
   .title span:last-child {
     font-size: clamp(1.2rem, 5.5vw, 1.9rem);
-    -webkit-text-stroke: 1px #ffffff;
-    text-stroke: 1px #ffffff;
   }
   
   .imageWrapper {
@@ -670,19 +671,24 @@
     font-size: 0.8rem;
   }
 }
+/* Resume/CV: the one highlighted action in the header */
 .resumeLink {
-  background-color: #FF6B00;
-  color: #fff;
-  padding: 8px 16px;
-  border-radius: 6px;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
   font-weight: 600;
+  color: #ffffff;
+  background-color: transparent;
+  border: 1.5px solid #ffffff;
+  border-radius: 999px;
+  padding: 0.4rem 1.1rem;
   text-decoration: none;
-  transition: transform 0.15s ease, opacity 0.15s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.resumeLink:hover {
-  transform: translateY(-1px);
-  opacity: 0.9;
+.resumeLink:hover,
+.resumeLink:focus-visible {
+  background-color: #ffffff;
+  color: #FF6B00;
   text-decoration: none;
 }
 
@@ -784,7 +790,7 @@
 @media (max-width: 768px) {
   .resumeLink {
     font-size: 0.8rem;
-    padding: 0.3rem 0.6rem;
+    padding: 0.25rem 0.75rem;
     order: 4; /* keeps it last, own line if others wrap */
   }
 }
@@ -846,4 +852,88 @@
 .skillTag::selection {
   background: #FF6B00 !important;
   color: #00C853 !important;
+}
+
+/* ===== Mobile type scale (kept last so it wins over earlier rules) ===== */
+@media (max-width: 768px) {
+  .navLink {
+    font-size: 0.85rem;
+  }
+
+  .contactLink {
+    font-size: 0.85rem;
+  }
+
+  .resumeLink {
+    font-size: 0.85rem;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navLink {
+    font-size: 0.8rem;
+  }
+
+  .contactLink {
+    font-size: 0.8rem;
+  }
+
+  .resumeLink {
+    font-size: 0.8rem;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+}
+
+/* ===== Header layout per screen size ===== */
+/* Phones and small tablets: two rows — logo + Contact Me on top, links below */
+@media (max-width: 768px) {
+  .navCenter {
+    flex: 0 0 100%;
+    order: 3;
+    min-width: 0;
+  }
+}
+
+/* Larger tablets: one row — logo, links, Contact Me on the right */
+@media (min-width: 641px) and (max-width: 768px) {
+  .navContainer {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .navCenter {
+    flex: 1 1 auto;
+    order: 0;
+    width: auto;
+    margin-top: 0;
+    gap: 1.2rem;
+  }
+
+  .contactLink {
+    order: 5;
+    white-space: nowrap;
+  }
+}
+
+/* Very small phones: keep all four links on the second row */
+@media (max-width: 380px) {
+  .navCenter {
+    gap: 0.6rem;
+  }
+
+  .navLink,
+  .resumeLink {
+    font-size: 0.75rem;
+  }
+
+  .resumeLink {
+    padding: 0.2rem 0.6rem;
+  }
 }

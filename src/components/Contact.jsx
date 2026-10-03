@@ -52,6 +52,7 @@ const Contact = () => {
         {/* Header - matching other sections */}
         <div className={styles.header}>
           <h2 className={styles.title}>CONTACT</h2>
+          <span className={styles.label}>07-CONTACT</span>
         </div>
 
         <div className={styles.content}>

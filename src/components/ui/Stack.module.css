@@ -27,7 +27,7 @@
 
 .title {
   font-size: clamp(3rem, 6vw, 5rem);
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1;
   margin: 0;
   margin-bottom: 0.2rem;
@@ -136,7 +136,7 @@
 }
 
 .techItem {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 0.75rem;
   padding: 0.25rem 0.75rem;
   background: #f8f8f8;
@@ -197,5 +197,24 @@
 
   .label {
     font-size: 0.6rem;
+  }
+}
+
+/* ===== Mobile type scale (kept last so it wins over earlier rules) ===== */
+@media (max-width: 768px) {
+  .stack {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+}
+
+/* Phones: the page container already provides side spacing */
+@media (max-width: 480px) {
+  .stack {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
