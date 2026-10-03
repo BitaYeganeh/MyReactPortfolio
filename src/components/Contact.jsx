@@ -4,7 +4,7 @@ import emailjs from "@emailjs/browser";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import styles from "./Contact.module.css";
 
-const EMAIL = "bita.yeganeh@metropolia.fi";
+const EMAIL = "b.yeganeh85@gmail.com";
 
 const Contact = () => {
   const formRef = useRef();
