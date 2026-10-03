@@ -95,7 +95,7 @@ const Hero = () => {
               <h1 className={styles.title}>
                 <span>JUNIOR</span>
                 <span>FULLSTACK SOFTWARE</span>
-                <span>DEVELOPER &amp; QA TESTING</span>
+                <span>DEVELOPER &amp; QA</span>
               </h1>
             </div>
             
@@ -106,7 +106,7 @@ const Hero = () => {
             >
               <img 
                 src="/images/profile.webp"
-                alt="Bita Yeganeh - Junior Full-Stack Developer & QA Tester"
+                alt="Bita Yeganeh - Junior Full-Stack Developer & QA"
                 className={styles.profileImage}
                 fetchPriority="high"
               />
