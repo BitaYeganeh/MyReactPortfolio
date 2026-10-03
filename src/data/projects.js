@@ -30,7 +30,7 @@ const projects = [
   },
   {
     id: 2,
-    title: "ABC OF MEDIA Website",
+    title: "ABC of Media Website",
     subtitle: "WORDPRESS · PHP",
     date: "DEC 2025 – PRESENT",
     description:

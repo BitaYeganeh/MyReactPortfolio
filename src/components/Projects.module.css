@@ -576,6 +576,11 @@
   font-size: 1.05rem;
   font-weight: 600;
   color: #000000;
+  transition: color 0.3s ease;
+}
+
+.otherWorkItem:hover .otherWorkName {
+  color: #FF6B00;
 }
 
 .otherWorkMeta {

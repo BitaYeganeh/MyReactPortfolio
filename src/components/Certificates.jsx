@@ -44,7 +44,7 @@ const Certificates = () => {
               </div>
 
               <div className={styles.content}>
-                <h3 className={styles.title}>{item.title}</h3>
+                <h3 className={styles.cardTitle}>{item.title}</h3>
                 <p className={styles.issuer}>{item.issuer}</p>
                 <p className={styles.date}>{item.date}</p>
               </div>
@@ -55,7 +55,7 @@ const Certificates = () => {
         {/* Footnote for additional coursework instead of a wall of thin certs */}
         <p className={styles.footnote}>
           Plus 12 additional short courses in AI tools and digital security
-          via Eduhouse < br/>
+          via Eduhouse <br />
           — several are sub-modules of Cyber Security Basics.
         </p>
       </div>

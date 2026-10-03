@@ -128,21 +128,21 @@ const Hero = () => {
             <span className={styles.sideTextLine}>// FORMER ELECTRONIC ENGINEER</span>
           </div>
         </div>
-      </section>
 
-      {/* Skills Bar - ALWAYS VISIBLE */}
-      <div className={styles.skillsBar}>
-        <div 
-          ref={trackRef}
-          className={styles.skillsTrack}
-        >
-          {duplicatedSkills.map((skill, index) => (
-            <span key={index} className={styles.skillTag}>
-              {skill}
-            </span>
-          ))}
+        {/* Skills Bar - sits at the bottom of the hero so together they fill the screen */}
+        <div className={styles.skillsBar}>
+          <div 
+            ref={trackRef}
+            className={styles.skillsTrack}
+          >
+            {duplicatedSkills.map((skill, index) => (
+              <span key={index} className={styles.skillTag}>
+                {skill}
+              </span>
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

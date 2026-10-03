@@ -144,23 +144,23 @@
   padding: 1.2rem 1.2rem 1.5rem;
 }
 
-.title {
+.cardTitle {
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: #000000;
   margin: 0 0 0.4rem 0;
-  line-height: 1.4;
+  line-height: 1.35;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  min-height: 3.8em;
+  min-height: 2.7em;
 }
 
 .issuer {
   font-family: var(--font-body);
-  font-size: 0.75rem;
+  font-size: 0.95rem;
   font-weight: 400;
   color: #666666;
   margin: 0 0 0.2rem 0;
@@ -168,7 +168,7 @@
 
 .date {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 400;
   color: #FF6B00;
   margin: 0;
@@ -180,11 +180,11 @@
 
 .footnote {
   font-family: var(--font-body);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: #888888;
   text-align: center;
   margin-top: 1.5rem;
-  font-style: italic;
+  font-style: normal;
 }
 
 :global(body.dark-mode) .footnote {
@@ -212,7 +212,7 @@
   border-color: #FF6B00;
 }
 
-:global(body.dark-mode) .title {
+:global(body.dark-mode) .cardTitle {
   color: #ffffff;
 }
 
@@ -263,21 +263,20 @@
     padding: 1rem;
   }
 
-  .title {
-    font-size: 0.8rem;
-    min-height: 3.2em;
+  .cardTitle {
+    font-size: 1rem;
   }
 
   .issuer {
-    font-size: 0.65rem;
+    font-size: 0.85rem;
   }
 
   .date {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
 
   .footnote {
-    font-size: 0.7rem;
+    font-size: 0.85rem;
   }
 }
 
@@ -299,13 +298,13 @@
     gap: 1rem;
   }
 
-  .title {
-    font-size: 0.85rem;
+  .cardTitle {
+    font-size: 0.9rem;
   }
 
   .footnote {
     font-size: 0.85rem;
     text-align: center;
-    font-style: italic;
+    font-style: normal;
   }
 }
