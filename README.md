@@ -2,9 +2,9 @@
 
 My personal portfolio: a single-page site showing my projects, experience, education and certificates.
 
-**Live site:** _add URL here_
+**Live site:** [myportfolio-u7mw.onrender.com](https://myportfolio-u7mw.onrender.com)
 
-![Portfolio hero section](public/images/profile.webp)
+![Portfolio preview](public/images/og-image.jpg)
 
 ## Tech stack
 
