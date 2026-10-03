@@ -69,7 +69,7 @@ const Hero = () => {
               <a href="#projects" className={styles.navLink}>Projects</a>
               <a href="#experience" className={styles.navLink}>Experience</a>
               <a
-                href="/images/BitaYeganeh.pdf"
+                href="/images/Bita_Yeganeh_CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.resumeLink}
