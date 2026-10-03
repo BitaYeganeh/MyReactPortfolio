@@ -27,7 +27,7 @@ const FeaturedProject = () => {
         <h3 className={styles.featuredTitle}>
           Cyber Security Finland — Website Redesign
         </h3>
-        <span className={styles.featuredDate}>JUN 2026 – PRESENT</span>
+        <span className={styles.featuredDate}>JUN – SEP 2026</span>
       </div>
 
       <p className={styles.featuredDescription}>
@@ -115,7 +115,7 @@ const FeaturedProject = () => {
 
       <div className={styles.featuredLinks}>
         <a
-          href="https://www.cybersecurity.fi/"
+          href="https://cybersecurity-pearl.vercel.app"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.liveLink}

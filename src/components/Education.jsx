@@ -14,9 +14,10 @@ const Education = () => {
 
         {/* Framing note */}
         <p className={styles.intro}>
-          Currently completing a vocational ICT qualification at Business
-          College Helsinki alongside a Bachelor's degree in ICT at
-          Metropolia University of Applied Sciences.
+          Completed a vocational ICT qualification at Business College
+          Helsinki in September 2026 with a grade of 4.92/5, and currently
+          studying for a Bachelor's degree in ICT at Metropolia University
+          of Applied Sciences.
         </p>
 
         {/* Content */}
@@ -25,12 +26,12 @@ const Education = () => {
           <div className={styles.section}>
             <h3 className={styles.sectionTitle}>EDUCATION</h3>
             <div className={styles.entries}>
-              {/* Education 1 - Business College (current vocational qualification) */}
+              {/* Education 1 - Business College (completed vocational qualification) */}
               <div className={styles.entry}>
                 <div className={styles.entryHeader}>
                   <span className={styles.entryDate}>
-                    MAR 2025 – OCT 2026
-                    <span className={styles.statusBadge}>ENROLLED</span>
+                    MAR 2025 – SEP 2026
+                    <span className={styles.statusBadge}>COMPLETED · GRADE 4.92 / 5</span>
                   </span>
                   <h4 className={styles.entryTitle}>
                     Vocational Qualification — Information & Communications

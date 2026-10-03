@@ -31,7 +31,7 @@ const experiences = [
   // ===== FINLAND =====
   {
     country: "🇫🇮 Finland",
-    period: "2023 – PRESENT",
+    period: "2026",
     companies: [
       {
         name: "Cyber Security Finland",
@@ -40,30 +40,16 @@ const experiences = [
         roles: [
           {
             title: "ICT Trainee",
-            period: "JUN 2026 – PRESENT",
+            period: "JUN 2026 – SEP 2026",
             achievements: [
-              "Redesigning and modernizing the company website, improving accessibility and UX",
-              "Conducting security assessments and applying web security best practices",
-              "Building responsive, secure interfaces with React, Astro, HTML, CSS and JavaScript",
-              "Improved site performance and security scores through hands-on remediation work",
+              "Redesigned and modernized the company website, improving accessibility and UX",
+              "Conducted security assessments and applied web security best practices",
+              "Built responsive, secure interfaces with React, Astro, TypeScript, HTML and CSS",
+              "Improved site performance and mobile usability, reaching a Lighthouse mobile score of 84/100",
             ],
           },
         ],
         skills: ["React", "Astro", "JavaScript", "HTML", "CSS", "Security"],
-      },
-      {
-        name: "Seure Henkilöstöpalvelut Oy",
-        type: "FULL-TIME · HELSINKI",
-        tier: "minimal",
-        roles: [
-          {
-            title: "Lastenhoitaja",
-            period: "OCT 2023 – JUL 2026",
-            oneLiner:
-              "Full-time role in a Finnish-speaking environment while relocating to Finland — built fluency, adaptability, and cross-cultural communication skills.",
-          },
-        ],
-        skills: [],
       },
     ],
   },
@@ -82,7 +68,7 @@ const experiences = [
             title: "Senior Quality Control Executive",
             period: "MAR 2016 – AUG 2019",
             oneLiner:
-              "Led QA processes achieving 100% data accuracy across the platform; promoted from QC to Senior QC Executive within 2 years.",
+              "Led QA processes achieving near-100% data accuracy across the platform; promoted from QC to Senior QC Executive within 2 years.",
           },
         ],
         skills: ["Quality Assurance", "Process Improvement"],

@@ -307,7 +307,7 @@
 .skillsBar {
   width: 100%;
   background: #FF6B00;
-  padding: 2rem 0;
+  padding: 1.25rem 0;
   overflow: hidden;
   position: relative;
   z-index: 10;
@@ -318,7 +318,8 @@
 .skillsTrack {
   display: flex;
   align-items: center;
-  gap: 4rem;
+  --skills-gap: 2.5rem;
+  gap: var(--skills-gap);
   animation: scrollSkills 60s linear infinite;
   white-space: nowrap;
   width: max-content;
@@ -349,15 +350,15 @@
   color: var(--skill-fill);
   font-family: var(--font-mono);
   font-weight: 900;
-  font-size: 4.5rem;
-  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  padding: 0.25rem 0.5rem;
   transition: all 0.3s ease;
   position: relative;
   flex-shrink: 0;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
-  -webkit-text-stroke: 2px var(--skill-stroke);
-  text-stroke: 2px var(--skill-stroke);
+  letter-spacing: 0.08em;
+  -webkit-text-stroke: 1.5px var(--skill-stroke);
+  text-stroke: 1.5px var(--skill-stroke);
 }
 
 .skillTag:nth-child(even) {
@@ -368,11 +369,11 @@
 .skillTag::after {
   content: '•';
   position: absolute;
-  right: -2rem;
+  right: calc(var(--skills-gap) / -2);
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(50%, -50%);
   color: var(--skill-fill);
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   opacity: 0.8;
 }
 
@@ -408,15 +409,15 @@
   }
   
   .skillsBar {
-    padding: 1.5rem 0;
+    padding: 1rem 0;
   }
   
   .skillTag {
-    font-size: 2.5rem;
+    font-size: 1.6rem;
   }
   
   .skillsTrack {
-    gap: 2.5rem;
+    --skills-gap: 2rem;
     animation: scrollSkills 40s linear infinite;
   }
   
@@ -555,27 +556,26 @@
   
   /* SKILLS BAR - ALWAYS VISIBLE ON MOBILE */
   .skillsBar {
-    padding: 1.2rem 0;
+    padding: 0.9rem 0;
     margin-top: auto;
     display: block !important;
   }
   
   .skillTag {
-    font-size: 1.4rem;
-    padding: 0.3rem 0.8rem;
-    -webkit-text-stroke: 1.5px var(--skill-stroke);
-    text-stroke: 1.5px var(--skill-stroke);
+    font-size: 1.2rem;
+    padding: 0.2rem 0.4rem;
+    -webkit-text-stroke: 1px var(--skill-stroke);
+    text-stroke: 1px var(--skill-stroke);
   }
   
   .skillsTrack {
-    gap: 2rem;
+    --skills-gap: 1.75rem;
     animation: scrollSkills 25s linear infinite;
     padding: 0 1rem;
   }
   
   .skillTag::after {
-    right: -1.2rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 
@@ -652,21 +652,20 @@
   }
   
   .skillTag {
-    font-size: 1rem;
+    font-size: 0.95rem;
     padding: 0.25rem 0.6rem;
     -webkit-text-stroke: 1px var(--skill-stroke);
     text-stroke: 1px var(--skill-stroke);
   }
   
   .skillsTrack {
-    gap: 1.5rem;
+    --skills-gap: 1.25rem;
     animation: scrollSkills 18s linear infinite;
     padding: 0 0.5rem;
   }
   
   .skillTag::after {
-    right: -0.9rem;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }
 .resumeLink {
@@ -701,7 +700,7 @@
   }
   
   .skillTag {
-    font-size: 5.5rem;
+    font-size: 2.4rem;
   }
 
   .imageWrapper {
@@ -777,7 +776,7 @@
   }
   
   .skillTag {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 @media (max-width: 768px) {
