@@ -43,7 +43,7 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: gradientShift 4s ease-in-out infinite;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: var(--font-display);
   display: inline-block;
 }
 
@@ -54,18 +54,18 @@
 }
 
 .label {
-  font-family: "JetBrains Mono", monospace;
-  font-style: italic;
-  font-size: 1rem;
-  font-weight: 300;
-  letter-spacing: 0.2em;
+  font-family: var(--font-mono);
   text-transform: uppercase;
   color: black;
   margin-top: 5px;
   position: relative;
-  padding-left: 2rem;
   opacity: 0.8;
   transition: all 0.3s ease;
+  font-style: normal;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  padding-left: 0.25rem;
 }
 
 .label::before {
@@ -120,7 +120,7 @@
 }
 
 .countryFlag {
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 1.2rem;
   font-weight: 600;
   color: #FF6B00;
@@ -128,7 +128,7 @@
 }
 
 .countryPeriod {
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.8rem;
   font-weight: 400;
   color: #999999;
@@ -169,12 +169,12 @@
 }
 
 .companyName {
-  font-family: "JetBrains Mono", monospace;
-  font-size: 1.1rem;
+  font-family: var(--font-display);
   font-weight: 600;
   color: #000000;
   margin: 0;
   transition: color 0.3s ease;
+  font-size: 1.25rem;
 }
 
 .companyBlock:hover .companyName {
@@ -182,7 +182,7 @@
 }
 
 .companyType {
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-body);
   font-size: 0.7rem;
   font-weight: 400;
   color: #999999;
@@ -213,7 +213,7 @@
 }
 
 .roleTitle {
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-display);
   font-size: 1rem;
   font-weight: 500;
   color: #000000;
@@ -221,7 +221,7 @@
 }
 
 .rolePeriod {
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.7rem;
   font-weight: 400;
   color: #FF6B00;
@@ -240,7 +240,7 @@
 
 .achievements li {
   font-size: 0.9rem;
-  text-align: justify;
+  text-align: left;
   color: #555555;
   line-height: 1.6;
   margin-bottom: 0.3rem;
@@ -273,7 +273,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.7rem;
   padding: 0.3rem 0.8rem;
   background: #f5f5f5;
@@ -540,12 +540,12 @@
 ========================= */
 
 .intro {
-  font-family: "Space Grotesk", sans-serif;
-  text-align:justify;
+  font-family: var(--font-body);
   font-size: 1rem;
   color: #555555;
   max-width: 640px;
   margin-bottom: 2.5rem;
+  text-align: left;
   line-height: 1.6;
 }
 
@@ -559,7 +559,7 @@
 
 .oneLiner {
   font-size: 0.85rem;
-  text-align: justify;
+  text-align: left;
   color: #555555;
   line-height: 1.6;
   margin: 0.3rem 0 0 0;

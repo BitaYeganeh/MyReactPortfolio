@@ -1,12 +1,10 @@
-import React, { useRef, useState } from "react";
-import Header from "./components/Header";
+import React, { useRef } from "react";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Stack from "./components/ui/Stack";
 import Experience from "./components/Experience";
 import Certificates from "./components/Certificates";
 import Projects from "./components/Projects";
-import Skills from "./components/Skills";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -14,8 +12,6 @@ import Footer from "./components/Footer";
 import "./App.css";
 
 function App() {
-  const [isSkillsOpen, setIsSkillsOpen] = useState(false);
-
   // Create a ref to the scrollable container
   const scrollContainerRef = useRef(null);
 
@@ -27,9 +23,6 @@ function App() {
 
   return (
     <div ref={scrollContainerRef} className="app-container">
-      {/* Header is now integrated into Hero, so we remove it from here */}
-      {/* <Header onOpenSkills={() => setIsSkillsOpen(true)} /> */}
-
       <main className="app-main">
         {/* Hero - Full screen, no wrapper section */}
         <Hero />
@@ -66,7 +59,6 @@ function App() {
         </div>
       </main>
 
-      <Skills isOpen={isSkillsOpen} onClose={() => setIsSkillsOpen(false)} />
       <Footer scrollToTop={scrollToTop} />
     </div>
   );

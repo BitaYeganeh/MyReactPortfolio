@@ -4,6 +4,9 @@ import projects from "../data/projects";
 import styles from "./Projects.module.css";
 import FeaturedProject from "./FeaturedProject";
 
+const mainProjects = projects.filter((project) => !project.otherWork);
+const otherProjects = projects.filter((project) => project.otherWork);
+
 const Projects = () => {
   return (
     <section id="projects" className={styles.projectsSection}>
@@ -19,7 +22,7 @@ const Projects = () => {
 
         {/* Projects Grid - Single Column */}
         <div className={styles.projectsGrid}>
-          {projects.map((project) => (
+          {mainProjects.map((project) => (
             <div
               key={project.id}
               className={styles.projectCard}
@@ -40,6 +43,16 @@ const Projects = () => {
                 <p className={styles.projectDescription}>
                   {project.description}
                 </p>
+                {project.highlights && (
+                  <dl className={styles.highlights}>
+                    {project.highlights.map((item) => (
+                      <div key={item.label} className={styles.highlight}>
+                        <dt>{item.label}</dt>
+                        <dd>{item.text}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                )}
                 <div className={styles.projectTags}>
                   {project.tags.map((tag, index) => (
                     <span key={index} className={styles.tag}>
@@ -75,11 +88,42 @@ const Projects = () => {
 
               {/* Right: Image */}
               <div className={styles.cardImage}>
-                <img src={project.image} alt={project.alt || project.title} />
+                <img src={project.image} alt={project.alt || project.title} loading="lazy" decoding="async" />
               </div>
             </div>
           ))}
         </div>
+
+        {/* Smaller learning projects - compact list, no images */}
+        {otherProjects.length > 0 && (
+          <div className={styles.otherWork}>
+            <h3 className={styles.otherWorkTitle}>Other work</h3>
+            <ul className={styles.otherWorkList}>
+              {otherProjects.map((project) => (
+                <li key={project.id} className={styles.otherWorkItem}>
+                  <div className={styles.otherWorkInfo}>
+                    <span className={styles.otherWorkName}>{project.title}</span>
+                    <span className={styles.otherWorkMeta}>
+                      {project.subtitle} · {project.date}
+                    </span>
+                  </div>
+                  <div className={styles.cardLinks}>
+                    {project.live && (
+                      <a href={project.live} target="_blank" rel="noopener noreferrer" className={styles.liveLink}>
+                        Live →
+                      </a>
+                    )}
+                    {project.github && (
+                      <a href={project.github} target="_blank" rel="noopener noreferrer" className={styles.githubLink}>
+                        GitHub
+                      </a>
+                    )}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </section>
   );

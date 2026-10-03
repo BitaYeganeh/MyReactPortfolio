@@ -43,7 +43,7 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: gradientShift 4s ease-in-out infinite;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: var(--font-display);
   display: inline-block;
 }
 
@@ -54,18 +54,18 @@
 }
 
 .label {
-  font-family: "JetBrains Mono", monospace;
-  font-style: italic;
-  font-size: 1rem;
-  font-weight: 300;
-  letter-spacing: 0.2em;
+  font-family: var(--font-mono);
   text-transform: uppercase;
   color: black;
   margin-top: 5px;
   position: relative;
-  padding-left: 2rem;
   opacity: 0.8;
   transition: all 0.3s ease;
+  font-style: normal;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  padding-left: 0.25rem;
 }
 
 .label::before {
@@ -132,7 +132,7 @@
   justify-content: center;
   color: #cccccc;
   font-weight: 600;
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-body);
   font-size: 0.9rem;
 }
 
@@ -145,9 +145,9 @@
 }
 
 .title {
-  font-family: "JetBrains Mono", monospace;
-  font-size: 0.9rem;
-  font-weight: 400;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
   color: #000000;
   margin: 0 0 0.4rem 0;
   line-height: 1.4;
@@ -159,7 +159,7 @@
 }
 
 .issuer {
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-body);
   font-size: 0.75rem;
   font-weight: 400;
   color: #666666;
@@ -167,7 +167,7 @@
 }
 
 .date {
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.7rem;
   font-weight: 400;
   color: #FF6B00;
@@ -179,7 +179,7 @@
 ========================= */
 
 .footnote {
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-body);
   font-size: 0.8rem;
   color: #888888;
   text-align: center;

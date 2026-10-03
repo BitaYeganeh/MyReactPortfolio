@@ -5,13 +5,13 @@ import styles from "./FeaturedProject.module.css";
 const comparisons = [
   {
     label: "Hero Section",
-    before: "/images/cybersecurity-hero-before.png",
-    after: "/images/cybersecurity-hero-after.png",
+    before: "/images/cybersecurity-hero-before.webp",
+    after: "/images/cybersecurity-hero-after.webp",
   },
   {
     label: "Core Capabilities",
-    before: "/images/cybersecurity-capabilities-before.png",
-    after: "/images/cybersecurity-capabilities-after.png",
+    before: "/images/cybersecurity-capabilities-before.webp",
+    after: "/images/cybersecurity-capabilities-after.webp",
     note: "Rebuilt as an interactive horizontal-scroll carousel with a progress indicator, replacing the original static grid.",
   },
 ];
@@ -61,6 +61,8 @@ const FeaturedProject = () => {
                   src={item.before}
                   alt={`Cyber Security Finland — ${item.label} — original version`}
                   className={styles.compareImage}
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
@@ -81,6 +83,8 @@ const FeaturedProject = () => {
                   src={item.after}
                   alt={`Cyber Security Finland — ${item.label} — redesigned version`}
                   className={styles.compareImage}
+                  loading="lazy"
+                  decoding="async"
                 />
               </a>
             </div>
@@ -95,9 +99,11 @@ const FeaturedProject = () => {
         <span className={styles.newAdditionLabel}>+ NEW ADDITION</span>
         <div className={styles.newAdditionImageWrapper}>
           <img
-            src="/images/cybersecurity-trustbar.png"
+            src="/images/cybersecurity-trustbar.webp"
             alt="New trust bar with compliance certification badges (NIS2, DORA, ISO 27001, CRA) added to the redesigned site"
             className={styles.newAdditionImage}
+            loading="lazy"
+            decoding="async"
           />
         </div>
         <p className={styles.comparisonNote}>

@@ -4,7 +4,6 @@ import styles from './Hero.module.css';
 const Hero = () => {
   const imageRef = useRef(null);
   const titleRef = useRef(null);
-  const leftTextRef = useRef(null);
   const rightTextRef = useRef(null);
   const trackRef = useRef(null);
 
@@ -33,10 +32,6 @@ const Hero = () => {
     }, 800);
 
     const timer3 = setTimeout(() => {
-      if (leftTextRef.current) {
-        leftTextRef.current.style.opacity = '1';
-        leftTextRef.current.style.transform = 'translateX(0)';
-      }
       if (rightTextRef.current) {
         rightTextRef.current.style.opacity = '1';
         rightTextRef.current.style.transform = 'translateX(0)';
@@ -90,14 +85,6 @@ const Hero = () => {
 
         {/* Main Content */}
         <div className={styles.content}>
-          {/* Left Text - Hidden on mobile, shows under title on mobile */}
-          <div 
-            ref={leftTextRef}
-            className={`${styles.sideText} ${styles.leftText}`}
-          >
-            <span className={styles.sideTextLine}>// Passionate about creating intuitive and engaging user experiences. Specialize in transforming ideas into beautifully crafted products.</span>
-          </div>
-
           {/* Center - Image with Title Overlay */}
           <div className={styles.centerContent}>
             {/* Title on top of image */}
@@ -106,8 +93,9 @@ const Hero = () => {
               className={styles.titleOverlay}
             >
               <h1 className={styles.title}>
-                <span>FULLSTACK</span>
-                <span>SOFTWARE DEVELOPER</span>
+                <span>JUNIOR</span>
+                <span>FULLSTACK SOFTWARE</span>
+                <span>DEVELOPER &amp; QA TESTING</span>
               </h1>
             </div>
             
@@ -117,19 +105,17 @@ const Hero = () => {
               className={styles.imageWrapper}
             >
               <img 
-                src="/images/Bitaa.png"
-                alt="Bita Yeganeh - Full Stack Developer"
+                src="/images/profile.webp"
+                alt="Bita Yeganeh - Junior Full-Stack Developer & QA Tester"
                 className={styles.profileImage}
+                fetchPriority="high"
               />
             </div>
 
             {/* Mobile Side Texts - Under Title */}
             <div className={styles.mobileSideTexts}>
-              <div className={styles.mobileLeftText}>
-                <span className={styles.mobileSideTextLine}>// Passionate about creating intuitive and engaging user experiences.</span>
-              </div>
               <div className={styles.mobileRightText}>
-                <span className={styles.mobileSideTextLine}>// AUTOMATIONS THAT SHIP WHILE YOU SLEEP</span>
+                <span className={styles.mobileSideTextLine}>// FORMER ELECTRONIC ENGINEER</span>
               </div>
             </div>
           </div>
@@ -139,8 +125,7 @@ const Hero = () => {
             ref={rightTextRef}
             className={`${styles.sideText} ${styles.rightText}`}
           >
-            <span className={styles.sideTextLine}>// AUTOMATIONS THAT SHIP
-WHILE YOU SLEEP</span>
+            <span className={styles.sideTextLine}>// FORMER ELECTRONIC ENGINEER</span>
           </div>
         </div>
       </section>

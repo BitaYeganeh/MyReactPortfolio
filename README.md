@@ -1,17 +1,62 @@
-# React + Vite
+# Bita Yeganeh — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My personal portfolio: a single-page site showing my projects, experience, education and certificates.
 
-Currently, two official plugins are available:
+**Live site:** _add URL here_
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Portfolio hero section](public/images/profile.webp)
 
-## React Compiler
+## Tech stack
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+- **React 19** + **Vite 7** (SWC)
+- **CSS Modules** for component styles, **Tailwind CSS 4** for utilities
+- **EmailJS** for the contact form (no backend needed)
+- **react-icons** for icons
 
-## Expanding the ESLint configuration
+## Highlights
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# MyReactPortfolio
+- Featured case study with interactive before/after comparisons of a cybersecurity company site redesign
+- Project data kept in one file (`src/data/projects.js`), so adding a project needs no component changes
+- Responsive layout with a separate mobile hero arrangement
+- Images served as resized WebP and lazy-loaded below the fold
+
+## Running locally
+
+```bash
+npm install
+cp .env.example .env   # then fill in your EmailJS IDs
+npm run dev
+```
+
+| Script            | What it does                      |
+| ----------------- | --------------------------------- |
+| `npm run dev`     | Start the dev server with HMR     |
+| `npm run build`   | Production build into `dist/`     |
+| `npm run preview` | Serve the production build        |
+| `npm run lint`    | Run ESLint                        |
+
+### Environment variables
+
+| Variable                   | Description          |
+| -------------------------- | -------------------- |
+| `VITE_EMAILJS_SERVICE_ID`  | EmailJS service ID   |
+| `VITE_EMAILJS_TEMPLATE_ID` | EmailJS template ID  |
+| `VITE_EMAILJS_PUBLIC_KEY`  | EmailJS public key   |
+
+When deploying, set these in your hosting provider's environment settings (e.g. Vercel → Project → Settings → Environment Variables).
+
+## Project structure
+
+```
+src/
+  components/      # One component + CSS module per section
+  components/ui/   # Shared UI pieces
+  data/            # Project content
+  assets/          # Certificates bundled by Vite
+public/images/     # Screenshots, profile photo, resume
+```
+
+## Contact
+
+- GitHub: [BitaYeganeh](https://github.com/BitaYeganeh)
+- LinkedIn: [bita-yeganeh](https://www.linkedin.com/in/bita-yeganeh-503144237/)

@@ -4,12 +4,26 @@ const projects = [
   {
     id: 1,
     title: "HR Management System",
-    subtitle: "REACT · NODE.JS",
+    subtitle: "REACT · REST API",
     date: "NOV 2025",
     description:
-      "Full-stack HR platform for managing employee records, departments, and salaries. Built the React frontend and Node.js/Express backend, with a focus on clean data flow between the UI and API.",
-    tags: ["React", "Node.js", "Full-Stack"],
-    image: "/images/hrapp-screenshot.png",
+      "A React app that helps small HR teams manage employee records and never miss key dates. It covers full create, read, update and delete for employees (department, salary, skills, contact details) on top of a REST API built with JSON Server and deployed on Render.",
+    highlights: [
+      {
+        label: "Problem",
+        text: "Small HR teams track staff in spreadsheets and easily miss probation reviews and work anniversaries.",
+      },
+      {
+        label: "Challenge",
+        text: "Automating reminders: a utility calculates time in the company from each hire date, flags employees under 6 months for a probation review and those reaching 5, 10 or 15 years for a recognition meeting.",
+      },
+      {
+        label: "Built with",
+        text: "A reusable useAxios() hook for all API calls, React Router with a 404 page, and CSS Modules.",
+      },
+    ],
+    tags: ["React", "React Router", "Axios", "JSON Server", "Render"],
+    image: "/images/hrapp-screenshot.webp",
     alt: "HR Management System",
     github: "https://github.com/BitaYeganeh/hrApp",
     live: "https://hrapp-1-68tb.onrender.com",
@@ -22,33 +36,35 @@ const projects = [
     description:
       "Ongoing WordPress/PHP site built for a media literacy initiative, including custom page templates and content structure to support press releases, media, and educational resources.",
     tags: ["WordPress", "PHP"],
-    image: "/images/abc.png",
+    image: "/images/abc.webp",
     alt: "WordPress/PHP Project - ABC OF MEDIA Website",
     github:
       "https://github.com/BitaYeganeh/WordPress-Project---ABC-OF-MEDIA",
   },
   {
     id: 3,
+    otherWork: true,
     title: "Pancake Order System",
     subtitle: "JAVASCRIPT",
     date: "AUG 2025",
     description:
       "Interactive ordering system built in vanilla JavaScript, handling dynamic pricing, topping selection, and order summaries without any framework — focused on clean DOM manipulation and state logic.",
     tags: ["JavaScript", "DOM"],
-    image: "/images/project2.png",
+    image: "/images/project2.webp",
     alt: "Pancake Order Project",
     github:
       "https://github.com/BitaYeganeh/Summer-tasks/tree/main/Pannukakku",
   },
   {
     id: 4,
+    otherWork: true,
     title: "Cafe Website UI Design",
     subtitle: "FIGMA · UI/UX",
     date: "JUL 2025",
     description:
       "End-to-end UI/UX design for a café website, from wireframes to a clickable prototype — covering layout, typography, and interaction design for a warm, brand-driven feel.",
     tags: ["Figma", "UI/UX Design"],
-    image: "/images/figma-cafe.png",
+    image: "/images/figma-cafe.webp",
     alt: "Café website UI design in Figma",
     live: "https://www.figma.com/proto/LOFz2qhMrQFBrMrCsotQfl/prototype-for-a-caf%C3%A9-website?node-id=1-2&starting-point-node-id=1%3A2&t=taVksUnCMCTiGYTj-1",
   },
