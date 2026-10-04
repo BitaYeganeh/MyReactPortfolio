@@ -38,11 +38,15 @@ const projects = [
     subtitle: "REACT · TYPESCRIPT · SHARETRIBE API",
     date: "OCT 2026",
     description:
-      "A two-day Sharetribe hackathon at Tieto HQ. The case: make search faster and more intuitive on an existing secondhand-clothing marketplace, without losing accuracy. Our team of four built a proof-of-concept where buyers describe what they want in plain words or upload a photo, instead of working through keyword filters.",
+      "A two-day Tieto Bootcamp Sharetribe hackathon at Tieto HQ. The case: make search faster and more intuitive on an existing secondhand-clothing marketplace, without losing accuracy. Our team of four built a proof-of-concept where buyers describe what they want in plain words or upload a photo, instead of working through keyword filters.",
     highlights: [
       {
         label: "My role",
         text: "Front-end developer. I built the buyer-facing experience: the landing page with typing search hints, category menu, sticky filter bar (size, brand, colour and a two-handle price slider), item popup, basket and saved items. I also made the server port configurable and documented the setup.",
+      },
+      {
+        label: "Results",
+        text: "Tested on 11 searches against the live marketplace, the team's AI search showed 54% correct items vs 27% for the built-in search, and the right items on the first page 88% of the time vs 67%. It also handles typos and Finnish words.",
       },
       {
         label: "Team solution",
