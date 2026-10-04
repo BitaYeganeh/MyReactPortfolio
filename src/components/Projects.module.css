@@ -64,7 +64,7 @@
 
 .label::before {
   content: '// ';
-  color: #FF6B00;
+  color: #C2410C;
   font-weight: 700;
   opacity: 0.6;
 }
@@ -138,13 +138,13 @@
 }
 
 .projectCard:hover .projectTitle {
-  color: #FF6B00;
+  color: #C2410C;
 }
 
 .projectDate {
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  color: #FF6B00;
+  color: #C2410C;
   font-weight: 500;
   letter-spacing: 0.02em;
 }
@@ -200,7 +200,7 @@
 
 .liveLink {
   font-family: var(--font-body);
-  background: #FF6B00;
+  background: #C2410C;
   color: #ffffff;
 }
 
@@ -523,7 +523,7 @@
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #FF6B00;
+  color: #C2410C;
   padding-top: 0.2rem;
 }
 
@@ -546,7 +546,7 @@
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #FF6B00;
+  color: #C2410C;
   margin: 0 0 0.75rem;
 }
 
@@ -581,14 +581,14 @@
 }
 
 .otherWorkItem:hover .otherWorkName {
-  color: #FF6B00;
+  color: #C2410C;
 }
 
 .otherWorkMeta {
   font-family: var(--font-mono);
   font-size: 0.75rem;
   letter-spacing: 0.05em;
-  color: #888888;
+  color: #666666;
 }
 
 @media (max-width: 768px) {

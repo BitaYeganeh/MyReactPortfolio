@@ -70,7 +70,7 @@
 
 .label::before {
   content: '// ';
-  color: #FF6B00;
+  color: #C2410C;
   font-weight: 700;
   opacity: 0.6;
 }
@@ -170,7 +170,7 @@
   font-family: var(--font-mono);
   font-size: 0.75rem;
   font-weight: 400;
-  color: #FF6B00;
+  color: #C2410C;
   margin: 0;
 }
 
@@ -181,14 +181,14 @@
 .footnote {
   font-family: var(--font-body);
   font-size: 0.9rem;
-  color: #888888;
+  color: #666666;
   text-align: left;
   margin-top: 1.5rem;
   font-style: normal;
 }
 
 :global(body.dark-mode) .footnote {
-  color: #777777;
+  color: #666666;
 }
 
 /* =========================

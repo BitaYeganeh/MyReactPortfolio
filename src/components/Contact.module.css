@@ -71,7 +71,7 @@
 
 .label::before {
   content: '// ';
-  color: #FF6B00;
+  color: #C2410C;
   font-weight: 700;
   opacity: 0.6;
 }
@@ -100,7 +100,7 @@
 .subtitle {
   font-family: var(--font-body);
   font-size: 1rem;
-  color: #FF6B00;
+  color: #C2410C;
   margin: 0;
   line-height: 1.6;
   text-align: center;
@@ -324,7 +324,7 @@
 }
 
 :global(body.dark-mode) .emailLink {
-  color: #FF6B00;
+  color: #C2410C;
 }
 
 :global(body.dark-mode) .emailLink:hover {
@@ -516,12 +516,12 @@
 
 .directLinks a:hover,
 .directLinks a:focus-visible {
-  color: #FF6B00;
+  color: #C2410C;
   border-bottom-color: #FF6B00;
 }
 
 .directLinks svg {
-  color: #FF6B00;
+  color: #C2410C;
 }
 
 /* ===== Mobile type scale (kept last so it wins over earlier rules) ===== */

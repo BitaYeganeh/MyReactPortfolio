@@ -70,7 +70,7 @@
 
 .label::before {
   content: '// ';
-  color: #FF6B00;
+  color: #C2410C;
   font-weight: 700;
   opacity: 0.6;
 }
@@ -123,7 +123,7 @@
   font-family: var(--font-display);
   font-size: 1.2rem;
   font-weight: 600;
-  color: #FF6B00;
+  color: #C2410C;
   letter-spacing: 0.02em;
 }
 
@@ -131,7 +131,7 @@
   font-family: var(--font-mono);
   font-size: 0.8rem;
   font-weight: 400;
-  color: #999999;
+  color: #666666;
   letter-spacing: 0.02em;
 }
 
@@ -178,14 +178,14 @@
 }
 
 .companyBlock:hover .companyName {
-  color: #FF6B00;
+  color: #C2410C;
 }
 
 .companyType {
   font-family: var(--font-body);
   font-size: 0.7rem;
   font-weight: 400;
-  color: #999999;
+  color: #666666;
   letter-spacing: 0.05em;
 }
 
@@ -224,7 +224,7 @@
   font-family: var(--font-mono);
   font-size: 0.7rem;
   font-weight: 400;
-  color: #FF6B00;
+  color: #C2410C;
   letter-spacing: 0.02em;
 }
 
@@ -252,7 +252,7 @@
   content: '—';
   position: absolute;
   left: -0.5rem;
-  color: #FF6B00;
+  color: #C2410C;
   font-weight: 400;
 }
 
@@ -314,7 +314,7 @@
 .mysql { color: #4479A1; }
 .wordpress { color: #21759B; }
 .typescript { color: #3178C6; }
-.n8n { color: #FF6B00; }
+.n8n { color: #C2410C; }
 .langchain { color: #1C3C3C; }
 
 .skillTag:hover .react,
@@ -345,7 +345,7 @@
 }
 
 :global(body.dark-mode) .countryFlag {
-  color: #FF6B00;
+  color: #C2410C;
 }
 
 :global(body.dark-mode) .countryPeriod {
@@ -575,12 +575,12 @@
 
 .companyBlock[data-tier="minimal"] .companyName {
   font-size: 0.95rem;
-  color: #777777;
+  color: #666666;
   font-weight: 500;
 }
 
 :global(body.dark-mode) .companyBlock[data-tier="minimal"] .companyName {
-  color: #888888;
+  color: #666666;
 }
 
 /* ===== Mobile type scale (kept last so it wins over earlier rules) ===== */

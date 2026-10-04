@@ -1,5 +1,7 @@
 # Bita Yeganeh — Portfolio
 
+[![Tests](https://github.com/BitaYeganeh/MyReactPortfolio/actions/workflows/tests.yml/badge.svg)](https://github.com/BitaYeganeh/MyReactPortfolio/actions/workflows/tests.yml)
+
 My personal portfolio: a single-page site showing my projects, experience, education and certificates.
 
 **Live site:** [myportfolio-u7mw.onrender.com](https://myportfolio-u7mw.onrender.com)
@@ -19,6 +21,24 @@ My personal portfolio: a single-page site showing my projects, experience, educa
 - Project data kept in one file (`src/data/projects.js`), so adding a project needs no component changes
 - Responsive layout with a separate mobile hero arrangement
 - Images served as resized WebP and lazy-loaded below the fold
+
+## Testing
+
+21 automated end-to-end tests (Playwright) run on every push in GitHub Actions:
+
+| Area | What is checked |
+| --- | --- |
+| Navigation | Menu links scroll to the right section; the Resume/CV button serves a real PDF |
+| Content | All six projects are listed and match the About stats; every image has alt text and loads |
+| Contact form | Required fields, success and error messages, spam trap — real emails are never sent (requests are intercepted) |
+| Responsive | No sideways scrolling from 320px phones to 1920px screens; header fits on small phones |
+| Accessibility | No serious or critical issues found by axe-core (WCAG colour contrast, image and icon labels) |
+
+Writing the tests found and fixed two real problems: low colour contrast on small orange text, and menu links landing in the wrong place while images loaded.
+
+```bash
+npm run test:e2e   # starts the site and runs the tests
+```
 
 ## Running locally
 

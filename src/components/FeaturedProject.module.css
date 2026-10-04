@@ -22,7 +22,7 @@
 }
 
 .featured:hover .featuredTitle {
-  color: #FF6B00;
+  color: #C2410C;
 }
 
 /* =========================
@@ -37,7 +37,7 @@
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.15em;
-  color: #FF6B00;
+  color: #C2410C;
   background: rgba(255, 107, 0, 0.08);
   padding: 0.4rem 1rem;
   border-radius: 20px;
@@ -75,7 +75,7 @@
 .featuredDate {
   font-family: var(--font-mono);
   font-size: 0.8rem;
-  color: #FF6B00;
+  color: #C2410C;
   font-weight: 500;
   white-space: nowrap;
   text-align: left !important;
@@ -154,7 +154,7 @@
 
 .comparisonNote {
   font-size: 0.85rem;
-  color: #777777;
+  color: #666666;
   line-height: 1.6;
   margin: 0.8rem 0 0 0;
   max-width: 700px;
@@ -193,12 +193,12 @@
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.1em;
-  color: #999999;
+  color: #666666;
   text-align: center !important;
 }
 
 .afterLabel {
-  color: #FF6B00;
+  color: #C2410C;
 }
 
 .compareImageWrapper {
@@ -226,7 +226,7 @@
 
 .compareArrow {
   font-size: 1.5rem;
-  color: #FF6B00;
+  color: #C2410C;
   font-weight: 700;
   flex-shrink: 0;
   padding: 0 0.5rem;
@@ -248,7 +248,7 @@
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.1em;
-  color: #00A86B;
+  color: #047857;
   background: rgba(0, 168, 107, 0.08);
   padding: 0.3rem 0.9rem;
   border-radius: 16px;
@@ -287,7 +287,7 @@
   font-family: var(--font-body);
   font-size: 0.85rem;
   padding: 0.6rem 1.4rem;
-  background: #FF6B00;
+  background: #C2410C;
   color: #ffffff;
   border-radius: 20px;
   text-decoration: none;
@@ -334,11 +334,11 @@
 }
 
 :global(body.dark-mode) .comparisonNote {
-  color: #999999;
+  color: #666666;
 }
 
 :global(body.dark-mode) .compareLabel {
-  color: #777777;
+  color: #666666;
 }
 
 :global(body.dark-mode) .compareImageWrapper,

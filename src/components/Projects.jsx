@@ -88,7 +88,7 @@ const Projects = () => {
 
               {/* Right: Image */}
               <div className={styles.cardImage}>
-                <img src={project.image} alt={project.alt || project.title} loading="lazy" decoding="async" />
+                <img src={project.image} alt={project.alt || project.title} width={1600} height={1000} loading="lazy" decoding="async" />
               </div>
             </div>
           ))}

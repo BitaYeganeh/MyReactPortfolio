@@ -106,7 +106,7 @@
 
 .label::before {
   content: '// ';
-  color: #FF6B00;
+  color: #C2410C;
   font-weight: 700;
   opacity: 0.6;
 }
@@ -145,7 +145,7 @@
 }
 
 .orangeText {
-  color: #FF6B00;
+  color: #C2410C;
   font-weight: 400;
   font-style: italic;
 }
