@@ -68,25 +68,7 @@ const Education = () => {
                 </p>
               </div>
 
-              {/* Education 3 - UKM Master's */}
-              <div className={styles.entry}>
-                <div className={styles.entryHeader}>
-                  <span className={styles.entryDate}>JAN 2014 – DEC 2015</span>
-                  <h4 className={styles.entryTitle}>
-                    Postgraduate Studies (Master's) — Renewable Energy
-                  </h4>
-                </div>
-                <p className={styles.entrySchool}>
-                  National University of Malaysia (UKM)
-                </p>
-                <p className={styles.entryDetail}>
-                  Research on thermoelectric power generation; awarded FRGS
-                  grant studentship and published 3 papers in international
-                  journals
-                </p>
-              </div>
-
-              {/* Education 4 - Garmsar Bachelor's */}
+              {/* Education 3 - Garmsar Bachelor's */}
               <div className={styles.entry}>
                 <div className={styles.entryHeader}>
                   <span className={styles.entryDate}>JAN 2005 – JUN 2009</span>

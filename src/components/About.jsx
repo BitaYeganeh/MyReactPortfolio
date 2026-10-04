@@ -39,9 +39,9 @@ const About = () => {
                 engineering principles to create applications that
                 businesses can trust. <br />
                 <br />
-                With a background in Electronic Engineering and Renewable
-                Energy, I bring a unique perspective to software
-                development.
+                With a background in Electronic Engineering and
+                renewable-energy research, I bring a unique perspective to
+                software development.
               </p>
             </div>
 
