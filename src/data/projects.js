@@ -33,6 +33,28 @@ const projects = [
     live: "https://hrapp-1-68tb.onrender.com",
   },
   {
+    id: 5,
+    title: "The Swap Cabinet — Sharetribe Hackathon",
+    subtitle: "REACT · TYPESCRIPT · SHARETRIBE API",
+    date: "OCT 2026",
+    description:
+      "A two-day hackathon case from Sharetribe: make search faster and more intuitive on an existing secondhand-clothing marketplace, without losing accuracy. Our team of four built a proof-of-concept where buyers describe what they want in plain words or upload a photo, instead of working through keyword filters.",
+    highlights: [
+      {
+        label: "My role",
+        text: "Front-end developer. I built the buyer-facing experience: the landing page with typing search hints, category menu, sticky filter bar (size, brand, colour and a two-handle price slider), item popup, basket and saved items. I also made the server port configurable and documented the setup.",
+      },
+      {
+        label: "Team solution",
+        text: "Listings come from the Sharetribe Marketplace API. Teammates built the AI search: Claude labels each listing and a vector database (LanceDB) matches meaning and photos.",
+      },
+    ],
+    tags: ["React", "TypeScript", "Tailwind CSS", "Sharetribe API", "Node.js", "Teamwork"],
+    image: "/images/swap-cabinet.webp",
+    alt: "The Swap Cabinet search prototype home page",
+    github: "https://github.com/Z4Tauhid/Hackathon_team4",
+  },
+  {
     id: 2,
     title: "ABC of Media Website",
     subtitle: "WORDPRESS · PHP",
