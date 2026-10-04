@@ -38,7 +38,7 @@ const projects = [
     subtitle: "REACT · TYPESCRIPT · SHARETRIBE API",
     date: "OCT 2026",
     description:
-      "A two-day hackathon case from Sharetribe: make search faster and more intuitive on an existing secondhand-clothing marketplace, without losing accuracy. Our team of four built a proof-of-concept where buyers describe what they want in plain words or upload a photo, instead of working through keyword filters.",
+      "A two-day Sharetribe hackathon at Tieto HQ. The case: make search faster and more intuitive on an existing secondhand-clothing marketplace, without losing accuracy. Our team of four built a proof-of-concept where buyers describe what they want in plain words or upload a photo, instead of working through keyword filters.",
     highlights: [
       {
         label: "My role",
