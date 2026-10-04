@@ -8,10 +8,10 @@ const Hero = () => {
   const trackRef = useRef(null);
 
   const skills = [
-    "PYTHON", "REACT", "NODE.JS", "JAVASCRIPT", "HTML", "CSS",
-    "SQL", "GIT", "GITHUB", "UI/UX","FIGMA", "DJANGO",
-    "RESTAPI", "Docker", "TailwindCSS", 
-    "TypeScript", "QC", "QA", "PHP", "WORDPRESS", "AI"
+    "REACT", "TYPESCRIPT", "JAVASCRIPT", "ASTRO", "NODE.JS", "PYTHON",
+    "PLAYWRIGHT", "VITEST", "QA", "HTML", "CSS", "TAILWIND CSS",
+    "SQL", "REST API", "DJANGO", "PHP", "WORDPRESS", "GIT",
+    "GITHUB ACTIONS", "DOCKER", "FIGMA", "AI"
   ];
 
   const duplicatedSkills = [...skills, ...skills];

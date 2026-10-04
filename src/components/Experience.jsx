@@ -112,7 +112,7 @@ const experiences = [
       {
         name: "Iman Electronic",
         type: "FULL-TIME",
-        tier: "minimal",
+        tier: "compact",
         roles: [
           {
             title: "Commercial Expert",
@@ -121,7 +121,7 @@ const experiences = [
               "Managed supplier negotiations and technical documentation for international electronics import operations.",
           },
         ],
-        skills: [],
+        skills: ["Negotiation", "Technical Documentation"],
       },
     ],
   },

@@ -11,37 +11,27 @@ const Stack = () => {
     {
       title: "FRONTEND / WEB",
       icon: "🎨",
-      items: ["React", "Next.js", "Tailwind CSS", "WordPress", "UI/UX Design"]
+      items: ["React", "Astro", "Next.js", "Tailwind CSS", "WordPress", "UI/UX Design"]
     },
     {
-      title: "BACKEND",
+      title: "BACKEND & DATA",
       icon: "🔧",
-      items: ["FastAPI", "Node.js", "Django", "REST API"]
-    },
-    {
-      title: "DATABASES",
-      icon: "🗄️",
-      items: ["PostgreSQL", "MySQL"]
+      items: ["Node.js", "Django", "FastAPI", "REST API", "Sharetribe API", "SQL"]
     },
     {
       title: "QUALITY & TESTING",
       icon: "✅",
-      items: ["QC", "QA", "Testing"]
+      items: ["Playwright", "Vitest", "React Testing Library", "GitHub Actions (CI)", "Manual QA & QC"]
     },
     {
-    title: "AI & AUTOMATION",
-    icon: "⚡",
-    items: ["Claude", "Copilot", "ChatGPT", "DeepSeek"]
-  },
-    {
-      title: "INFRA / CLOUD",
-      icon: "☁️",
-      items: ["Docker"]
+      title: "AI & AUTOMATION",
+      icon: "⚡",
+      items: ["Claude", "Copilot", "ChatGPT", "DeepSeek"]
     },
     {
-      title: "TOOLS",
+      title: "TOOLS & DEPLOYMENT",
       icon: "🛠️",
-      items: ["Git", "GitHub", "VS Code", "Copilot", "Figma"]
+      items: ["Git", "GitHub", "VS Code", "Figma", "Docker", "Vercel", "Render"]
     }
   ];
 
