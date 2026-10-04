@@ -21,8 +21,12 @@ const projects = [
         label: "Built with",
         text: "A reusable useAxios() hook for all API calls, React Router with a 404 page, and CSS Modules.",
       },
+      {
+        label: "Tested",
+        text: "39 automated tests with Vitest, React Testing Library and Playwright, run in GitHub Actions on every push. Writing them uncovered 6 bugs, all fixed, including duplicate employee IDs and wrong work-experience dates.",
+      },
     ],
-    tags: ["React", "React Router", "Axios", "JSON Server", "Render"],
+    tags: ["React", "React Router", "Axios", "JSON Server", "Vitest", "Playwright", "Render"],
     image: "/images/hrapp-screenshot.webp",
     alt: "HR Management System",
     github: "https://github.com/BitaYeganeh/hrApp",
