@@ -52,7 +52,7 @@ const projects = [
     tags: ["React", "TypeScript", "Tailwind CSS", "Sharetribe API", "Node.js", "Teamwork"],
     image: "/images/swap-cabinet.webp",
     alt: "The Swap Cabinet search prototype home page",
-    github: "https://github.com/Z4Tauhid/Hackathon_team4",
+    github: "https://github.com/BitaYeganeh/swap-cabinet-hackathon",
   },
   {
     id: 2,
