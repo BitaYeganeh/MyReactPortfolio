@@ -61,6 +61,8 @@ const FeaturedProject = () => {
                   src={item.before}
                   alt={`Cyber Security Finland — ${item.label} — original version`}
                   className={styles.compareImage}
+                  width={1600}
+                  height={858}
                   loading="lazy"
                   decoding="async"
                 />
@@ -83,6 +85,8 @@ const FeaturedProject = () => {
                   src={item.after}
                   alt={`Cyber Security Finland — ${item.label} — redesigned version`}
                   className={styles.compareImage}
+                  width={1600}
+                  height={858}
                   loading="lazy"
                   decoding="async"
                 />
@@ -102,6 +106,8 @@ const FeaturedProject = () => {
             src="/images/cybersecurity-trustbar.webp"
             alt="New trust bar with compliance certification badges (NIS2, DORA, ISO 27001, CRA) added to the redesigned site"
             className={styles.newAdditionImage}
+            width={1600}
+            height={859}
             loading="lazy"
             decoding="async"
           />

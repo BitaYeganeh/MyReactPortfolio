@@ -15,16 +15,16 @@ import {
 } from "react-icons/si";
 
 const techIcons = {
-  React: <SiReact className={styles.react} />,
-  JavaScript: <SiJavascript className={styles.javascript} />,
-  Python: <SiPython className={styles.python} />,
-  Astro: <SiAstro className={styles.astro} />,
-  HTML: <SiHtml5 className={styles.html} />,
-  CSS: <SiCss className={styles.css} />,
-  PHP: <SiPhp className={styles.php} />,
-  SQL: <SiMysql className={styles.mysql} />,
-  WordPress: <SiWordpress className={styles.wordpress} />,
-  TypeScript: <SiTypescript className={styles.typescript} />,
+  React: <SiReact aria-hidden="true" className={styles.react} />,
+  JavaScript: <SiJavascript aria-hidden="true" className={styles.javascript} />,
+  Python: <SiPython aria-hidden="true" className={styles.python} />,
+  Astro: <SiAstro aria-hidden="true" className={styles.astro} />,
+  HTML: <SiHtml5 aria-hidden="true" className={styles.html} />,
+  CSS: <SiCss aria-hidden="true" className={styles.css} />,
+  PHP: <SiPhp aria-hidden="true" className={styles.php} />,
+  SQL: <SiMysql aria-hidden="true" className={styles.mysql} />,
+  WordPress: <SiWordpress aria-hidden="true" className={styles.wordpress} />,
+  TypeScript: <SiTypescript aria-hidden="true" className={styles.typescript} />,
 };
 
 const experiences = [

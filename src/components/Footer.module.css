@@ -1,7 +1,7 @@
 .footer {
   text-align: center;
   padding: 0.75rem 1.5rem;
-  background-color: #FF6B00;
+  background-color: #C2410C;
   color: white;
   position: relative;
   display: flex;
@@ -51,7 +51,7 @@
 .footer p {
   margin: 0;
   font-size: 14px;
-  color: black;
+  color: #ffffff;
 }
 
 /* =========================
@@ -70,7 +70,7 @@
   border-radius: 50%;
 
   background: linear-gradient(135deg, #1f260d);
-  color: #FF6B00;
+  color: #C2410C;
 
   display: flex;
   align-items: center;
