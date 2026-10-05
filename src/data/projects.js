@@ -73,6 +73,30 @@ const projects = [
     live: "https://bitayeganeh.github.io/WordPress-Project---ABC-OF-MEDIA/",
   },
   {
+    id: 6,
+    otherWork: true,
+    title: "Business College Networking Site",
+    subtitle: "WORDPRESS · BILINGUAL",
+    date: "NOV 2025",
+    description:
+      "Bilingual (English/Finnish) WordPress site that helps students find networking events and communities, with category filters for IT, programming, business and gaming.",
+    tags: ["WordPress", "PHP", "TranslatePress"],
+    github: "https://github.com/BitaYeganeh/wordpress_Ohjelmistokehitysprojekti-1",
+    live: "https://bitayeganeh.github.io/wordpress_Ohjelmistokehitysprojekti-1/",
+  },
+  {
+    id: 7,
+    otherWork: true,
+    title: "Tech News Website",
+    subtitle: "WORDPRESS · CUSTOM THEME",
+    date: "2025",
+    description:
+      "WordPress news site with a custom theme, a testimonials plugin and a contact form.",
+    tags: ["WordPress", "PHP"],
+    github: "https://github.com/BitaYeganeh/WordPress-PHP-Project---Tech-News",
+    live: "https://bitayeganeh.github.io/WordPress-PHP-Project---Tech-News/",
+  },
+  {
     id: 3,
     otherWork: true,
     title: "Pancake Order System",

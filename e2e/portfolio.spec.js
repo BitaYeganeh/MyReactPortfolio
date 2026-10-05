@@ -42,7 +42,7 @@ test.describe('Hero and navigation', () => {
 });
 
 test.describe('Content', () => {
-  test('lists all six projects', async ({ page }) => {
+  test('lists all eight projects', async ({ page }) => {
     const titles = [
       'Cyber Security Finland',
       'HR Management System',
@@ -50,12 +50,14 @@ test.describe('Content', () => {
       'ABC of Media',
       'Pancake Order System',
       'Cafe Website UI Design',
+      'Business College Networking Site',
+      'Tech News Website',
     ];
     for (const title of titles) {
       await expect(page.locator('#projects').getByText(title).first()).toBeAttached();
     }
     // The About stat must match the number of projects shown
-    await expect(page.locator('#about').getByText('6', { exact: true })).toBeVisible();
+    await expect(page.locator('#about').getByText('8', { exact: true })).toBeVisible();
   });
 
   test('every external link opens safely in a new tab', async ({ page }) => {
