@@ -72,6 +72,17 @@ const Projects = () => {
                       Live →
                     </a>
                   )}
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.liveLink}
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      Watch demo ▶
+                    </a>
+                  )}
                   {project.github && (
                     <a
                       href={project.github}

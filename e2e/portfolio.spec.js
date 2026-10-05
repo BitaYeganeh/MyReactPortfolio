@@ -78,6 +78,14 @@ test.describe('Content', () => {
     }
   });
 
+  test('hackathon demo video is served', async ({ page, request }) => {
+    const demo = page.getByRole('link', { name: /Watch demo/ });
+    await expect(demo).toHaveAttribute('target', '_blank');
+    const response = await request.get(await demo.getAttribute('href'));
+    expect(response.status()).toBe(200);
+    expect(response.headers()['content-type']).toContain('video/mp4');
+  });
+
   test('all project images load', async ({ page, request }) => {
     const sources = await page.locator('#projects img').evaluateAll((imgs) =>
       imgs.map((img) => img.getAttribute('src'))

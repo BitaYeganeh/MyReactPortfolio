@@ -57,6 +57,7 @@ const projects = [
     image: "/images/swap-cabinet.webp",
     alt: "The Swap Cabinet search prototype home page",
     github: "https://github.com/BitaYeganeh/swap-cabinet-hackathon",
+    demo: "/videos/swap-cabinet-demo.mp4",
   },
   {
     id: 2,
