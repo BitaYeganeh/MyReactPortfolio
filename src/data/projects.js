@@ -70,6 +70,7 @@ const projects = [
     alt: "WordPress/PHP Project - ABC OF MEDIA Website",
     github:
       "https://github.com/BitaYeganeh/WordPress-Project---ABC-OF-MEDIA",
+    live: "https://bitayeganeh.github.io/WordPress-Project---ABC-OF-MEDIA/",
   },
   {
     id: 3,
