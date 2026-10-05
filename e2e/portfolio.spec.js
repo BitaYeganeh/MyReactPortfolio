@@ -18,6 +18,7 @@ test.describe('Hero and navigation', () => {
 
   for (const [link, sectionId] of [
     ['About', 'about'],
+    ['Skills', 'stack'],
     ['Projects', 'projects'],
     ['Experience', 'experience'],
   ]) {
