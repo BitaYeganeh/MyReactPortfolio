@@ -15,16 +15,11 @@ const About = () => {
             {/* Tagline under the title */}
             <div className={styles.tagline}>
               <p>
-                I build{" "}
-                <span className={styles.orangeText}>secure, scalable</span>{" "}
-                solutions <br />
-                that
-                <br />
+                I build web apps{" "}
+                <span className={styles.orangeText}>that work,</span>{" "}
                 <em>
-                  bridge{" "}
-                  <span className={styles.orangeText}>
-                    engineering and design.
-                  </span>
+                  and I test them{" "}
+                  <span className={styles.orangeText}>to prove it.</span>
                 </em>
               </p>
             </div>
@@ -35,13 +30,19 @@ const About = () => {
             {/* Description */}
             <div className={styles.description}>
               <p>
-                My work combines frontend development, cybersecurity, and
-                engineering principles to create applications that
-                businesses can trust. <br />
-                <br />
-                With a background in Electronic Engineering and
-                renewable-energy research, I bring a unique perspective to
-                software development.
+                I'm a junior full-stack developer and QA tester in Espoo,
+                Finland. I build with React, TypeScript and Python/Django, and
+                I write automated tests (Playwright, Vitest, Django) that run
+                in CI: 84 so far, and they've caught 8 real bugs.
+              </p>
+              <p>
+                Before software, I earned a B.Eng. in Electronics and spent
+                three years in quality control at HappyFresh and Shopee.
+                That's where I learned to care about the details users notice.
+              </p>
+              <p>
+                I'm looking for junior developer or QA roles in the Helsinki
+                area or remote. I speak English, Persian and Finnish (B2).
               </p>
             </div>
 
@@ -56,8 +57,8 @@ const About = () => {
               </div>
 
               <div className={styles.statItem}>
-                <span className={styles.statNumber}>3</span>
-                <span className={styles.statLabel}>COUNTRIES</span>
+                <span className={styles.statNumber}>84</span>
+                <span className={styles.statLabel}>AUTOMATED TESTS</span>
               </div>
 
               <div className={styles.statItem}>
