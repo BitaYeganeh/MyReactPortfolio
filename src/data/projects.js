@@ -60,6 +60,29 @@ const projects = [
     demo: "/videos/swap-cabinet-demo.mp4",
   },
   {
+    id: 8,
+    title: "Django To-Do App",
+    subtitle: "PYTHON · DJANGO",
+    date: "FEB 2026",
+    description:
+      "A Django task manager where each user signs up, logs in and manages their own to-do list. A public demo mode lets visitors try the app without creating an account. Deployed on Render with Gunicorn and WhiteNoise.",
+    highlights: [
+      {
+        label: "Built with",
+        text: "Django auth for sign-up and login, a Task model linked to each user, Django forms with validation, and a mobile-friendly layout.",
+      },
+      {
+        label: "Tested",
+        text: "22 Django tests run in GitHub Actions on every push. Writing them uncovered 2 bugs, both fixed: tasks could be completed or deleted by a plain link (now POST-only with CSRF protection), and the home page crashed when no demo user existed.",
+      },
+    ],
+    tags: ["Python", "Django", "SQLite", "Django TestCase", "GitHub Actions", "Render"],
+    image: "/images/django-todo.webp",
+    alt: "Django To-Do App demo page with a list of tasks",
+    github: "https://github.com/BitaYeganeh/Python_django-TO-DO-LIST-",
+    live: "https://django-todo-xvec.onrender.com",
+  },
+  {
     id: 2,
     title: "ABC of Media Website",
     subtitle: "WORDPRESS · PHP",
@@ -110,6 +133,7 @@ const projects = [
     alt: "Pancake Order Project",
     github:
       "https://github.com/BitaYeganeh/Summer-tasks/tree/main/Pannukakku",
+    live: "https://bitayeganeh.github.io/Summer-tasks/Pannukakku/order.html",
   },
   {
     id: 4,

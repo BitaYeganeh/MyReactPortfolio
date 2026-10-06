@@ -51,7 +51,7 @@ const About = () => {
             {/* Stats - real, verifiable numbers instead of vanity metrics */}
             <div className={styles.statsGrid}>
               <div className={styles.statItem}>
-                <span className={styles.statNumber}>8</span>
+                <span className={styles.statNumber}>9</span>
                 <span className={styles.statLabel}>PROJECTS</span>
               </div>
 
