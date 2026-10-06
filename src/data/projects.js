@@ -96,7 +96,7 @@ const projects = [
       },
       {
         label: "Deployed",
-        text: "On Render with Docker for the PHP API and a static site for React. Making it run live uncovered 4 bugs, all fixed: categories that never displayed, broken image links, a crash without a .env file and a debug page that exposed parts of the keys.",
+        text: "On Render with Docker for the PHP API and a static site for React. Making it run live uncovered 6 problems, all fixed: categories that never displayed, an empty category list in the product form, product images lost on every deploy (now in Supabase Storage), a crash without a .env file, a debug page that exposed parts of the keys and unclear error messages.",
       },
       {
         label: "Redesigned",
