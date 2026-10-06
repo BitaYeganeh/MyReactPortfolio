@@ -29,7 +29,7 @@ My personal portfolio: a single-page site showing my projects, experience, educa
 | Area | What is checked |
 | --- | --- |
 | Navigation | Menu links scroll to the right section; the Resume/CV button serves a real PDF |
-| Content | All nine projects are listed and match the About stats; every image has alt text and loads; the hackathon demo video is served; external links open safely in a new tab |
+| Content | All ten projects are listed and match the About stats; every image has alt text and loads; the hackathon demo video is served; external links open safely in a new tab |
 | Contact form | Required fields, success and error messages, spam trap — real emails are never sent (requests are intercepted) |
 | Responsive | No sideways scrolling from 320px phones to 1920px screens; header fits on small phones |
 | Accessibility | No serious or critical issues found by axe-core (WCAG colour contrast, image and icon labels) |

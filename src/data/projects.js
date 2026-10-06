@@ -121,6 +121,18 @@ const projects = [
     live: "https://bitayeganeh.github.io/WordPress-PHP-Project---Tech-News/",
   },
   {
+    id: 9,
+    otherWork: true,
+    title: "Currency Converter",
+    subtitle: "REACT · REST API",
+    date: "SEP 2025",
+    description:
+      "React converter for 160+ currencies with live rates from a public REST API: swap, popular currencies, loading and error states, dark mode.",
+    tags: ["React", "Axios", "REST API"],
+    github: "https://github.com/BitaYeganeh/06-Exchange-rate-API",
+    live: "https://bitayeganeh.github.io/06-Exchange-rate-API/",
+  },
+  {
     id: 3,
     otherWork: true,
     title: "Pancake Order System",

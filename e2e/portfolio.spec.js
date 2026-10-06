@@ -7,6 +7,9 @@ const EMAILJS = 'https://api.emailjs.com/**';
 test.beforeEach(async ({ page }) => {
   await page.route(EMAILJS, (route) => route.abort());
   await page.goto('/');
+  // Web fonts arrive late and make every section a little taller; wait for
+  // them so anchor links scroll to the final position
+  await page.waitForFunction(() => document.fonts.status === 'loaded');
 });
 
 test.describe('Hero and navigation', () => {
@@ -30,7 +33,8 @@ test.describe('Hero and navigation', () => {
 
   test('"Contact Me" link scrolls to the contact form', async ({ page }) => {
     await page.getByRole('link', { name: /Contact Me/ }).click();
-    await expect(page.getByPlaceholder('Your Name')).toBeInViewport();
+    await expect(page.locator('section#contact').first()).toBeInViewport();
+    await expect(page.getByPlaceholder('Your Name')).toBeVisible();
   });
 
   test('Resume/CV button opens a real PDF', async ({ page, request }) => {
@@ -43,7 +47,7 @@ test.describe('Hero and navigation', () => {
 });
 
 test.describe('Content', () => {
-  test('lists all nine projects', async ({ page }) => {
+  test('lists all ten projects', async ({ page }) => {
     const titles = [
       'Cyber Security Finland',
       'HR Management System',
@@ -54,12 +58,13 @@ test.describe('Content', () => {
       'Business College Networking Site',
       'Tech News Website',
       'Django To-Do App',
+      'Currency Converter',
     ];
     for (const title of titles) {
       await expect(page.locator('#projects').getByText(title).first()).toBeAttached();
     }
     // The About stat must match the number of projects shown
-    await expect(page.locator('#about').getByText('9', { exact: true })).toBeVisible();
+    await expect(page.locator('#about').getByText('10', { exact: true })).toBeVisible();
   });
 
   test('every external link opens safely in a new tab', async ({ page }) => {
