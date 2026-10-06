@@ -196,6 +196,7 @@ const projects = [
     tags: ["Figma", "UI/UX Design"],
     image: "/images/figma-cafe.webp",
     alt: "Café website UI design in Figma",
+    liveLabel: "Figma prototype",
     live: "https://www.figma.com/proto/LOFz2qhMrQFBrMrCsotQfl/prototype-for-a-caf%C3%A9-website?node-id=1-2&starting-point-node-id=1%3A2&t=taVksUnCMCTiGYTj-1",
   },
 ];

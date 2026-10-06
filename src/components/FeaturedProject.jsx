@@ -35,15 +35,16 @@ const FeaturedProject = () => {
         part of my ICT traineeship — moving from a traditional serif-heavy
         layout to a modern, gradient-driven visual identity with new
         interactive elements, while preserving the site's compliance-focused
-        messaging (ISO 27001, NIS2, GDPR, DORA).
+        messaging (ISO 27001, NIS2, GDPR, DORA). The redesign scores 90/100
+        for mobile performance and 96/100 for accessibility in Lighthouse.
       </p>
 
       <div className={styles.featuredTags}>
         <span className={styles.tag}>Astro</span>
-        <span className={styles.tag}>JavaScript</span>
-        <span className={styles.tag}>HTML</span>
-        <span className={styles.tag}>CSS</span>
-        <span className={styles.tag}>Security</span>
+        <span className={styles.tag}>TypeScript</span>
+        <span className={styles.tag}>Tailwind CSS</span>
+        <span className={styles.tag}>Accessibility</span>
+        <span className={styles.tag}>Performance</span>
       </div>
 
       {/* Before / After comparisons */}

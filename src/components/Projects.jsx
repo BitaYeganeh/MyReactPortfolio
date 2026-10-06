@@ -69,7 +69,7 @@ const Projects = () => {
                       className={styles.liveLink}
                       onClick={(e) => e.stopPropagation()}
                     >
-                      Live →
+                      {project.liveLabel ?? 'Live'} →
                     </a>
                   )}
                   {project.demo && (
@@ -121,7 +121,7 @@ const Projects = () => {
                   <div className={styles.cardLinks}>
                     {project.live && (
                       <a href={project.live} target="_blank" rel="noopener noreferrer" className={styles.liveLink}>
-                        Live →
+                        {project.liveLabel ?? 'Live'} →
                       </a>
                     )}
                     {project.github && (
