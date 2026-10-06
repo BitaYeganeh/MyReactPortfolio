@@ -148,6 +148,17 @@ const projects = [
     live: "https://bitayeganeh.github.io/WordPress-PHP-Project---Tech-News/",
   },
   {
+    id: 11,
+    otherWork: true,
+    title: "Flower Shop Ordering App",
+    subtitle: "SQL · MARIADB · EXPRESS",
+    date: "OCT 2025",
+    description:
+      "Seven-table MariaDB database with an Express REST API and a JavaScript front end. Orders are saved in one transaction with database prices and stock checks; 10 API tests run against a real MariaDB in GitHub Actions.",
+    tags: ["SQL", "MariaDB", "Express", "Node.js", "GitHub Actions"],
+    github: "https://github.com/BitaYeganeh/flower-shop-sql",
+  },
+  {
     id: 9,
     otherWork: true,
     title: "Currency Converter",
