@@ -63,7 +63,7 @@ const projects = [
     id: 8,
     title: "Django To-Do App",
     subtitle: "PYTHON · DJANGO",
-    date: "FEB 2026",
+    date: "2025",
     description:
       "A Django task manager where each user signs up, logs in and manages their own to-do list. A public demo mode lets visitors try the app without creating an account. Deployed on Render with Gunicorn and WhiteNoise.",
     highlights: [
