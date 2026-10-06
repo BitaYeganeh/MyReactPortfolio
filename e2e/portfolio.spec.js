@@ -47,7 +47,7 @@ test.describe('Hero and navigation', () => {
 });
 
 test.describe('Content', () => {
-  test('lists all ten projects', async ({ page }) => {
+  test('lists all eleven projects', async ({ page }) => {
     const titles = [
       'Cyber Security Finland',
       'HR Management System',
@@ -59,12 +59,13 @@ test.describe('Content', () => {
       'Tech News Website',
       'Django To-Do App',
       'Currency Converter',
+      'StockFlow Inventory App',
     ];
     for (const title of titles) {
       await expect(page.locator('#projects').getByText(title).first()).toBeAttached();
     }
     // The About stat must match the number of projects shown
-    await expect(page.locator('#about').getByText('10', { exact: true })).toBeVisible();
+    await expect(page.locator('#about').getByText('11', { exact: true })).toBeVisible();
   });
 
   test('every external link opens safely in a new tab', async ({ page }) => {

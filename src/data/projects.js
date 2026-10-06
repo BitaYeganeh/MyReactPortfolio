@@ -121,6 +121,18 @@ const projects = [
     live: "https://bitayeganeh.github.io/WordPress-PHP-Project---Tech-News/",
   },
   {
+    id: 10,
+    otherWork: true,
+    title: "StockFlow Inventory App",
+    subtitle: "PHP · REACT · SUPABASE",
+    date: "MAR 2026",
+    description:
+      "Course project: inventory and order management with a PHP (Slim) REST API and a React front end, Google sign-in through Supabase and Gemini AI product descriptions. I built the API routes and finished the React pages.",
+    tags: ["PHP", "Slim", "React", "Supabase", "REST API", "Docker"],
+    github: "https://github.com/BitaYeganeh/StockFlow/tree/final_task",
+    live: "https://stockflow-7o1k.onrender.com",
+  },
+  {
     id: 9,
     otherWork: true,
     title: "Currency Converter",
