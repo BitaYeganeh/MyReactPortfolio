@@ -31,8 +31,9 @@ const FeaturedProject = () => {
       </div>
 
       <p className={styles.featuredDescription}>
-        Redesigned the live company website for Cyber Security Finland as
-        part of my ICT traineeship — moving from a traditional serif-heavy
+        Redesigned the Cyber Security Finland website during my ICT
+        traineeship (live in 2026; the company has since updated the site) —
+        moving from a traditional serif-heavy
         layout to a modern, gradient-driven visual identity with new
         interactive elements, while preserving the site's compliance-focused
         messaging (ISO 27001, NIS2, GDPR, DORA). The redesign scores 90/100
