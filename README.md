@@ -24,12 +24,12 @@ My personal portfolio: a single-page site showing my projects, experience, educa
 
 ## Testing
 
-21 automated end-to-end tests (Playwright) run on every push in GitHub Actions:
+23 automated end-to-end tests (Playwright) run on every push in GitHub Actions. The tests are in [`e2e/portfolio.spec.js`](e2e/portfolio.spec.js), configured in [`playwright.config.js`](playwright.config.js), and the CI workflow is [`.github/workflows/tests.yml`](.github/workflows/tests.yml).
 
 | Area | What is checked |
 | --- | --- |
 | Navigation | Menu links scroll to the right section; the Resume/CV button serves a real PDF |
-| Content | All six projects are listed and match the About stats; every image has alt text and loads |
+| Content | All eight projects are listed and match the About stats; every image has alt text and loads; the hackathon demo video is served; external links open safely in a new tab |
 | Contact form | Required fields, success and error messages, spam trap — real emails are never sent (requests are intercepted) |
 | Responsive | No sideways scrolling from 320px phones to 1920px screens; header fits on small phones |
 | Accessibility | No serious or critical issues found by axe-core (WCAG colour contrast, image and icon labels) |
@@ -63,7 +63,7 @@ npm run dev
 | `VITE_EMAILJS_TEMPLATE_ID` | EmailJS template ID  |
 | `VITE_EMAILJS_PUBLIC_KEY`  | EmailJS public key   |
 
-When deploying, set these in your hosting provider's environment settings (e.g. Vercel → Project → Settings → Environment Variables).
+When deploying, set these in your hosting provider's environment settings (e.g. Render → Service → Environment).
 
 ## Project structure
 
@@ -74,6 +74,8 @@ src/
   data/            # Project content
   assets/          # Certificates bundled by Vite
 public/images/     # Screenshots, profile photo, resume
+public/videos/     # Project demo videos
+e2e/               # Playwright end-to-end tests
 ```
 
 ## Contact
