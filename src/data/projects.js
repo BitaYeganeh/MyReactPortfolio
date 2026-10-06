@@ -83,6 +83,33 @@ const projects = [
     live: "https://django-todo-xvec.onrender.com",
   },
   {
+    id: 10,
+    title: "StockFlow — Inventory & Orders",
+    subtitle: "PHP · REACT · SUPABASE",
+    date: "MAR 2026",
+    description:
+      "A full-stack inventory and order management app: a PHP (Slim 4) REST API with a React front end, a Supabase (PostgreSQL) database with row-level security, Google sign-in and Gemini AI features. Started from course starter code; I built the API routes, finished the React pages and deployed it.",
+    highlights: [
+      {
+        label: "Built",
+        text: "REST API for products (CRUD, search, pagination, image upload), orders with status rules (draft → confirmed → fulfilled), stock movements and a dashboard summary.",
+      },
+      {
+        label: "Deployed",
+        text: "On Render with Docker for the PHP API and a static site for React. Making it run live uncovered 4 bugs, all fixed: categories that never displayed, broken image links, a crash without a .env file and a debug page that exposed parts of the keys.",
+      },
+      {
+        label: "Redesigned",
+        text: "One consistent design system, status badges, euro prices, plain-language errors and a layout that works on phones.",
+      },
+    ],
+    tags: ["PHP", "Slim", "React", "Supabase", "REST API", "Docker", "Render"],
+    image: "/images/stockflow.webp",
+    alt: "StockFlow product list with categories, prices and stock status badges",
+    github: "https://github.com/BitaYeganeh/StockFlow/tree/final_task",
+    live: "https://stockflow-7o1k.onrender.com",
+  },
+  {
     id: 2,
     title: "ABC of Media Website",
     subtitle: "WORDPRESS · PHP",
@@ -119,18 +146,6 @@ const projects = [
     tags: ["WordPress", "PHP"],
     github: "https://github.com/BitaYeganeh/WordPress-PHP-Project---Tech-News",
     live: "https://bitayeganeh.github.io/WordPress-PHP-Project---Tech-News/",
-  },
-  {
-    id: 10,
-    otherWork: true,
-    title: "StockFlow Inventory App",
-    subtitle: "PHP · REACT · SUPABASE",
-    date: "MAR 2026",
-    description:
-      "Course project: inventory and order management with a PHP (Slim) REST API and a React front end, Google sign-in through Supabase and Gemini AI product descriptions. I built the API routes and finished the React pages.",
-    tags: ["PHP", "Slim", "React", "Supabase", "REST API", "Docker"],
-    github: "https://github.com/BitaYeganeh/StockFlow/tree/final_task",
-    live: "https://stockflow-7o1k.onrender.com",
   },
   {
     id: 9,

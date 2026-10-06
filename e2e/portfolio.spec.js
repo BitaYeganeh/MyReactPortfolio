@@ -59,7 +59,7 @@ test.describe('Content', () => {
       'Tech News Website',
       'Django To-Do App',
       'Currency Converter',
-      'StockFlow Inventory App',
+      'StockFlow',
     ];
     for (const title of titles) {
       await expect(page.locator('#projects').getByText(title).first()).toBeAttached();
